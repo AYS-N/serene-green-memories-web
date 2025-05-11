@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ | 整理の味方 - 遺品整理・生前整理・特殊清掃</title>
+  <meta name="description" content="遺品整理、生前整理、特殊清掃、不用品回収のお問い合わせはこちらから。無料お見積り、ご相談を承っております。" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <h1 class="logo">
+          <a href="index.html">整理の味方</a>
+        </h1>
+        <nav class="nav-pc">
+          <ul class="nav-list">
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="services.html">サービス内容</a></li>
+            <li><a href="about.html">会社概要</a></li>
+            <li><a href="faq.html">よくある質問</a></li>
+            <li><a href="contact.html" class="active">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <button class="nav-toggle" id="nav-toggle" aria-label="メニュー">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-sp" id="nav-sp">
+      <ul class="nav-list">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="services.html">サービス内容</a></li>
+        <li><a href="about.html">会社概要</a></li>
+        <li><a href="faq.html">よくある質問</a></li>
+        <li><a href="contact.html" class="active">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ページタイトル -->
+  <div class="page-title">
+    <div class="container">
+      <h1>お問い合わせ</h1>
+      <p>ご質問・お見積りのご依頼など、お気軽にお問い合わせください</p>
+    </div>
+  </div>
+
+  <!-- お問い合わせ方法 -->
+  <section class="section contact-methods">
+    <div class="container">
+      <div class="contact-methods-inner">
+        <div class="contact-method contact-method-tel">
+          <div class="contact-method-icon">
+            <img src="images/icon-tel.svg" alt="電話でのお問い合わせ">
+          </div>
+          <h2 class="contact-method-title">お電話でのお問い合わせ</h2>
+          <div class="contact-tel-number">0120-123-456</div>
+          <p class="contact-method-note">受付時間: 9:00〜18:00（年中無休）</p>
+          <p>お急ぎの場合はお電話がおすすめです。<br>ご相談・お見積りも承っております。</p>
+        </div>
+        <div class="contact-method contact-method-form">
+          <div class="contact-method-icon">
+            <img src="images/icon-mail.svg" alt="メールでのお問い合わせ">
+          </div>
+          <h2 class="contact-method-title">お問い合わせフォーム</h2>
+          <p>下記フォームに必要事項をご入力の上、送信ください。<br>24時間受付中、スタッフが確認次第ご連絡いたします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせフォーム -->
+  <section class="section contact-form-section">
+    <div class="container">
+      <h2 class="section-title">お問い合わせフォーム</h2>
+      <form id="contactForm" class="contact-form">
+        <div class="form-group">
+          <label for="name">お名前<span class="required">必須</span></label>
+          <input type="text" id="name" name="name" required placeholder="山田 太郎">
+        </div>
+
+        <div class="form-group">
+          <label for="email">メールアドレス<span class="required">必須</span></label>
+          <input type="email" id="email" name="email" required placeholder="example@email.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">電話番号</label>
+          <input type="tel" id="phone" name="phone" placeholder="090-1234-5678">
+        </div>
+
+        <div class="form-group">
+          <label for="inquiry_type">お問い合わせ内容<span class="required">必須</span></label>
+          <select id="inquiry_type" name="inquiry_type" required>
+            <option value="" disabled selected>お問い合わせ内容を選択してください</option>
+            <option value="estate_cleanup">遺品整理について</option>
+            <option value="lifetime_cleanup">生前整理について</option>
+            <option value="special_cleaning">特殊清掃について</option>
+            <option value="waste_collection">不用品回収について</option>
+            <option value="price">料金について</option>
+            <option value="other">その他</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">お問い合わせ詳細<span class="required">必須</span></label>
+          <textarea id="message" name="message" required placeholder="お問い合わせ内容の詳細をご記入ください"></textarea>
+        </div>
+
+        <div class="form-group privacy-policy">
+          <label class="checkbox-container">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <span class="checkmark"></span>
+            <span class="privacy-text"><a href="#" target="_blank">プライバシーポリシー</a>に同意する</span>
+          </label>
+        </div>
+
+        <div class="form-button">
+          <button type="submit" class="btn btn-large btn-primary">送信する</button>
+        </div>
+      </form>
+
+      <div id="formSuccess" class="form-success" style="display: none;">
+        <div class="form-success-inner">
+          <div class="form-success-icon">✓</div>
+          <h3>お問い合わせありがとうございます</h3>
+          <p>お問い合わせを受け付けました。担当者より折り返しご連絡いたします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="footer-logo">整理の味方</div>
+          <address class="footer-address">
+            〒123-4567<br>
+            東京都○○区○○町1-2-3<br>
+            TEL: 0120-123-456<br>
+            受付時間: 9:00〜18:00（年中無休）
+          </address>
+        </div>
+        <div class="footer-menu">
+          <div class="footer-menu-section">
+            <h3 class="footer-menu-title">サービスメニュー</h3>
+            <ul class="footer-menu-list">
+              <li><a href="services.html#estate">遺品整理サービス</a></li>
+              <li><a href="services.html#lifetime">生前整理サービス</a></li>
+              <li><a href="services.html#cleanup">特殊清掃</a></li>
+              <li><a href="services.html#waste">不用品回収</a></li>
+            </ul>
+          </div>
+          <div class="footer-menu-section">
+            <h3 class="footer-menu-title">会社情報</h3>
+            <ul class="footer-menu-list">
+              <li><a href="about.html">会社概要</a></li>
+              <li><a href="faq.html">よくある質問</a></li>
+              <li><a href="#">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="services.html">サービス内容</a></li>
+            <li><a href="about.html">会社概要</a></li>
+            <li><a href="faq.html">よくある質問</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+        <div class="copyright">&copy; <span id="current-year"></span> 整理の味方 All Rights Reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

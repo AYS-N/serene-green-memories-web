@@ -1,26 +1,316 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>serene-green-memories-web</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>整理の味方 - 遺品整理・生前整理・特殊清掃のプロフェッショナル</title>
+  <meta name="description" content="遺品整理、生前整理、特殊清掃のプロフェッショナル。心を込めて、大切な思い出の整理をお手伝いいたします。" />
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap">
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <h1 class="logo">
+          <a href="index.html">整理の味方</a>
+        </h1>
+        <nav class="nav-pc">
+          <ul class="nav-list">
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="services.html">サービス内容</a></li>
+            <li><a href="about.html">会社概要</a></li>
+            <li><a href="faq.html">よくある質問</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+        <button class="nav-toggle" id="nav-toggle" aria-label="メニュー">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+    <nav class="nav-sp" id="nav-sp">
+      <ul class="nav-list">
+        <li><a href="index.html">トップ</a></li>
+        <li><a href="services.html">サービス内容</a></li>
+        <li><a href="about.html">会社概要</a></li>
+        <li><a href="faq.html">よくある質問</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <meta property="og:title" content="serene-green-memories-web" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  <!-- メインビジュアル -->
+  <div class="main-visual">
+    <div class="container">
+      <div class="main-visual-content">
+        <h2 class="main-visual-title">心を込めて<br>大切な思い出の整理を</h2>
+        <p class="main-visual-text">故人様の想いを尊重し、<br>ご遺族様の気持ちに寄り添います</p>
+        <div class="main-visual-buttons">
+          <a href="contact.html" class="btn btn-primary">お問い合わせ</a>
+          <a href="tel:0120-123-456" class="btn btn-outline tel-btn">
+            <span class="tel-label">お電話でのお問い合わせ</span>
+            <span class="tel-number">0120-123-456</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+  <!-- サービス紹介 -->
+  <section class="section service-intro">
+    <div class="container">
+      <h2 class="section-title">サービス内容</h2>
+      <div class="service-list">
+        <div class="service-item">
+          <div class="service-image">
+            <img src="images/service-estate.jpg" alt="遺品整理サービス">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">遺品整理</h3>
+            <p class="service-text">大切な方の遺品を丁寧に整理いたします。思い出の品は適切に保管し、不用品は責任を持って処分・リサイクルいたします。</p>
+            <a href="services.html#estate" class="service-link">詳しく見る</a>
+          </div>
+        </div>
+        
+        <div class="service-item">
+          <div class="service-image">
+            <img src="images/service-lifetime.jpg" alt="生前整理サービス">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">生前整理</h3>
+            <p class="service-text">ご自身の荷物を整理して、心もお部屋もスッキリと。大切な方への負担を減らし、自分らしい生活空間を取り戻しませんか？</p>
+            <a href="services.html#lifetime" class="service-link">詳しく見る</a>
+          </div>
+        </div>
+        
+        <div class="service-item">
+          <div class="service-image">
+            <img src="images/service-cleanup.jpg" alt="特殊清掃サービス">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">特殊清掃</h3>
+            <p class="service-text">特殊な状況での清掃が必要な場合も、プロの技術と専門知識で対応いたします。徹底した消臭・除菌で安心できる空間を取り戻します。</p>
+            <a href="services.html#cleanup" class="service-link">詳しく見る</a>
+          </div>
+        </div>
+        
+        <div class="service-item">
+          <div class="service-image">
+            <img src="images/service-waste.jpg" alt="不用品回収サービス">
+          </div>
+          <div class="service-content">
+            <h3 class="service-title">不用品回収</h3>
+            <p class="service-text">不要になった家具・家電・日用品などを適切に回収いたします。リサイクル可能な品は再利用し、環境に配慮した処分を行います。</p>
+            <a href="services.html#waste" class="service-link">詳しく見る</a>
+          </div>
+        </div>
+      </div>
+      <div class="section-more">
+        <a href="services.html" class="btn btn-secondary">サービス一覧へ</a>
+      </div>
+    </div>
+  </section>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- 選ばれる理由 -->
+  <section class="section reasons">
+    <div class="container">
+      <h2 class="section-title">選ばれる理由</h2>
+      <div class="reasons-list">
+        <div class="reason-item">
+          <div class="reason-icon">
+            <img src="images/icon-heart.svg" alt="心配り">
+          </div>
+          <h3 class="reason-title">心を込めた対応</h3>
+          <p class="reason-text">故人様への敬意と遺族様への配慮を大切に、心のこもったサービスを提供しています。</p>
+        </div>
+        
+        <div class="reason-item">
+          <div class="reason-icon">
+            <img src="images/icon-price.svg" alt="適正価格">
+          </div>
+          <h3 class="reason-title">明確な料金体系</h3>
+          <p class="reason-text">追加料金のない明確な料金プランで、安心してご依頼いただけます。</p>
+        </div>
+        
+        <div class="reason-item">
+          <div class="reason-icon">
+            <img src="images/icon-time.svg" alt="スピード対応">
+          </div>
+          <h3 class="reason-title">迅速な対応</h3>
+          <p class="reason-text">ご連絡いただいてから最短即日での対応が可能。急な依頼にも柔軟に対応します。</p>
+        </div>
+        
+        <div class="reason-item">
+          <div class="reason-icon">
+            <img src="images/icon-staff.svg" alt="専門スタッフ">
+          </div>
+          <h3 class="reason-title">専門知識を持つスタッフ</h3>
+          <p class="reason-text">研修を受けた専門スタッフが、丁寧かつ効率的に作業を行います。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 安心の流れ -->
+  <section class="section flow">
+    <div class="container">
+      <h2 class="section-title">ご依頼からの流れ</h2>
+      <div class="flow-list">
+        <div class="flow-item">
+          <div class="flow-step">STEP 1</div>
+          <div class="flow-content">
+            <h3 class="flow-title">お問い合わせ</h3>
+            <p class="flow-text">お電話またはお問い合わせフォームからご連絡ください。ご要望をお聞かせください。</p>
+          </div>
+        </div>
+        
+        <div class="flow-item">
+          <div class="flow-step">STEP 2</div>
+          <div class="flow-content">
+            <h3 class="flow-title">無料お見積り</h3>
+            <p class="flow-text">現地調査を行い、作業内容と料金のお見積りをご提示します。追加料金は一切ありません。</p>
+          </div>
+        </div>
+        
+        <div class="flow-item">
+          <div class="flow-step">STEP 3</div>
+          <div class="flow-content">
+            <h3 class="flow-title">ご契約・作業日決定</h3>
+            <p class="flow-text">内容にご納得いただけましたら、作業日を決定し契約を締結いたします。</p>
+          </div>
+        </div>
+        
+        <div class="flow-item">
+          <div class="flow-step">STEP 4</div>
+          <div class="flow-content">
+            <h3 class="flow-title">作業実施</h3>
+            <p class="flow-text">経験豊富なスタッフが丁寧に整理・清掃作業を行います。貴重品や思い出の品は大切に取り扱います。</p>
+          </div>
+        </div>
+        
+        <div class="flow-item">
+          <div class="flow-step">STEP 5</div>
+          <div class="flow-content">
+            <h3 class="flow-title">最終確認・お支払い</h3>
+            <p class="flow-text">作業完了後に仕上がりを確認していただき、ご満足いただけましたらお支払いをお願いいたします。</p>
+          </div>
+        </div>
+      </div>
+      <div class="section-more">
+        <a href="contact.html" class="btn btn-primary">無料お見積りのご依頼</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- お客様の声 -->
+  <section class="section testimonials">
+    <div class="container">
+      <h2 class="section-title">お客様の声</h2>
+      <div class="testimonial-list" id="testimonial-slider">
+        <div class="testimonial-item">
+          <div class="testimonial-content">
+            <p class="testimonial-text">突然の出来事で途方に暮れていましたが、スタッフの方々の温かい対応に救われました。遺品を丁寧に扱っていただき、感謝しています。</p>
+            <div class="testimonial-author">東京都 S.K様</div>
+          </div>
+        </div>
+        
+        <div class="testimonial-item">
+          <div class="testimonial-content">
+            <p class="testimonial-text">実家の片付けを依頼しましたが、想像以上にきれいになり驚きました。親切で丁寧な対応と、明確な料金体系に満足しています。</p>
+            <div class="testimonial-author">神奈川県 M.T様</div>
+          </div>
+        </div>
+        
+        <div class="testimonial-item">
+          <div class="testimonial-content">
+            <p class="testimonial-text">生前整理を手伝っていただき、気持ちがとても楽になりました。必要なものと不要なものの仕分けも的確にアドバイスいただき助かりました。</p>
+            <div class="testimonial-author">埼玉県 H.S様</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-control">
+        <button class="testimonial-prev" id="testimonial-prev" aria-label="前へ">&#10094;</button>
+        <button class="testimonial-next" id="testimonial-next" aria-label="次へ">&#10095;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- お問い合わせ -->
+  <section class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">お問い合わせ</h2>
+      <div class="contact-content">
+        <div class="contact-text">
+          <p>遺品整理や生前整理、特殊清掃についてのご質問やお見積りのご依頼など、お気軽にお問い合わせください。</p>
+          <div class="contact-info">
+            <div class="contact-tel">
+              <div class="contact-tel-label">お電話でのお問い合わせ</div>
+              <div class="contact-tel-number">0120-123-456</div>
+              <div class="contact-tel-hours">受付時間: 9:00〜18:00（年中無休）</div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-button">
+          <a href="contact.html" class="btn btn-large btn-primary">お問い合わせフォーム</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-info">
+          <div class="footer-logo">整理の味方</div>
+          <address class="footer-address">
+            〒123-4567<br>
+            東京都○○区○○町1-2-3<br>
+            TEL: 0120-123-456<br>
+            受付時間: 9:00〜18:00（年中無休）
+          </address>
+        </div>
+        <div class="footer-menu">
+          <div class="footer-menu-section">
+            <h3 class="footer-menu-title">サービスメニュー</h3>
+            <ul class="footer-menu-list">
+              <li><a href="services.html#estate">遺品整理サービス</a></li>
+              <li><a href="services.html#lifetime">生前整理サービス</a></li>
+              <li><a href="services.html#cleanup">特殊清掃</a></li>
+              <li><a href="services.html#waste">不用品回収</a></li>
+            </ul>
+          </div>
+          <div class="footer-menu-section">
+            <h3 class="footer-menu-title">会社情報</h3>
+            <ul class="footer-menu-list">
+              <li><a href="about.html">会社概要</a></li>
+              <li><a href="faq.html">よくある質問</a></li>
+              <li><a href="#">プライバシーポリシー</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <nav class="footer-nav">
+          <ul class="footer-nav-list">
+            <li><a href="index.html">トップ</a></li>
+            <li><a href="services.html">サービス内容</a></li>
+            <li><a href="about.html">会社概要</a></li>
+            <li><a href="faq.html">よくある質問</a></li>
+            <li><a href="contact.html">お問い合わせ</a></li>
+            <li><a href="#">プライバシーポリシー</a></li>
+          </ul>
+        </nav>
+        <div class="copyright">&copy; <span id="current-year"></span> 整理の味方 All Rights Reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
