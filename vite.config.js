@@ -1,15 +1,15 @@
 
 import { defineConfig } from 'vite'
+import path from 'path'
 
-export default defineConfig({
+export default defineConfig(({ mode }) => ({
   server: {
+    host: "::",
     port: 8080,
-    // Configure server to handle SPA-like navigation for HTML files
     open: '/',
   },
   build: {
     outDir: 'dist',
-    // Ensure all HTML files are processed correctly
     rollupOptions: {
       input: {
         main: 'index.html',
@@ -20,4 +20,4 @@ export default defineConfig({
       }
     }
   }
-})
+}))
