@@ -12,9 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
   const navSp = document.getElementById('nav-sp');
   
   if (navToggle && navSp) {
-    navToggle.addEventListener('click', function() {
+    // イベントリスナーを修正して正常に動作させる
+    navToggle.addEventListener('click', function(e) {
+      e.preventDefault(); // デフォルトの動作を防止
       navToggle.classList.toggle('active');
       navSp.classList.toggle('active');
+      console.log('ハンバーガーメニューがクリックされました'); // デバッグログ
     });
     
     // メニュー内のリンクをクリックした時にメニューを閉じる
@@ -25,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function() {
         navSp.classList.remove('active');
       });
     });
+  } else {
+    console.log('ナビゲーション要素が見つかりません'); // デバッグログ
   }
   
   // お客様の声スライダー
