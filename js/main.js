@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
   // FAQのアコーディオン
-  function toggleAnswer(element) {
+  window.toggleAnswer = function(element) {
     const answer = element.nextElementSibling;
     const isActive = element.classList.contains('active');
     
@@ -90,9 +90,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   }
-  
-  // グローバルスコープに関数を追加
-  window.toggleAnswer = toggleAnswer;
   
   // 初期表示時、URLハッシュに該当するFAQカテゴリまでスクロール
   if (window.location.hash && document.querySelector(window.location.hash)) {
