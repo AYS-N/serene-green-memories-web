@@ -1,6 +1,7 @@
 
 import { defineConfig } from 'vite'
 import path from 'path'
+import { componentTagger } from "lovable-tagger"
 
 export default defineConfig(({ mode }) => ({
   server: {
@@ -8,6 +9,9 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     open: '/',
   },
+  plugins: [
+    mode === 'development' && componentTagger(),
+  ].filter(Boolean),
   build: {
     outDir: 'dist',
     rollupOptions: {
@@ -19,5 +23,10 @@ export default defineConfig(({ mode }) => ({
         faq: 'faq.html'
       }
     }
+  },
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
   }
 }))
