@@ -949,7 +949,8 @@ ul, ol {
 }
 
 .price-note {
-  font-size: 13px;
+  font-size: 15px;
+  font-weight: bold;
   color: var(--color-text-light);
   margin-bottom: 20px;
 }
