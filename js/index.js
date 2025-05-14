@@ -19,8 +19,10 @@ function formatDate(dateString) {
 async function fetchRecentBlogs() {
   try {
     if (!SERVICE_DOMAIN || !API_KEY) {
-      blogPreview.innerHTML = '<p class="info-message">microCMSの環境変数が設定されていません。</p>';
-      return;
+      if (blogPreview) {
+        blogPreview.innerHTML = '<p class="info-message">microCMSの環境変数が設定されていません。</p>';
+      }
+      return [];
     }
     
     const response = await fetch(`https://${SERVICE_DOMAIN}.microcms.io/api/v1/blogs?limit=3`, {
@@ -37,7 +39,9 @@ async function fetchRecentBlogs() {
     return data.contents;
   } catch (error) {
     console.error('Error:', error);
-    blogPreview.innerHTML = '<p class="error-message">ブログ記事の取得に失敗しました。</p>';
+    if (blogPreview) {
+      blogPreview.innerHTML = '<p class="error-message">ブログ記事の取得に失敗しました。</p>';
+    }
     return [];
   }
 }

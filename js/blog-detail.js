@@ -31,7 +31,14 @@ async function fetchBlogDetail() {
   try {
     if (!blogId) {
       window.location.href = 'blog.html';
-      return;
+      return null;
+    }
+    
+    if (!SERVICE_DOMAIN || !API_KEY) {
+      if (blogDetailContent) {
+        blogDetailContent.innerHTML = '<p class="info-message">microCMSの環境変数が設定されていません。</p>';
+      }
+      return null;
     }
     
     const response = await fetch(`https://${SERVICE_DOMAIN}.microcms.io/api/v1/blogs/${blogId}`, {
@@ -48,7 +55,9 @@ async function fetchBlogDetail() {
     return blog;
   } catch (error) {
     console.error('Error:', error);
-    blogDetailContent.innerHTML = '<p class="error-message">ブログ記事の取得に失敗しました。しばらく経ってからもう一度お試しください。</p>';
+    if (blogDetailContent) {
+      blogDetailContent.innerHTML = '<p class="error-message">ブログ記事の取得に失敗しました。しばらく経ってからもう一度お試しください。</p>';
+    }
     return null;
   }
 }
@@ -171,5 +180,7 @@ async function displayRecentBlogs() {
 
 // ページ読み込み時に実行
 document.addEventListener('DOMContentLoaded', () => {
-  displayBlogDetail();
+  if (blogDetailContent) {
+    displayBlogDetail();
+  }
 });

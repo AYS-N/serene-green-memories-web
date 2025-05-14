@@ -23,6 +23,13 @@ function formatDate(dateString) {
 // ブログ記事一覧を取得する関数
 async function fetchBlogs(page = 1) {
   try {
+    if (!SERVICE_DOMAIN || !API_KEY) {
+      if (blogList) {
+        blogList.innerHTML = '<p class="info-message">microCMSの環境変数が設定されていません。</p>';
+      }
+      return null;
+    }
+    
     const offset = (page - 1) * limit;
     const response = await fetch(`https://${SERVICE_DOMAIN}.microcms.io/api/v1/blogs?limit=${limit}&offset=${offset}`, {
       headers: {
@@ -38,7 +45,9 @@ async function fetchBlogs(page = 1) {
     return data;
   } catch (error) {
     console.error('Error:', error);
-    blogList.innerHTML = '<p class="error-message">ブログ記事の取得に失敗しました。しばらく経ってからもう一度お試しください。</p>';
+    if (blogList) {
+      blogList.innerHTML = '<p class="error-message">ブログ記事の取得に失敗しました。しばらく経ってからもう一度お試しください。</p>';
+    }
     return null;
   }
 }
@@ -153,5 +162,7 @@ async function loadBlogs() {
 
 // ページ読み込み時にブログ記事を取得
 document.addEventListener('DOMContentLoaded', () => {
-  loadBlogs();
+  if (blogList) {
+    loadBlogs();
+  }
 });

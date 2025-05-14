@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
   // 現在の年を取得してコピーライトに設定
   const currentYear = new Date().getFullYear();
@@ -36,40 +35,44 @@ document.addEventListener('DOMContentLoaded', function() {
   const testimonialSlider = document.getElementById('testimonial-slider');
   if (testimonialSlider) {
     const testimonialItems = testimonialSlider.querySelectorAll('.testimonial-item');
-    const prevBtn = document.getElementById('testimonial-prev');
-    const nextBtn = document.getElementById('testimonial-next');
-    let currentIndex = 0;
-    
-    // 初期状態で最初のテスティモニアルを表示
-    if (testimonialItems.length > 0) {
+    if (testimonialItems && testimonialItems.length > 0) {
+      const prevBtn = document.getElementById('testimonial-prev');
+      const nextBtn = document.getElementById('testimonial-next');
+      let currentIndex = 0;
+      
+      // 初期状態で最初のテスティモニアルを表示
       testimonialItems[0].classList.add('active');
+      
+      // 次のスライドを表示
+      function showNextSlide() {
+        if (testimonialItems && testimonialItems.length > 0) {
+          testimonialItems[currentIndex].classList.remove('active');
+          currentIndex = (currentIndex + 1) % testimonialItems.length;
+          testimonialItems[currentIndex].classList.add('active');
+        }
+      }
+      
+      // 前のスライドを表示
+      function showPrevSlide() {
+        if (testimonialItems && testimonialItems.length > 0) {
+          testimonialItems[currentIndex].classList.remove('active');
+          currentIndex = (currentIndex - 1 + testimonialItems.length) % testimonialItems.length;
+          testimonialItems[currentIndex].classList.add('active');
+        }
+      }
+      
+      // ボタンクリック時のイベント
+      if (nextBtn) {
+        nextBtn.addEventListener('click', showNextSlide);
+      }
+      
+      if (prevBtn) {
+        prevBtn.addEventListener('click', showPrevSlide);
+      }
+      
+      // 自動スライド（5秒ごと）
+      setInterval(showNextSlide, 5000);
     }
-    
-    // 次のスライドを表示
-    function showNextSlide() {
-      testimonialItems[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex + 1) % testimonialItems.length;
-      testimonialItems[currentIndex].classList.add('active');
-    }
-    
-    // 前のスライドを表示
-    function showPrevSlide() {
-      testimonialItems[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex - 1 + testimonialItems.length) % testimonialItems.length;
-      testimonialItems[currentIndex].classList.add('active');
-    }
-    
-    // ボタンクリック時のイベント
-    if (nextBtn) {
-      nextBtn.addEventListener('click', showNextSlide);
-    }
-    
-    if (prevBtn) {
-      prevBtn.addEventListener('click', showPrevSlide);
-    }
-    
-    // 自動スライド（5秒ごと）
-    setInterval(showNextSlide, 5000);
   }
   
   // FAQのアコーディオン
