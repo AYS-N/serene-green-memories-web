@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
   // 現在の年を取得してコピーライトに設定
   const currentYear = new Date().getFullYear();
@@ -163,13 +162,20 @@ function scrollToHashElement() {
   }
 }
 
-// 各ページが読み込まれた後に初期化処理を実行
-// これはメインのDOMContentLoadedイベントに加えて、
-// 後から動的に読み込まれる可能性のあるページのために追加
-if (document.readyState === 'complete' || document.readyState === 'interactive') {
-  initMobileMenu();
-} else {
+// 即時実行関数でメニュー初期化を行う
+(function() {
+  // ページ読み込み状態に関わらず、メニュー初期化を実行
+  if (document.readyState === 'complete' || document.readyState === 'interactive' || document.readyState === 'loading') {
+    // すでにDOMが利用可能な場合は直接初期化
+    setTimeout(function() {
+      initMobileMenu();
+      console.log('ハンバーガーメニューを初期化しました');
+    }, 0);
+  }
+  
+  // 念のためDOMContentLoadedイベントでも初期化
   window.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
+    console.log('DOMContentLoadedでメニューを初期化しました');
   });
-}
+})();
