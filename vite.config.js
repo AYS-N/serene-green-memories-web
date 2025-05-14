@@ -20,7 +20,9 @@ export default defineConfig(({ mode }) => ({
         about: 'about.html',
         services: 'services.html',
         contact: 'contact.html',
-        faq: 'faq.html'
+        faq: 'faq.html',
+        blog: 'blog.html',
+        blogDetail: 'blog-detail.html'
       }
     }
   },
