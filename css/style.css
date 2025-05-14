@@ -1206,6 +1206,7 @@ FAQ ページ
 
 .faq-question-text {
   flex: 1;
+  padding-top: 4px;
   padding-right: 20px;
   font-weight: 500;
 }
@@ -1233,10 +1234,12 @@ FAQ ページ
   font-weight: 700;
   font-size: 20px;
   margin-right: 15px;
+  padding-top: 8px;
 }
 
 .faq-answer-content {
   flex: 1;
+  margin-top: 12px;
 }
 
 .faq-contact-section {
