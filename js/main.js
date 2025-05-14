@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
   // 現在の年を取得してコピーライトに設定
   const currentYear = new Date().getFullYear();
@@ -7,6 +8,23 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // モバイルメニューの開閉
+  initMobileMenu();
+  
+  // お客様の声スライダー
+  initTestimonialSlider();
+  
+  // FAQのアコーディオン初期化
+  initFaq();
+  
+  // お問い合わせフォームの送信処理
+  initContactForm();
+  
+  // URLハッシュに該当するFAQカテゴリまでスクロール
+  scrollToHashElement();
+});
+
+// モバイルメニューの初期化
+function initMobileMenu() {
   const navToggle = document.getElementById('nav-toggle');
   const navSp = document.getElementById('nav-sp');
   
@@ -30,8 +48,10 @@ document.addEventListener('DOMContentLoaded', function() {
   } else {
     console.log('ナビゲーション要素が見つかりません'); // デバッグログ
   }
-  
-  // お客様の声スライダー
+}
+
+// お客様の声スライダーの初期化
+function initTestimonialSlider() {
   const testimonialSlider = document.getElementById('testimonial-slider');
   if (testimonialSlider) {
     const testimonialItems = testimonialSlider.querySelectorAll('.testimonial-item');
@@ -74,8 +94,11 @@ document.addEventListener('DOMContentLoaded', function() {
       setInterval(showNextSlide, 5000);
     }
   }
-  
-  // FAQのアコーディオン
+}
+
+// FAQのアコーディオン初期化
+function initFaq() {
+  // FAQのアコーディオン関数をグローバルに設定
   window.toggleAnswer = function(element) {
     const answer = element.nextElementSibling;
     const isActive = element.classList.contains('active');
@@ -98,19 +121,10 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   }
-  
-  // 初期表示時、URLハッシュに該当するFAQカテゴリまでスクロール
-  if (window.location.hash && document.querySelector(window.location.hash)) {
-    setTimeout(function() {
-      const element = document.querySelector(window.location.hash);
-      window.scrollTo({
-        top: element.offsetTop - 120,
-        behavior: 'smooth'
-      });
-    }, 100);
-  }
-  
-  // お問い合わせフォームの送信処理
+}
+
+// お問い合わせフォームの初期化
+function initContactForm() {
   const contactForm = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
   
@@ -134,4 +148,28 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-});
+}
+
+// URLハッシュに該当する要素までスクロール
+function scrollToHashElement() {
+  if (window.location.hash && document.querySelector(window.location.hash)) {
+    setTimeout(function() {
+      const element = document.querySelector(window.location.hash);
+      window.scrollTo({
+        top: element.offsetTop - 120,
+        behavior: 'smooth'
+      });
+    }, 100);
+  }
+}
+
+// 各ページが読み込まれた後に初期化処理を実行
+// これはメインのDOMContentLoadedイベントに加えて、
+// 後から動的に読み込まれる可能性のあるページのために追加
+if (document.readyState === 'complete' || document.readyState === 'interactive') {
+  initMobileMenu();
+} else {
+  window.addEventListener('DOMContentLoaded', function() {
+    initMobileMenu();
+  });
+}
