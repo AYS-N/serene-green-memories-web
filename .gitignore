@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment / local config
+.env
+.env.*.local
+public/microcms-config.js

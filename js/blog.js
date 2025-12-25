@@ -1,7 +1,8 @@
 
+import { getMicrocmsConfig } from './microcms-config.js';
+
 // microCMSの設定
-const SERVICE_DOMAIN = import.meta.env.VITE_MICROCMS_SERVICE_DOMAIN;
-const API_KEY = import.meta.env.VITE_MICROCMS_API_KEY;
+const { serviceDomain: SERVICE_DOMAIN, apiKey: API_KEY } = getMicrocmsConfig();
 
 // DOM要素
 const blogList = document.getElementById('blog-list');
@@ -10,6 +11,8 @@ const pagination = document.getElementById('blog-pagination');
 // ページネーションの設定
 let currentPage = 1;
 const limit = 12;
+const urlParams = new URLSearchParams(window.location.search);
+const categoryId = urlParams.get('category');
 
 // 日付をフォーマットする関数
 function formatDate(dateString) {
@@ -31,7 +34,16 @@ async function fetchBlogs(page = 1) {
     }
     
     const offset = (page - 1) * limit;
-    const response = await fetch(`https://${SERVICE_DOMAIN}.microcms.io/api/v1/blogs?limit=${limit}&offset=${offset}`, {
+    const queryParams = new URLSearchParams({
+      limit: String(limit),
+      offset: String(offset),
+    });
+
+    if (categoryId) {
+      queryParams.append('filters', `category[equals]${categoryId}`);
+    }
+
+    const response = await fetch(`https://${SERVICE_DOMAIN}.microcms.io/api/v1/blogs?${queryParams.toString()}`, {
       headers: {
         'X-API-KEY': API_KEY
       }

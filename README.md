@@ -71,3 +71,27 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
+## microCMS setup (blog)
+
+Set credentials in one of the following ways:
+
+1) Vite env file (recommended)
+
+Create `.env` in the project root:
+
+```
+VITE_MICROCMS_SERVICE_DOMAIN=your-service-domain
+VITE_MICROCMS_API_KEY=your-api-key
+```
+
+2) Runtime config (static hosting)
+
+Copy `public/microcms-config.example.js` to `public/microcms-config.js` and fill values:
+
+```
+window.__MICROCMS__ = {
+  serviceDomain: 'your-service-domain',
+  apiKey: 'your-api-key',
+};
+```

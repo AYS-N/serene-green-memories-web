@@ -1,7 +1,8 @@
 
+import { getMicrocmsConfig } from './microcms-config.js';
+
 // microCMSの設定
-const SERVICE_DOMAIN = import.meta.env.VITE_MICROCMS_SERVICE_DOMAIN;
-const API_KEY = import.meta.env.VITE_MICROCMS_API_KEY;
+const { serviceDomain: SERVICE_DOMAIN, apiKey: API_KEY } = getMicrocmsConfig();
 
 // DOM要素
 const blogTitle = document.getElementById('blog-title');
@@ -65,6 +66,13 @@ async function fetchBlogDetail() {
 // カテゴリ一覧を取得する関数
 async function fetchCategories() {
   try {
+    if (!SERVICE_DOMAIN || !API_KEY) {
+      if (blogCategories) {
+        blogCategories.innerHTML = '<p class="info-message">microCMSの環境変数が設定されていません。</p>';
+      }
+      return [];
+    }
+
     const response = await fetch(`https://${SERVICE_DOMAIN}.microcms.io/api/v1/categories`, {
       headers: {
         'X-API-KEY': API_KEY
@@ -87,6 +95,13 @@ async function fetchCategories() {
 // 最新記事を取得する関数
 async function fetchRecentBlogs() {
   try {
+    if (!SERVICE_DOMAIN || !API_KEY) {
+      if (blogRecent) {
+        blogRecent.innerHTML = '<p class="info-message">microCMSの環境変数が設定されていません。</p>';
+      }
+      return [];
+    }
+
     const response = await fetch(`https://${SERVICE_DOMAIN}.microcms.io/api/v1/blogs?limit=5`, {
       headers: {
         'X-API-KEY': API_KEY

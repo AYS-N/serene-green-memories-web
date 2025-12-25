@@ -1,7 +1,8 @@
 
+import { getMicrocmsConfig } from './microcms-config.js';
+
 // microCMSの設定
-const SERVICE_DOMAIN = import.meta.env.VITE_MICROCMS_SERVICE_DOMAIN;
-const API_KEY = import.meta.env.VITE_MICROCMS_API_KEY;
+const { serviceDomain: SERVICE_DOMAIN, apiKey: API_KEY } = getMicrocmsConfig();
 
 // DOM要素
 const blogPreview = document.getElementById('blog-preview');
