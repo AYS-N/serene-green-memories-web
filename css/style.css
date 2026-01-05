@@ -770,6 +770,13 @@ ul, ol {
   line-height: 1.4;
 }
 
+.main-visual-title .brand-name {
+  display: inline-block;
+  color: var(--color-primary);
+  font-size: 1.3em;
+  font-weight: 700;
+}
+
 .main-visual-text {
   font-size: 18px;
   margin-bottom: 30px;
@@ -802,11 +809,17 @@ ul, ol {
 
 @media (max-width: 768px) {
   .main-visual {
-    padding: 80px 0;
+    padding: 60px 0;
   }
   
   .main-visual-title {
-    font-size: 28px;
+    font-size: 24px;
+    line-height: 1.5;
+    text-align: center;
+  }
+  
+  .main-visual-text {
+    text-align: center;
   }
   
   .main-visual-buttons {
@@ -857,17 +870,7 @@ ul, ol {
     align-items: flex-start;
   }
   .main-visual-person {
-    margin-left: 0;
-    margin-top: 32px;
-    width: 100%;
-    justify-content: center;
-    min-height: 0;
-  }
-  .main-visual-person img {
-    position: static;
-    height: auto;
-    width: 220px;
-    max-width: 70vw;
+    display: none;
   }
 }
 
