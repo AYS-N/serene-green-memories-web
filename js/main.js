@@ -127,6 +127,12 @@ function initContactForm() {
   const contactForm = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
   
+  // 希望日時のドロップダウンを初期化
+  initPreferredDateSelect();
+  
+  // 住所自動入力機能を初期化
+  initAutoFillAddress();
+  
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
@@ -147,6 +153,69 @@ function initContactForm() {
       }
     });
   }
+}
+
+// 希望日時のドロップダウンを初期化（今日から1ヶ月先まで）
+function initPreferredDateSelect() {
+  const preferredDateSelect = document.getElementById('preferred_date');
+  if (!preferredDateSelect) return;
+  
+  const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
+  const today = new Date();
+  
+  // 1ヶ月分の日付を追加
+  for (let i = 0; i < 31; i++) {
+    const date = new Date(today);
+    date.setDate(today.getDate() + i);
+    
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    const weekday = weekdays[date.getDay()];
+    
+    const option = document.createElement('option');
+    option.value = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    option.textContent = `${year}/${month}/${day}(${weekday})`;
+    preferredDateSelect.appendChild(option);
+  }
+}
+
+// 郵便番号から住所を自動入力する機能
+function initAutoFillAddress() {
+  const autoFillLink = document.getElementById('autoFillAddress');
+  const postalCodeInput = document.getElementById('postalcode');
+  const addressInput = document.getElementById('address');
+  
+  if (!autoFillLink || !postalCodeInput || !addressInput) return;
+  
+  autoFillLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    // 郵便番号を取得（ハイフンを除去）
+    const postalCode = postalCodeInput.value.replace(/-/g, '');
+    
+    if (postalCode.length !== 7) {
+      alert('郵便番号は7桁で入力してください（例：000-0000）');
+      return;
+    }
+    
+    // 郵便番号検索API（zipcloud）を使用
+    fetch(`https://zipcloud.ibsnet.co.jp/api/search?zipcode=${postalCode}`)
+      .then(response => response.json())
+      .then(data => {
+        if (data.results) {
+          const result = data.results[0];
+          const address = result.address1 + result.address2 + result.address3;
+          addressInput.value = address;
+        } else {
+          alert('住所が見つかりませんでした。郵便番号を確認してください。');
+        }
+      })
+      .catch(error => {
+        console.error('住所検索エラー:', error);
+        alert('住所の検索中にエラーが発生しました。');
+      });
+  });
 }
 
 // URLハッシュに該当する要素までスクロール

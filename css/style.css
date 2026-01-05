@@ -1909,6 +1909,153 @@ FAQ ページ
   margin-top: 30px;
 }
 
+/* 画像に合わせた新しいフォームスタイル */
+.contact-form-styled {
+  padding: 0;
+  background-color: white;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  padding: 25px 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.form-row:first-child {
+  border-top: 1px solid #e5e5e5;
+}
+
+.form-row-textarea {
+  align-items: flex-start;
+}
+
+.form-label-area {
+  display: flex;
+  align-items: center;
+  width: 180px;
+  min-width: 180px;
+  gap: 15px;
+}
+
+.form-label-area label {
+  font-weight: 500;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 0;
+  width: 80px;
+  min-width: 80px;
+}
+
+.required-badge {
+  display: inline-block;
+  background-color: #e53935;
+  color: white;
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-weight: 500;
+}
+
+.form-input-area {
+  flex: 1;
+}
+
+.form-input-area input,
+.form-input-area select,
+.form-input-area textarea {
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 15px;
+  font-size: 15px;
+  width: 100%;
+}
+
+.form-input-area input::placeholder,
+.form-input-area textarea::placeholder {
+  color: #999;
+}
+
+.form-input-area input:focus,
+.form-input-area select:focus,
+.form-input-area textarea:focus {
+  outline: none;
+  background-color: #fff;
+  border: 1px solid var(--color-primary);
+}
+
+.form-input-area textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.input-short {
+  max-width: 180px;
+}
+
+.form-input-with-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.auto-fill-link {
+  color: #2196F3;
+  text-decoration: underline;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.auto-fill-link:hover {
+  text-decoration: none;
+}
+
+.form-input-with-note {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.form-note {
+  color: #e53935;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.contact-form-styled .form-button {
+  padding: 30px;
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .form-label-area {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .form-input-area {
+    width: 100%;
+  }
+
+  .input-short {
+    max-width: 100%;
+  }
+
+  .form-input-with-link,
+  .form-input-with-note {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
 .form-success {
   max-width: 800px;
   margin: 30px auto 0;

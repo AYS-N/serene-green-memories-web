@@ -89,46 +89,77 @@
   <section class="section contact-form-section">
     <div class="container">
       <h2 class="section-title">お問い合わせフォーム</h2>
-      <form id="contactForm" class="contact-form">
-        <div class="form-group">
-          <label for="name">お名前<span class="required">必須</span></label>
-          <input type="text" id="name" name="name" required placeholder="山田 太郎">
+      <form id="contactForm" class="contact-form contact-form-styled">
+        <div class="form-row">
+          <div class="form-label-area">
+            <label for="name">氏名</label>
+            <span class="required-badge">必須</span>
+          </div>
+          <div class="form-input-area">
+            <input type="text" id="name" name="name" required placeholder="整理 太郎">
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="email">メールアドレス<span class="required">必須</span></label>
-          <input type="email" id="email" name="email" required placeholder="example@email.com">
+        <div class="form-row">
+          <div class="form-label-area">
+            <label for="furigana">ふりがな</label>
+            <span class="required-badge">必須</span>
+          </div>
+          <div class="form-input-area">
+            <input type="text" id="furigana" name="furigana" required placeholder="せいり たろう">
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="phone">電話番号</label>
-          <input type="tel" id="phone" name="phone" placeholder="090-1234-5678">
+        <div class="form-row">
+          <div class="form-label-area">
+            <label for="postalcode">郵便番号</label>
+            <span class="required-badge">必須</span>
+          </div>
+          <div class="form-input-area form-input-with-link">
+            <input type="text" id="postalcode" name="postalcode" required placeholder="000-0000" class="input-short">
+            <a href="#" class="auto-fill-link" id="autoFillAddress">住所自動入力</a>
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="inquiry_type">お問い合わせ内容<span class="required">必須</span></label>
-          <select id="inquiry_type" name="inquiry_type" required>
-            <option value="" disabled selected>お問い合わせ内容を選択してください</option>
-            <option value="estate_cleanup">遺品整理について</option>
-            <!-- <option value="lifetime_cleanup">生前整理について</option> -->
-            <option value="special_cleaning">特殊清掃について</option>
-            <!-- <option value="waste_collection">不用品回収について</option> -->
-            <option value="price">料金について</option>
-            <option value="other">その他</option>
-          </select>
+        <div class="form-row">
+          <div class="form-label-area">
+            <label for="address">住所</label>
+            <span class="required-badge">必須</span>
+          </div>
+          <div class="form-input-area">
+            <input type="text" id="address" name="address" required placeholder="入力してください">
+          </div>
         </div>
 
-        <div class="form-group">
-          <label for="message">お問い合わせ詳細<span class="required">必須</span></label>
-          <textarea id="message" name="message" required placeholder="お問い合わせ内容の詳細をご記入ください"></textarea>
+        <div class="form-row">
+          <div class="form-label-area">
+            <label for="phone">電話番号</label>
+            <span class="required-badge">必須</span>
+          </div>
+          <div class="form-input-area">
+            <input type="tel" id="phone" name="phone" required placeholder="000-0000-0000">
+          </div>
         </div>
 
-        <div class="form-group privacy-policy">
-          <label class="checkbox-container">
-            <input type="checkbox" id="privacy" name="privacy" required>
-            <span class="checkmark"></span>
-            <span class="privacy-text"><a href="#" target="_blank">プライバシーポリシー</a>に同意する</span>
-          </label>
+        <div class="form-row">
+          <div class="form-label-area">
+            <label for="preferred_date">希望日時</label>
+          </div>
+          <div class="form-input-area form-input-with-note">
+            <select id="preferred_date" name="preferred_date" class="input-short">
+              <option value="">日付を選択</option>
+            </select>
+            <span class="form-note">※入力日から１ヶ月先まで選択可能</span>
+          </div>
+        </div>
+
+        <div class="form-row form-row-textarea">
+          <div class="form-label-area">
+            <label for="message">ご相談内容</label>
+          </div>
+          <div class="form-input-area">
+            <textarea id="message" name="message" placeholder="遺品整理について"></textarea>
+          </div>
         </div>
 
         <div class="form-button">
