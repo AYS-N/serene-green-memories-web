@@ -10,7 +10,7 @@ const pagination = document.getElementById('blog-pagination');
 
 // ページネーションの設定
 let currentPage = 1;
-const limit = 12;
+const limit = 6;
 const urlParams = new URLSearchParams(window.location.search);
 const categoryId = urlParams.get('category');
 
