@@ -742,7 +742,7 @@ ul, ol {
   background-position: center;
   position: relative;
   padding: 100px 0 40px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .main-visual::before {
@@ -832,17 +832,16 @@ ul, ol {
   align-items: flex-end;
   justify-content: flex-end;
   min-height: 380px;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .main-visual-person img {
   position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 99px;
-  z-index: 0;
-  height: 416px;
-  width: 353px;
+  right: -40px;
+  bottom: -40px;
+  z-index: 10;
+  height: 520px;
+  width: auto;
   max-width: none;
   object-fit: contain;
   display: block;
