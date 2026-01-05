@@ -757,8 +757,10 @@ ul, ol {
 }
 
 .tel-number {
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 700;
+  width: 165px;
+  height: 33px;
 }
 
 @media (max-width: 768px) {
@@ -800,8 +802,10 @@ ul, ol {
   position: absolute;
   right: 0;
   bottom: 0;
-  height: 115%;
-  width: auto;
+  left: 99px;
+  z-index: 0;
+  height: 416px;
+  width: 353px;
   max-width: none;
   object-fit: contain;
   display: block;
