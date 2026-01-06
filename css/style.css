@@ -737,7 +737,7 @@ ul, ol {
 
 .main-visual {
   background-color: var(--color-primary-bg);
-  background-image: url('../images/a9ffd2ed09cdb58fd07590cca4357730.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/遺品整理作業シーン.png');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -768,18 +768,23 @@ ul, ol {
   font-weight: 600;
   margin-bottom: 20px;
   line-height: 1.4;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .main-visual-title .brand-name {
   display: inline-block;
-  color: var(--color-primary);
+  color: #90EE90;
   font-size: 1.3em;
   font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .main-visual-text {
   font-size: 18px;
   margin-bottom: 30px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .main-visual-buttons {
@@ -1391,13 +1396,6 @@ ul, ol {
   color: var(--color-primary);
   position: absolute;
   left: 0;
-}
-
-.price-table {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 15px;
-  margin-bottom: 15px;
 }
 
 .price-item {
@@ -2111,4 +2109,1016 @@ FAQ ページ
   list-style: none;
   padding-left: 0;
   margin: 0;
+}
+
+/* 
+==========================================================================
+サービスページ - おかたづけ×買取
+==========================================================================
+*/
+
+/* サービスヒーロー */
+.service-hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/遺品整理作業シーン.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.service-hero h1 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 20px;
+  line-height: 1.4;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.service-hero-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.badge-item {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.badge-accent {
+  background-color: #e53935;
+}
+
+.badge-times {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.service-hero-text {
+  font-size: 1.1rem;
+  color: #fff;
+  margin-bottom: 25px;
+  line-height: 1.8;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.service-hero-area {
+  display: inline-flex;
+  align-items: center;
+  gap: 15px;
+  background-color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.area-label {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.area-list-inline {
+  color: #333;
+  font-weight: 500;
+}
+
+/* お悩みセクション */
+.troubles-section {
+  background-color: white;
+  padding: 60px 0;
+}
+
+.troubles-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.trouble-item {
+  background-color: var(--color-primary-bg);
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.trouble-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.trouble-item p {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.troubles-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.troubles-description p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.troubles-solution {
+  background-color: #fff8e1;
+  padding: 20px 30px;
+  border-radius: 8px;
+  border-left: 4px solid #ffc107;
+}
+
+/* 特徴セクション */
+.features-section {
+  background-color: var(--color-primary-bg);
+  padding: 80px 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.feature-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.feature-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 15px;
+}
+
+.feature-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* 安心ポイント */
+.safety-points {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.safety-title {
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--color-primary-dark);
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.safety-item {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  background-color: var(--color-primary-bg);
+  border-radius: 8px;
+}
+
+.safety-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.safety-content h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.safety-content p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* 料金セクション */
+.pricing-section {
+  background-color: white;
+  padding: 80px 0;
+}
+
+.pricing-system {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.pricing-subtitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 20px;
+}
+
+.pricing-description {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.pricing-formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.formula-item {
+  background-color: #f5f5f5;
+  padding: 20px 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.formula-label {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  display: block;
+}
+
+.formula-sub {
+  font-size: 0.85rem;
+  color: #666;
+  display: block;
+  margin-top: 5px;
+}
+
+.formula-operator {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.formula-highlight {
+  background-color: #e8f5e9;
+  border: 2px solid var(--color-primary);
+}
+
+.formula-result {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.formula-result .formula-label {
+  color: white;
+}
+
+.pricing-note {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* モデルケース */
+.model-cases {
+  text-align: center;
+}
+
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.case-card {
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.case-header {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.case-label {
+  font-size: 0.8rem;
+  opacity: 0.9;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.case-type {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.case-body {
+  padding: 25px 20px;
+}
+
+.case-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ddd;
+  font-size: 0.95rem;
+}
+
+.case-row:last-child {
+  border-bottom: none;
+}
+
+.case-subtotal {
+  font-weight: 600;
+  background-color: #f0f0f0;
+  margin: 10px -20px;
+  padding: 10px 20px;
+}
+
+.case-buyback {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.case-total {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 700;
+  margin: 10px -20px -25px;
+  padding: 15px 20px;
+  font-size: 1.1rem;
+}
+
+.cases-note {
+  font-size: 0.85rem;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* 買取対象品セクション */
+.buyback-section {
+  background-color: var(--color-primary-bg);
+  padding: 80px 0;
+}
+
+.buyback-description {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.buyback-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.buyback-item {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.buyback-icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.buyback-item h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.buyback-item p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 買取実例 */
+.buyback-examples {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.buyback-examples-title {
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 30px;
+}
+
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.example-item {
+  background-color: var(--color-primary-bg);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.example-category {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.example-price {
+  font-size: 0.9rem;
+  color: var(--color-primary-dark);
+}
+
+.example-price strong {
+  display: block;
+  font-size: 1.3rem;
+  color: #e53935;
+  margin-top: 5px;
+}
+
+/* サービスの流れ - 追加スタイル */
+.flow-section {
+  background-color: white;
+}
+
+/* SP表示用 */
+.sp-only {
+  display: none;
+}
+
+/* index.html サービスセクション追加スタイル */
+.service-intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.service-intro-text {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+.service-list-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-pricing-preview {
+  background-color: var(--color-primary-bg);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.pricing-preview-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 25px;
+}
+
+.pricing-preview-formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.formula-box {
+  background-color: white;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.formula-box.formula-highlight {
+  background-color: #e8f5e9;
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary-dark);
+}
+
+.formula-box.formula-result {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.formula-sign {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.pricing-preview-note {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .service-list-3col {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-preview-formula {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .formula-sign {
+    font-size: 1.2rem;
+  }
+}
+
+/* レスポンシブ */
+@media (max-width: 768px) {
+  .sp-only {
+    display: inline;
+  }
+
+  .service-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .service-hero-badge {
+    gap: 10px;
+  }
+
+  .badge-item {
+    padding: 8px 15px;
+    font-size: 1rem;
+  }
+
+  .badge-times {
+    font-size: 1.5rem;
+  }
+
+  .service-hero-text {
+    font-size: 0.95rem;
+  }
+
+  .service-hero-area {
+    flex-direction: column;
+    gap: 8px;
+    padding: 15px 20px;
+  }
+
+  .troubles-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .safety-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing-formula {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .formula-operator {
+    font-size: 1.5rem;
+  }
+
+  .cases-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .buyback-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .examples-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+}
+
+/* ==========================================================================
+   トップページ - 遺品整理向けスタイル
+   ========================================================================== */
+
+/* メインビジュアル リード文 */
+.main-visual-lead {
+  font-size: 1.2rem;
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 20px;
+  border-radius: var(--radius-sm);
+}
+
+/* サービスヒーロー リード文 */
+.service-hero-lead {
+  font-size: 1.1rem;
+  color: var(--color-primary-dark);
+  font-weight: 700;
+  margin-bottom: 15px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 20px;
+  border-radius: var(--radius-sm);
+}
+
+/* 料金セクション追加スタイル */
+.pricing-highlight {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin: 20px 0;
+}
+
+.pricing-sub {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--color-text-light);
+}
+
+.service-intro {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.service-intro-text {
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* こんなお悩みセクション（トップページ） */
+.troubles-section-home {
+  background-color: var(--color-primary-bg);
+}
+
+.troubles-list-home {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+.trouble-item-home {
+  background: white;
+  padding: 25px 20px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--color-primary);
+}
+
+.trouble-item-home p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.troubles-solution-home {
+  text-align: center;
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  margin-top: 20px;
+}
+
+/* 料金表 */
+.price-table-wrapper {
+  max-width: 700px;
+  margin: 0 auto 40px;
+  overflow-x: auto;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.price-table th,
+.price-table td {
+  padding: 15px 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.price-table th {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.price-table tbody tr:hover {
+  background-color: var(--color-primary-bg);
+}
+
+.price-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.price-table td:last-child {
+  font-weight: 600;
+  color: var(--color-primary-dark);
+}
+
+.price-table-note {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  text-align: center;
+}
+
+/* 完全回収セクション */
+.complete-collection {
+  background: linear-gradient(135deg, #fafafa 0%, #f0f4ef 100%);
+}
+
+.complete-collection-intro {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.complete-collection-highlight {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.subsection-title {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 40px 0 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--color-primary);
+  display: inline-block;
+  width: 100%;
+}
+
+.collection-items {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.collection-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 30px;
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  min-width: 120px;
+}
+
+.collection-icon {
+  font-size: 2.5rem;
+}
+
+.collection-item span:last-child {
+  font-weight: 500;
+}
+
+.collection-items-image,
+.buyback-items-image {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.collection-items-image img,
+.buyback-items-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.buyback-items-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto 20px;
+}
+
+.buyback-item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 15px 10px;
+  background: white;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.buyback-item-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.buyback-icon {
+  font-size: 1.8rem;
+}
+
+.buyback-note {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-top: 20px;
+}
+
+/* 整理のミカタについてセクション */
+.about-section {
+  background-color: #fff;
+}
+
+.about-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 2;
+}
+
+.about-message {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--color-primary-bg);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+}
+
+.about-message-title {
+  font-size: 1.3rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.about-message-content {
+  line-height: 1.9;
+}
+
+.about-message-content p {
+  margin-bottom: 15px;
+}
+
+.about-message-highlight {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+  margin-bottom: 20px;
+  padding: 15px;
+  background: white;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.about-message-cta {
+  text-align: center;
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid var(--color-border);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+  .troubles-list-home {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .trouble-item-home {
+    padding: 20px 15px;
+  }
+
+  .troubles-solution-home {
+    font-size: 1.1rem;
+  }
+
+  .price-table th,
+  .price-table td {
+    padding: 12px 10px;
+    font-size: 0.9rem;
+  }
+
+  .complete-collection-intro {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  .complete-collection-highlight {
+    font-size: 1.1rem;
+  }
+
+  .collection-items {
+    gap: 15px;
+  }
+
+  .collection-item {
+    padding: 15px 20px;
+    min-width: 100px;
+  }
+
+  .collection-icon {
+    font-size: 2rem;
+  }
+
+  .buyback-items-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .buyback-item-card {
+    padding: 12px 8px;
+    font-size: 0.85rem;
+  }
+
+  .buyback-icon {
+    font-size: 1.5rem;
+  }
 }
