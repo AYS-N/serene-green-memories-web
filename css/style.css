@@ -2976,8 +2976,10 @@ FAQ ページ
 
 .troubles-image {
   width: 100%;
+  max-width: 1300px;
   height: auto;
   display: block;
+  margin: 0 auto;
 }
 
 .troubles-list-home {
