@@ -2997,6 +2997,13 @@ FAQ ページ
   margin: 0 auto;
 }
 
+/* スマホ版でグリーン系デザイン画像を上に移動 */
+@media (max-width: 768px) {
+  .green-design-section {
+    margin-top: -20px;
+  }
+}
+
 .troubles-list-home {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
