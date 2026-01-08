@@ -52,19 +52,21 @@
 
     <!-- メインビジュアル -->
     <div class="main-visual-hero">
-      <img src="images/整理のミカタ_PC最適サイズ.png" alt="整理のミカタ - 地域No.1の安心価格 遺品もお悩みも全て回収します！" class="hero-image">
-      <div class="hero-buttons-overlay">
-        <a href="contact.html" class="hero-btn-contact">
-          <span class="hero-btn-contact-text">無料お見積り・ご相談はこちら</span>
-        </a>
-        <a href="tel:0120-433-233" class="hero-btn-tel">
-          <span class="hero-btn-tel-icon">📞</span>
-          <span class="hero-btn-tel-content">
-            <span class="hero-btn-tel-label">お電話はこちら</span>
-            <span class="hero-btn-tel-number">0120-433-233</span>
-          </span>
-        </a>
-      </div>
+      <img src="images/heroimg.png" alt="整理のミカタ - 地域No.1の安心価格 遺品もお悩みも全て回収します！" class="hero-image">
+    </div>
+
+    <!-- 固定フローティングボタン -->
+    <div class="floating-buttons">
+      <a href="contact.html" class="floating-btn-contact">
+        <span class="floating-btn-contact-text">無料お見積り・ご相談</span>
+      </a>
+      <a href="tel:0120-433-233" class="floating-btn-tel">
+        <span class="floating-btn-tel-icon">📞</span>
+        <span class="floating-btn-tel-content">
+          <span class="floating-btn-tel-label">お電話はこちら</span>
+          <span class="floating-btn-tel-number">0120-433-233</span>
+        </span>
+      </a>
     </div>
 
     <!-- こんなお悩み -->
@@ -377,5 +379,34 @@
     <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/js/index.js"></script>
     <script type="module" src="/js/main.js"></script>
+    
+    <!-- フローティングボタンのスクロール制御 -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var floatingButtons = document.querySelector('.floating-buttons');
+        if (!floatingButtons) {
+          console.log('floating-buttons not found');
+          return;
+        }
+        
+        var scrollThreshold = 200;
+        
+        function handleScroll() {
+          if (window.scrollY > scrollThreshold || window.pageYOffset > scrollThreshold) {
+            floatingButtons.classList.add('visible');
+          } else {
+            floatingButtons.classList.remove('visible');
+          }
+        }
+        
+        // 初期状態をチェック
+        handleScroll();
+        
+        // スクロールイベントを監視
+        window.addEventListener('scroll', handleScroll);
+        
+        console.log('Floating buttons initialized');
+      });
+    </script>
   </body>
 </html>

@@ -20,6 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // URLハッシュに該当するFAQカテゴリまでスクロール
   scrollToHashElement();
+  
+  // フローティングボタンのスクロール表示制御
+  initFloatingButtons();
 });
 
 // モバイルメニューの初期化
@@ -229,6 +232,28 @@ function scrollToHashElement() {
       });
     }, 100);
   }
+}
+
+// フローティングボタンのスクロール表示制御
+function initFloatingButtons() {
+  const floatingButtons = document.querySelector('.floating-buttons');
+  if (!floatingButtons) return;
+  
+  const scrollThreshold = 200; // 200px以上スクロールで表示
+  
+  function handleScroll() {
+    if (window.scrollY > scrollThreshold) {
+      floatingButtons.classList.add('visible');
+    } else {
+      floatingButtons.classList.remove('visible');
+    }
+  }
+  
+  // 初期状態をチェック
+  handleScroll();
+  
+  // スクロールイベントを監視
+  window.addEventListener('scroll', handleScroll);
 }
 
 // 即時実行関数でメニュー初期化を行う
