@@ -630,6 +630,20 @@ ul, ol {
 .logo a {
   font-family: var(--font-serif);
   color: var(--color-primary);
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 150px;
+  width: auto;
+  margin-left: 50px;
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    height: 48px;
+  }
 }
 
 .nav-list {
