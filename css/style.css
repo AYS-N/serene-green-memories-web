@@ -3296,3 +3296,18 @@ FAQ ページ
     font-size: 1.5rem;
   }
 }
+
+/* スマートフォン向け画像サイズ調整 */
+@media (max-width: 768px) {
+  .main-visual-hero .hero-image {
+    width: 120%;
+    max-width: none;
+    margin-left: -10%;
+  }
+
+  .troubles-image {
+    width: 120%;
+    max-width: none;
+    margin-left: -10%;
+  }
+}
