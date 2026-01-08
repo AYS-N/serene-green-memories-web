@@ -2968,6 +2968,18 @@ FAQ ページ
   background-color: var(--color-primary-bg);
 }
 
+/* こんなお悩み画像セクション */
+.troubles-image-section {
+  padding: 0;
+  margin-top: 40px;
+}
+
+.troubles-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .troubles-list-home {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
