@@ -2809,14 +2809,14 @@ FAQ ページ
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 24px;
+  padding: 16px 28px;
   background: linear-gradient(180deg, #4CAF50 0%, #388E3C 100%);
   border: 2px solid #2E7D32;
   border-radius: 8px;
   color: white;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
@@ -2883,8 +2883,8 @@ FAQ ページ
   }
 
   .floating-btn-contact {
-    padding: 12px 18px;
-    font-size: 0.85rem;
+    padding: 14px 20px;
+    font-size: 1rem;
   }
 
   .floating-btn-tel {
