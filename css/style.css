@@ -642,7 +642,8 @@ ul, ol {
 
 @media (max-width: 768px) {
   .logo-img {
-    height: 48px;
+    height: 100px;
+    margin-left: 10px;
   }
 }
 
