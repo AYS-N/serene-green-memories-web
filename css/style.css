@@ -2772,7 +2772,7 @@ FAQ ページ
 .main-visual-hero {
   position: relative;
   width: 100%;
-  margin-top: 80px;
+  margin-top: 0;
 }
 
 .main-visual-hero .hero-image {
