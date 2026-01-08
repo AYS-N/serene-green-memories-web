@@ -3301,14 +3301,14 @@ FAQ ページ
 /* スマートフォン向け画像サイズ調整 */
 @media (max-width: 768px) {
   .main-visual-hero .hero-image {
-    width: 120%;
+    width: 150%;
     max-width: none;
-    margin-left: -10%;
+    margin-left: -25%;
   }
 
   .troubles-image {
-    width: 120%;
+    width: 150%;
     max-width: none;
-    margin-left: -10%;
+    margin-left: -25%;
   }
 }
