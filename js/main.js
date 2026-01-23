@@ -27,29 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // モバイルメニューの初期化
 function initMobileMenu() {
-  const navToggle = document.getElementById('nav-toggle');
-  const navSp = document.getElementById('nav-sp');
-  
-  if (navToggle && navSp) {
-    // イベントリスナーを修正して正常に動作させる
-    navToggle.addEventListener('click', function(e) {
-      e.preventDefault(); // デフォルトの動作を防止
-      navToggle.classList.toggle('active');
-      navSp.classList.toggle('active');
-      console.log('ハンバーガーメニューがクリックされました'); // デバッグログ
-    });
-    
-    // メニュー内のリンクをクリックした時にメニューを閉じる
-    const navLinks = navSp.querySelectorAll('a');
-    navLinks.forEach(function(link) {
-      link.addEventListener('click', function() {
-        navToggle.classList.remove('active');
-        navSp.classList.remove('active');
-      });
-    });
-  } else {
-    console.log('ナビゲーション要素が見つかりません'); // デバッグログ
-  }
+  // 下部のensureMobileMenuInitで初期化するため、ここでは何もしない
+  ensureMobileMenuInit();
 }
 
 // お客様の声スライダーの初期化
@@ -256,20 +235,39 @@ function initFloatingButtons() {
   window.addEventListener('scroll', handleScroll);
 }
 
-// 即時実行関数でメニュー初期化を行う
-(function() {
-  // ページ読み込み状態に関わらず、メニュー初期化を実行
-  if (document.readyState === 'complete' || document.readyState === 'interactive' || document.readyState === 'loading') {
-    // すでにDOMが利用可能な場合は直接初期化
-    setTimeout(function() {
-      initMobileMenu();
-      console.log('ハンバーガーメニューを初期化しました');
-    }, 0);
+// 確実にメニューを初期化する
+function ensureMobileMenuInit() {
+  const navToggle = document.getElementById('nav-toggle');
+  const navSp = document.getElementById('nav-sp');
+
+  if (navToggle && navSp && !navToggle.hasAttribute('data-initialized')) {
+    navToggle.setAttribute('data-initialized', 'true');
+
+    navToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      this.classList.toggle('active');
+      navSp.classList.toggle('active');
+    });
+
+    // メニュー内のリンクをクリックした時にメニューを閉じる
+    navSp.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        navToggle.classList.remove('active');
+        navSp.classList.remove('active');
+      });
+    });
+
+    console.log('ハンバーガーメニューを初期化しました');
   }
-  
-  // 念のためDOMContentLoadedイベントでも初期化
-  window.addEventListener('DOMContentLoaded', function() {
-    initMobileMenu();
-    console.log('DOMContentLoadedでメニューを初期化しました');
-  });
-})();
+}
+
+// 複数の方法で初期化を試みる
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', ensureMobileMenuInit);
+} else {
+  ensureMobileMenuInit();
+}
+
+// 念のため、loadイベントでも初期化
+window.addEventListener('load', ensureMobileMenuInit);
