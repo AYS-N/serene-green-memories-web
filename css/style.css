@@ -1654,10 +1654,8 @@ li {
 */
 
 .philosophy-content {
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  gap: 40px;
-  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .philosophy-main {
@@ -1674,9 +1672,8 @@ li {
 }
 
 .message-content {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .message-image img {
@@ -1761,8 +1758,6 @@ li {
 }
 
 @media (max-width: 768px) {
-  .philosophy-content,
-  .message-content,
   .map-content {
     grid-template-columns: 1fr;
   }
