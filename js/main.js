@@ -217,20 +217,32 @@ function scrollToHashElement() {
 function initFloatingButtons() {
   const floatingButtons = document.querySelector('.floating-buttons');
   if (!floatingButtons) return;
-  
+
+  const footer = document.querySelector('.footer');
   const scrollThreshold = 200; // 200px以上スクロールで表示
-  
+
   function handleScroll() {
-    if (window.scrollY > scrollThreshold) {
+    const scrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+
+    // フッターが画面内に入っているかチェック
+    let isFooterVisible = false;
+    if (footer) {
+      const footerRect = footer.getBoundingClientRect();
+      // フッターの上端が画面下部に入ってきたら非表示
+      isFooterVisible = footerRect.top < windowHeight - 50;
+    }
+
+    if (scrollY > scrollThreshold && !isFooterVisible) {
       floatingButtons.classList.add('visible');
     } else {
       floatingButtons.classList.remove('visible');
     }
   }
-  
+
   // 初期状態をチェック
   handleScroll();
-  
+
   // スクロールイベントを監視
   window.addEventListener('scroll', handleScroll);
 }
