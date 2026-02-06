@@ -1501,6 +1501,7 @@ li {
 
 .page-title {
   background-color: var(--color-primary-bg);
+  background-image: var(--texture-paper);
   padding: 60px 0;
   text-align: center;
   position: relative;
@@ -2210,8 +2211,25 @@ FAQ ページ
   }
 
   .form-label-area {
-    width: 100%;
+    display: inline-flex;
+    width: auto;
+    min-width: auto;
     margin-bottom: 10px;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .form-label-area label {
+    width: auto;
+    min-width: auto;
+  }
+
+  .form-label-area .required-badge {
+    background: none;
+    color: #e53935;
+    font-size: 12px;
+    padding: 0;
+    font-weight: 400;
   }
 
   .form-input-area {
@@ -2485,53 +2503,171 @@ FAQ ページ
   border-left: 4px solid #ffc107;
 }
 
-/* 特徴セクション */
+/* 特徴セクション（選ばれる理由） */
 .features-section {
-  background-color: var(--color-primary-bg);
+  background-color: #F0F7F4;
   padding: 80px 0;
+}
+
+.features-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.features-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1A1918;
+  margin-bottom: 16px;
+}
+
+.features-subtitle {
+  font-size: 18px;
+  color: #4A4A4A;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-bottom: 60px;
+  gap: 32px;
+  margin-bottom: 48px;
 }
 
 .feature-card {
   background-color: white;
-  padding: 40px 30px;
-  border-radius: 12px;
+  padding: 32px;
+  border-radius: 20px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
-.feature-icon {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto 20px;
+.feature-num {
+  width: 56px;
+  height: 56px;
+  background-color: #2E7D4A;
+  color: white;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.feature-icon img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.feature-title {
-  font-size: 1.2rem;
+  font-size: 20px;
   font-weight: 700;
-  color: var(--color-primary-dark);
-  margin-bottom: 15px;
 }
 
-.feature-text {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.7;
+.feature-card-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1A1918;
+  margin-bottom: 0;
+}
+
+.feature-card-desc {
+  font-size: 16px;
+  color: #4A4A4A;
+  line-height: 1.6;
+}
+
+/* スペシャリスト紹介 */
+.specialist-intro {
+  background-color: white;
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.specialist-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #2E7D4A;
+  margin-bottom: 0;
+}
+
+.specialist-desc {
+  font-size: 16px;
+  color: #4A4A4A;
+  line-height: 1.8;
+}
+
+.specialist-image {
+  max-width: 686px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* CTA セクション */
+.cta-section {
+  background-color: #2E7D4A;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.cta-subtitle {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 18px 40px;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn svg {
+  flex-shrink: 0;
+}
+
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn-white {
+  background-color: white;
+  color: #2E7D4A;
+}
+
+.cta-btn-white:hover {
+  color: #2E7D4A;
+}
+
+.cta-btn-line {
+  background-color: #06C755;
+  color: white;
+}
+
+.cta-btn-line:hover {
+  color: white;
 }
 
 /* 安心ポイント */
@@ -2977,6 +3113,44 @@ FAQ ページ
 
   .features-grid {
     grid-template-columns: 1fr;
+  }
+
+  .features-title {
+    font-size: 28px;
+  }
+
+  .specialist-intro {
+    padding: 24px;
+  }
+
+  .specialist-title {
+    font-size: 20px;
+  }
+
+  .cta-section {
+    padding: 60px 0;
+  }
+
+  .cta-title {
+    font-size: 28px;
+  }
+
+  .cta-subtitle {
+    font-size: 16px;
+  }
+
+  .cta-btn {
+    padding: 14px 28px;
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-width: 320px;
+    margin: 0 auto;
   }
 
   .safety-grid {
@@ -3565,5 +3739,293 @@ FAQ ページ
     width: 100%;
     max-width: none;
     margin-left: 0;
+  }
+}
+
+/*
+==========================================================================
+料金ページ
+==========================================================================
+*/
+
+/* 料金目安セクション */
+.price-guide-section {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.price-guide-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.price-guide-title-badge {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 1.75rem;
+  font-weight: 700;
+  padding: 12px 32px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 24px;
+}
+
+.price-guide-subtitle {
+  font-size: 1.125rem;
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+.price-guide-subtitle p {
+  margin-bottom: 4px;
+}
+
+/* 料金テーブル */
+.price-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 24px;
+}
+
+.price-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.price-table thead th {
+  padding: 16px;
+  font-weight: 600;
+  font-size: 1.125rem;
+  text-align: center;
+}
+
+.price-table thead th.price-table-room {
+  background-color: var(--color-primary);
+  color: #fff;
+  width: 25%;
+}
+
+.price-table thead th.price-table-time,
+.price-table thead th.price-table-cost {
+  background-color: #C8E6C9;
+  color: var(--color-text);
+  width: 37.5%;
+}
+
+.price-table tbody tr:nth-child(odd) td {
+  background-color: #fff;
+}
+
+.price-table tbody tr:nth-child(even) td {
+  background-color: #F5F5F5;
+}
+
+.price-table tbody td {
+  padding: 16px;
+  text-align: center;
+  font-size: 1rem;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.price-table tbody td.room-type {
+  background-color: #E8F5E9 !important;
+  font-weight: 600;
+}
+
+.price-table tbody td.price-amount {
+  color: #E53935;
+  font-weight: 600;
+  font-size: 1.125rem;
+}
+
+.price-note {
+  text-align: center;
+  color: #E53935;
+  font-size: 0.9375rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 精算の仕組みセクション */
+.settlement-section {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.settlement-banner {
+  background-color: var(--color-primary);
+  color: #fff;
+  padding: 32px 48px;
+  border-radius: var(--radius-md);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.settlement-banner h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.settlement-banner p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.settlement-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.settlement-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* モデルケースセクション */
+.model-case-section {
+  background-color: #F0F7F4;
+  padding: 80px 0;
+}
+
+.model-case-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.model-case-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* お買取りできるものセクション */
+.buyable-items-section {
+  background-color: #fff;
+  padding: 80px 0;
+}
+
+.buyable-items-image {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+
+.buyable-items-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.buyable-items-note {
+  background-color: #E8F5F9;
+  border: 2px solid #B3E5FC;
+  border-radius: var(--radius-md);
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.buyable-items-note .note-title {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: 1.125rem;
+  margin-bottom: 12px;
+}
+
+.buyable-items-note .note-desc {
+  color: #4A4A4A;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+/* お支払い方法セクション */
+.payment-method-section {
+  background-color: #F0F7F4;
+  padding: 60px 0;
+}
+
+.payment-method-image {
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.payment-method-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 料金ページ レスポンシブ */
+@media (max-width: 768px) {
+  .price-guide-section,
+  .settlement-section,
+  .model-case-section,
+  .buyable-items-section,
+  .payment-method-section {
+    padding: 48px 0;
+  }
+
+  .price-guide-title-badge {
+    font-size: 1.25rem;
+    padding: 10px 20px;
+  }
+
+  .price-guide-subtitle {
+    font-size: 1rem;
+  }
+
+  .price-table {
+    font-size: 0.875rem;
+  }
+
+  .price-table thead th {
+    font-size: 0.875rem;
+    padding: 12px 8px;
+  }
+
+  .price-table tbody td {
+    padding: 12px 8px;
+    font-size: 0.875rem;
+  }
+
+  .price-table tbody td.price-amount {
+    font-size: 0.9375rem;
+  }
+
+  .price-note {
+    font-size: 0.8125rem;
+    padding: 0 16px;
+  }
+
+  .settlement-banner {
+    padding: 24px 20px;
+  }
+
+  .settlement-banner h3 {
+    font-size: 1.25rem;
+  }
+
+  .settlement-banner p {
+    font-size: 1rem;
+  }
+
+  .buyable-items-note {
+    padding: 16px 20px;
+  }
+
+  .buyable-items-note .note-title {
+    font-size: 1rem;
+  }
+
+  .buyable-items-note .note-desc {
+    font-size: 0.875rem;
   }
 }

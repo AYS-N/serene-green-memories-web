@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "WebFetch(domain:serene-green-memories-web.vercel.app)",
+      "Bash(powershell -Command \"Rename-Item -Path ''サービスの流れ_高解像度版.png'' -NewName ''service-flow-hires.png''\")",
+      "Bash(powershell:*)"
+    ]
+  }
+}
