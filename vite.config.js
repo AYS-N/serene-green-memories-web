@@ -22,7 +22,8 @@ export default defineConfig(({ mode }) => ({
         contact: 'contact.html',
         faq: 'faq.html',
         blog: 'blog.html',
-        blogDetail: 'blog-detail.html'
+        blogDetail: 'blog-detail.html',
+        price: 'price.html'
       }
     }
   },
