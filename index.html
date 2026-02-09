@@ -121,6 +121,57 @@
       </div>
     </section>
 
+    <!-- お客様の声セクション -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <h2 class="testimonials-heading">お客様よりたくさんのお声を頂いております</h2>
+        <p class="testimonials-subtitle">整理のミカタの遺品整理サービスをご利用頂いたお客様のお声を紹介します。</p>
+        <div class="testimonials-slider">
+          <button class="testimonials-arrow testimonials-arrow--prev" aria-label="前へ">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <div class="testimonials-viewport">
+            <div class="testimonials-track">
+              <!-- 1人目 -->
+              <div class="testimonial-card">
+                <div class="testimonial-img-wrap">
+                  <img src="images/voice-yamamoto.jpg" alt="山本さん" class="testimonial-img">
+                </div>
+                <h3 class="testimonial-title">遺品整理の悩みがなくなりました！</h3>
+                <div class="testimonial-divider"></div>
+                <p class="testimonial-name">山本さん 64歳</p>
+                <p class="testimonial-text">ずっとやらないといけないとモヤモヤしていましたが、見積もりを取ったり、日程を決めたりが面倒に思い、手が付けられずにいましたが、「整理のミカタ」にお願いしたら、すぐに見積もりも出してくれたし、希望日に対応してくださったので、本当に助かりました！作業も早く、全てのものを回収してくれたので良かったです！ずっと心にあったしこりがなくなって、スッキリしました。</p>
+              </div>
+              <!-- 2人目 -->
+              <div class="testimonial-card">
+                <div class="testimonial-img-wrap">
+                  <img src="images/voice-miwa.jpg" alt="三輪さん" class="testimonial-img">
+                </div>
+                <h3 class="testimonial-title">想い出の品物を買い取ってもらえました</h3>
+                <div class="testimonial-divider"></div>
+                <p class="testimonial-name">三輪さん 78歳</p>
+                <p class="testimonial-text">妻が残した遺品を買取してもらいました。あっても使わないし、置いておくのもスペースが必要だったので、どうしようか？と悩んでいたので、遺品の回収&買取をしてくれるという「整理のミカタ」に相談しました。ブランド品や宝飾品など高く買い取って頂き、作業費用が相殺になりかつ、現金が手元に残りました！妻との思い出の品もあり、処分するのを躊躇していましたが、丁寧に作業をしてください、買取もして頂けたので、お願いして良かったと思います！残った現金は、妻が残してくれたご褒美ですね。笑</p>
+              </div>
+              <!-- 3人目 -->
+              <div class="testimonial-card">
+                <div class="testimonial-img-wrap">
+                  <img src="images/voice-tomita.jpg" alt="富田さん" class="testimonial-img">
+                </div>
+                <h3 class="testimonial-title">遺品が社会貢献になるなんて思っていませんでした</h3>
+                <div class="testimonial-divider"></div>
+                <p class="testimonial-name">富田夫妻 58歳</p>
+                <p class="testimonial-text">両親の残した遺品を回収、買取して頂きました！両親との想い出もあるので、ゴミとして処分されるのは嫌だと思っていたのですが、「整理のミカタ」に相談したところ、回収した遺品はリサイクルなどの社会貢献に活用されるということで、安心してお願いできました。大好きだった両親の残した遺品が、少しでも社会貢献になるというのは、誇らしいです！遺品改修後の家の解体についても相談に乗って頂き、信頼できる業者さんをご紹介いただけたのも感謝です。遺品整理に関しては「整理のミカタ」に相談すれば全て解決するので、おすすめです！</p>
+              </div>
+            </div>
+          </div>
+          <button class="testimonials-arrow testimonials-arrow--next" aria-label="次へ">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+        </div>
+        <div class="testimonials-dots"></div>
+      </div>
+    </section>
+
     <!-- ブログセクション -->
     <section class="section blog-section">
       <div class="container">
@@ -228,6 +279,113 @@
     <script type="module" src="./js/index.js"></script>
     <script type="module" src="./js/main.js"></script>
     
+    <!-- お客様の声スライダー -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        var track = document.querySelector('.testimonials-track');
+        var cards = document.querySelectorAll('.testimonials-track > .testimonial-card');
+        var prevBtn = document.querySelector('.testimonials-arrow--prev');
+        var nextBtn = document.querySelector('.testimonials-arrow--next');
+        var dotsContainer = document.querySelector('.testimonials-dots');
+        if (!track || cards.length === 0) return;
+
+        var currentIndex = 0;
+        var gap = 24;
+
+        function equalizeHeights(selector) {
+          var els = document.querySelectorAll('.testimonials-track > .testimonial-card ' + selector);
+          els.forEach(function(el) { el.style.minHeight = ''; });
+          var maxH = 0;
+          els.forEach(function(el) { if (el.offsetHeight > maxH) maxH = el.offsetHeight; });
+          els.forEach(function(el) { el.style.minHeight = maxH + 'px'; });
+        }
+
+        function equalizeCardHeights() {
+          equalizeHeights('.testimonial-title');
+          cards.forEach(function(c) { c.style.height = 'auto'; });
+          var maxH = 0;
+          cards.forEach(function(c) { if (c.offsetHeight > maxH) maxH = c.offsetHeight; });
+          cards.forEach(function(c) { c.style.height = maxH + 'px'; });
+        }
+
+        function getVisibleCount() {
+          return window.innerWidth <= 768 ? 1 : 2;
+        }
+
+        function getMaxIndex() {
+          return Math.max(0, cards.length - getVisibleCount());
+        }
+
+        // ドット生成
+        function buildDots() {
+          dotsContainer.innerHTML = '';
+          var total = getMaxIndex() + 1;
+          for (var i = 0; i < total; i++) {
+            var dot = document.createElement('button');
+            dot.className = 'testimonials-dot' + (i === currentIndex ? ' active' : '');
+            dot.setAttribute('aria-label', (i + 1) + '番目');
+            dot.dataset.index = i;
+            dot.addEventListener('click', function() {
+              goTo(parseInt(this.dataset.index));
+            });
+            dotsContainer.appendChild(dot);
+          }
+        }
+
+        function updateSlider() {
+          var cardWidth = cards[0].offsetWidth;
+          var offset = currentIndex * (cardWidth + gap);
+          track.style.transform = 'translateX(-' + offset + 'px)';
+          prevBtn.disabled = currentIndex === 0;
+          nextBtn.disabled = currentIndex >= getMaxIndex();
+          var dots = dotsContainer.querySelectorAll('.testimonials-dot');
+          dots.forEach(function(d, i) {
+            d.classList.toggle('active', i === currentIndex);
+          });
+        }
+
+        function goTo(index) {
+          currentIndex = Math.max(0, Math.min(index, getMaxIndex()));
+          updateSlider();
+        }
+
+        prevBtn.addEventListener('click', function() { goTo(currentIndex - 1); });
+        nextBtn.addEventListener('click', function() { goTo(currentIndex + 1); });
+
+        // タッチスワイプ対応
+        var startX = 0;
+        var isDragging = false;
+        track.addEventListener('touchstart', function(e) {
+          startX = e.touches[0].clientX;
+          isDragging = true;
+        }, { passive: true });
+        track.addEventListener('touchend', function(e) {
+          if (!isDragging) return;
+          var diff = startX - e.changedTouches[0].clientX;
+          if (Math.abs(diff) > 50) {
+            diff > 0 ? goTo(currentIndex + 1) : goTo(currentIndex - 1);
+          }
+          isDragging = false;
+        }, { passive: true });
+
+        // リサイズ対応
+        var resizeTimer;
+        window.addEventListener('resize', function() {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function() {
+            if (currentIndex > getMaxIndex()) currentIndex = getMaxIndex();
+            equalizeCardHeights();
+            buildDots();
+            updateSlider();
+          }, 150);
+        });
+
+        equalizeCardHeights();
+        buildDots();
+        updateSlider();
+      });
+    </script>
+
     <!-- フローティングボタンのスクロール制御 -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {

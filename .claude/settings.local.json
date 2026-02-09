@@ -4,7 +4,12 @@
       "Bash(git add:*)",
       "WebFetch(domain:serene-green-memories-web.vercel.app)",
       "Bash(powershell -Command \"Rename-Item -Path ''サービスの流れ_高解像度版.png'' -NewName ''service-flow-hires.png''\")",
-      "Bash(powershell:*)"
+      "Bash(powershell:*)",
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_wait_for",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_click"
     ]
   }
 }
