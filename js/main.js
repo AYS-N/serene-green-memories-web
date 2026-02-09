@@ -12,8 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // お客様の声スライダー
   initTestimonialSlider();
   
-  // FAQのアコーディオン初期化
-  initFaq();
   
   // お問い合わせフォームの送信処理
   initContactForm();
@@ -77,32 +75,6 @@ function initTestimonialSlider() {
   }
 }
 
-// FAQのアコーディオン初期化
-function initFaq() {
-  // FAQのアコーディオン関数をグローバルに設定
-  window.toggleAnswer = function(element) {
-    const answer = element.nextElementSibling;
-    const isActive = element.classList.contains('active');
-    
-    // すべてのFAQ質問を非アクティブにする
-    const allQuestions = document.querySelectorAll('.faq-question');
-    allQuestions.forEach(function(question) {
-      question.classList.remove('active');
-      const answerElement = question.nextElementSibling;
-      if (answerElement && answerElement.classList.contains('faq-answer')) {
-        answerElement.style.display = 'none';
-      }
-    });
-    
-    // クリックされた質問をトグルする
-    if (!isActive) {
-      element.classList.add('active');
-      if (answer && answer.classList.contains('faq-answer')) {
-        answer.style.display = 'flex';
-      }
-    }
-  }
-}
 
 // お問い合わせフォームの初期化
 function initContactForm() {
