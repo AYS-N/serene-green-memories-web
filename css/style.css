@@ -723,7 +723,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 120px;
   padding: 10px 0;
 }
 
@@ -744,14 +744,14 @@ li {
 }
 
 .logo-img {
-  height: 100px;
+  height: 140px;
   width: auto;
   margin-left: 50px;
 }
 
 @media (max-width: 768px) {
   .logo-img {
-    height: 70px;
+    height: 120px;
     margin-left: 10px;
   }
 }
@@ -3969,19 +3969,21 @@ FAQ ページ
 
 .price-table {
   width: 100%;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   border-collapse: collapse;
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-md);
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .price-table thead th {
-  padding: 16px;
-  font-weight: 600;
-  font-size: 1.125rem;
+  padding: 20px 16px;
+  font-weight: 700;
+  font-size: 1.35rem;
   text-align: center;
+  letter-spacing: 0.05em;
 }
 
 .price-table thead th.price-table-room {
@@ -4006,21 +4008,23 @@ FAQ ページ
 }
 
 .price-table tbody td {
-  padding: 16px;
+  padding: 20px 16px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.25rem;
   border-bottom: 1px solid #E0E0E0;
 }
 
 .price-table tbody td.room-type {
   background-color: #E8F5E9 !important;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.35rem;
 }
 
 .price-table tbody td.price-amount {
   color: #E53935;
-  font-weight: 600;
-  font-size: 1.125rem;
+  font-weight: 800;
+  font-size: 1.6rem;
+  letter-spacing: 0.02em;
 }
 
 .price-note {
@@ -4164,21 +4168,27 @@ FAQ ページ
   }
 
   .price-table {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 
   .price-table thead th {
-    font-size: 0.875rem;
-    padding: 12px 8px;
+    font-size: 1rem;
+    padding: 14px 8px;
+    font-weight: 700;
   }
 
   .price-table tbody td {
-    padding: 12px 8px;
-    font-size: 0.875rem;
+    padding: 14px 8px;
+    font-size: 1.05rem;
+  }
+
+  .price-table tbody td.room-type {
+    font-size: 1.1rem;
   }
 
   .price-table tbody td.price-amount {
-    font-size: 0.9375rem;
+    font-size: 1.25rem;
+    font-weight: 800;
   }
 
   .price-note {
