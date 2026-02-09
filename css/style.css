@@ -1937,31 +1937,65 @@ FAQ ページ
 
 .contact-method {
   text-align: center;
-  padding: 30px;
+  padding: 36px 28px;
   background-color: white;
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .contact-method-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: #f0f7f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
-}
-
-.contact-method-icon img {
-  width: 60px;
-  height: 60px;
 }
 
 .contact-method-title {
   font-size: 20px;
   color: var(--color-primary);
-  margin-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .contact-method-note {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--color-text-light);
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+}
+
+.contact-method-desc {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+.contact-method-line-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #06C755;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 40px;
+  margin-top: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(6, 199, 85, 0.3);
+}
+
+.contact-method-line-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(6, 199, 85, 0.4);
+  color: #fff;
 }
 
 .contact-form-section {
