@@ -1499,9 +1499,26 @@ li {
 ==========================================================================
 */
 
+/* 料金ページ ヒーロー画像 */
+.price-hero {
+  width: 100%;
+  margin-bottom: 60px;
+  overflow: hidden;
+  max-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
 .page-title {
-  background-color: var(--color-primary-bg);
-  background-image: var(--texture-paper);
+  background: url('../images/price-background.png') center / cover no-repeat;
   padding: 60px 0;
   text-align: center;
   position: relative;
@@ -1510,7 +1527,7 @@ li {
 
 .page-title h1 {
   font-size: 32px;
-  color: var(--color-primary);
+  color: #5a9e6b;
   margin-bottom: 10px;
 }
 
@@ -3588,8 +3605,9 @@ FAQ ページ
 
 /* グリーン系デザイン画像セクション */
 .green-design-section {
-  padding: 0;
+  padding: 0 24px;
   margin-top: 10px;
+  margin-bottom: 40px;
 }
 
 .green-design-image {
