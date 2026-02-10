@@ -3950,108 +3950,136 @@ FAQ ページ
 
 /* 料金目安セクション */
 .price-guide-section {
-  background-color: #fff;
-  padding: 80px 0;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
 }
 
-.price-guide-header {
+.price-guide-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.price-guide-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.price-guide-content {
+  max-width: 760px;
+  margin-left: -200px;
+  margin-right: auto;
+  padding: 48px 40px;
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+.price-guide-heading {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary);
   text-align: center;
-  margin-bottom: 48px;
-}
-
-.price-guide-title-badge {
-  display: inline-block;
-  background-color: var(--color-primary);
-  color: #fff;
-  font-size: 1.75rem;
-  font-weight: 700;
-  padding: 12px 32px;
-  border-radius: var(--radius-sm);
-  margin-bottom: 24px;
-}
-
-.price-guide-subtitle {
-  font-size: 1.125rem;
-  color: var(--color-text);
-  line-height: 1.8;
-}
-
-.price-guide-subtitle p {
   margin-bottom: 4px;
 }
 
-/* 料金テーブル */
-.price-table-wrapper {
-  overflow-x: auto;
+.price-guide-sub {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 1.1rem;
+  color: var(--color-text);
+  text-align: center;
   margin-bottom: 24px;
 }
 
+.price-guide-badge {
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 8px 24px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  display: block;
+  text-align: center;
+  max-width: 160px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 料金テーブル */
 .price-table {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
   border-collapse: collapse;
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
   font-family: 'Noto Sans JP', sans-serif;
+  margin-bottom: 16px;
 }
 
 .price-table thead th {
-  padding: 20px 16px;
+  padding: 12px 16px;
   font-weight: 700;
-  font-size: 1.35rem;
+  font-size: 0.95rem;
   text-align: center;
-  letter-spacing: 0.05em;
-}
-
-.price-table thead th.price-table-room {
   background-color: var(--color-primary);
   color: #fff;
-  width: 25%;
 }
 
-.price-table thead th.price-table-time,
-.price-table thead th.price-table-cost {
-  background-color: #C8E6C9;
-  color: var(--color-text);
-  width: 37.5%;
-}
-
-.price-table tbody tr:nth-child(odd) td {
-  background-color: #fff;
-}
-
-.price-table tbody tr:nth-child(even) td {
-  background-color: #F5F5F5;
-}
-
-.price-table tbody td {
-  padding: 20px 16px;
-  text-align: center;
-  font-size: 1.25rem;
+.price-table tbody tr {
   border-bottom: 1px solid #E0E0E0;
 }
 
+.price-table tbody tr:nth-child(even) {
+  background-color: #f9faf9;
+}
+
+.price-table tbody td {
+  padding: 14px 16px;
+  text-align: center;
+  font-size: 1rem;
+}
+
 .price-table tbody td.room-type {
-  background-color: #E8F5E9 !important;
+  text-align: left;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.check-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 0.75rem;
   font-weight: 700;
-  font-size: 1.35rem;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 .price-table tbody td.price-amount {
-  color: #E53935;
   font-weight: 800;
-  font-size: 1.6rem;
-  letter-spacing: 0.02em;
+  font-size: 1.15rem;
+  color: var(--color-text);
 }
 
 .price-note {
-  text-align: center;
-  color: #E53935;
-  font-size: 0.9375rem;
-  max-width: 800px;
-  margin: 0 auto;
+  text-align: left;
+  color: #888;
+  font-size: 0.8rem;
+  line-height: 1.6;
 }
 
 /* 精算の仕組みセクション */
@@ -4177,37 +4205,54 @@ FAQ ページ
     padding: 48px 0;
   }
 
-  .price-guide-title-badge {
-    font-size: 1.25rem;
-    padding: 10px 20px;
+  .price-guide-section {
+    overflow: visible;
   }
 
-  .price-guide-subtitle {
-    font-size: 1rem;
+  .price-guide-bg {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    left: auto;
+    transform: none;
   }
 
-  .price-table {
-    font-size: 1rem;
+  .price-guide-content {
+    max-width: 100%;
+    margin-left: 0;
+    padding: 32px 20px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .price-guide-heading {
+    font-size: 1.5rem;
   }
 
   .price-table thead th {
-    font-size: 1rem;
-    padding: 14px 8px;
-    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 10px 8px;
   }
 
   .price-table tbody td {
-    padding: 14px 8px;
-    font-size: 1.05rem;
+    padding: 12px 8px;
+    font-size: 0.9rem;
   }
 
   .price-table tbody td.room-type {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
   }
 
   .price-table tbody td.price-amount {
-    font-size: 1.25rem;
-    font-weight: 800;
+    font-size: 1rem;
+  }
+
+  .check-icon {
+    width: 18px;
+    height: 18px;
+    font-size: 0.65rem;
+    margin-right: 4px;
   }
 
   .price-note {
