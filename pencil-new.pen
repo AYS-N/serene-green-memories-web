@@ -1,5 +1,5 @@
 {
-  "version": "2.7",
+  "version": "2.8",
   "children": [
     {
       "type": "frame",
@@ -11,7 +11,719 @@
       "width": 21995,
       "height": 24704,
       "fill": "#FFFFFF",
-      "layout": "none"
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "0FuGm",
+          "x": 16867,
+          "y": 534,
+          "name": "サンクスページ",
+          "width": 1440,
+          "fill": "#F0F7F4",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "hUlE4",
+              "name": "header",
+              "width": "fill_container",
+              "height": 72,
+              "fill": "#FFFFFF",
+              "padding": [
+                0,
+                120
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "14abN",
+                  "name": "Logo",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "images/seirino-mikata-logo.png",
+                    "mode": "fit"
+                  },
+                  "width": 180,
+                  "height": 60
+                },
+                {
+                  "type": "frame",
+                  "id": "6Sbjp",
+                  "name": "Navigation",
+                  "gap": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "8Daig",
+                      "name": "navTop",
+                      "fill": "#1A1918",
+                      "content": "トップ",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "A5cVL",
+                      "name": "navServiceContent",
+                      "fill": "#4A4A4A",
+                      "content": "サービス内容",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "CPBmu",
+                      "name": "navService",
+                      "fill": "#4A4A4A",
+                      "content": "料金について",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WcW4l",
+                      "name": "navAbout",
+                      "enabled": false,
+                      "fill": "#E8F5E9",
+                      "cornerRadius": 4,
+                      "padding": [
+                        6,
+                        12
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "HTJSI",
+                          "name": "navAboutText",
+                          "fill": "#4A4A4A",
+                          "content": "会社概要",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "T1jiG",
+                      "name": "navBlog",
+                      "fill": "#4A4A4A",
+                      "content": "ブログ",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "NNGY6",
+                      "name": "navFaq",
+                      "fill": "#4A4A4A",
+                      "content": "よくある質問",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "MZ5ao",
+                      "name": "navContact",
+                      "fill": "#4A4A4A",
+                      "content": "お問い合わせ",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "eCU5E",
+              "name": "Thanks Hero",
+              "width": "fill_container",
+              "fill": "#E8F5E9",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": [
+                60,
+                120
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "BptTb",
+                  "name": "heroTitle",
+                  "fill": "#2E7D4A",
+                  "content": "送信完了",
+                  "textAlign": "center",
+                  "fontFamily": "Outfit",
+                  "fontSize": 32,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "K0DOX",
+                  "name": "heroBreadcrumb",
+                  "fill": "#4A4A4A",
+                  "content": "トップ > お問い合わせ > 送信完了",
+                  "fontFamily": "Outfit",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "THGVe",
+              "name": "Thanks Content",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "layout": "vertical",
+              "gap": 40,
+              "padding": [
+                80,
+                120
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "IjZGy",
+                  "name": "Thanks Card",
+                  "width": 720,
+                  "fill": "#F0F7F4",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": 32,
+                  "padding": [
+                    60,
+                    48
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "AeLfP",
+                      "name": "Check Circle",
+                      "width": 100,
+                      "height": 100,
+                      "fill": "#2E7D4A",
+                      "cornerRadius": 50,
+                      "layout": "none",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "60l8o",
+                          "x": 24,
+                          "y": 24,
+                          "name": "checkIcon",
+                          "width": 52,
+                          "height": 52,
+                          "iconFontName": "check",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "S0VdS",
+                      "name": "thankTitle",
+                      "fill": "#1A1918",
+                      "content": "お問い合わせありがとうございます",
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 28,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "j3RYO",
+                      "name": "thankDesc",
+                      "fill": "#4A4A4A",
+                      "content": "お問い合わせを受け付けました。\n担当者より折り返しご連絡いたしますので、\nしばらくお待ちください。",
+                      "lineHeight": 1.8,
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "XeXwH",
+                      "name": "Serial Number Box",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "align": "inside",
+                        "thickness": 1,
+                        "fill": "#2E7D4A33"
+                      },
+                      "gap": 12,
+                      "padding": [
+                        16,
+                        24
+                      ],
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "g5PrZ",
+                          "name": "serialLabel",
+                          "fill": "#4A4A4A",
+                          "content": "受付番号：",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        },
+                        {
+                          "type": "text",
+                          "id": "ibO8V",
+                          "name": "serialNum",
+                          "fill": "#2E7D4A",
+                          "content": "20260217-0001",
+                          "fontFamily": "Outfit",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FMsVu",
+                      "name": "Button Row",
+                      "gap": 20,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "8sLLb",
+                          "name": "Home Button",
+                          "fill": "#2E7D4A",
+                          "cornerRadius": 12,
+                          "padding": [
+                            16,
+                            36
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "8AEqO",
+                              "name": "btnHomeText",
+                              "fill": "#FFFFFF",
+                              "content": "トップページへ戻る",
+                              "fontFamily": "Outfit",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "hYkKO",
+                          "name": "LINE Button",
+                          "fill": "#06C755",
+                          "cornerRadius": 12,
+                          "padding": [
+                            16,
+                            36
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "6W7pq",
+                              "name": "btnLineText",
+                              "fill": "#FFFFFF",
+                              "content": "LINEで相談する",
+                              "fontFamily": "Outfit",
+                              "fontSize": 16,
+                              "fontWeight": "600"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "aPeXm",
+                  "name": "Note Box",
+                  "width": 720,
+                  "fill": "#FFF8E1",
+                  "cornerRadius": 8,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 1,
+                    "fill": "#FFB30033"
+                  },
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    24,
+                    32
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "aYqGt",
+                      "name": "noteTitle",
+                      "fill": "#E65100",
+                      "content": "ご確認ください",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "text",
+                      "id": "2GAah",
+                      "name": "noteText",
+                      "fill": "#4A4A4A",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "・自動返信メールが届かない場合は、迷惑メールフォルダをご確認ください。\n・2営業日以内にご連絡がない場合は、お手数ですがお電話にてお問い合わせください。\n・電話番号: 0120-433-233（受付時間: 10:00〜19:00）",
+                      "lineHeight": 1.8,
+                      "fontFamily": "Outfit",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NFfKB",
+              "name": "footer",
+              "width": "fill_container",
+              "fill": "#F5F5F5",
+              "layout": "vertical",
+              "gap": 40,
+              "padding": [
+                60,
+                120
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "PJaln",
+                  "name": "footerTop",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "1CJd1",
+                      "name": "companyInfo",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "c8YWE",
+                          "name": "companyTitle",
+                          "fill": "#2E7D4A",
+                          "content": "整理のミカタ",
+                          "fontFamily": "Outfit",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "TRUNg",
+                          "name": "postal",
+                          "fill": "#1A1918",
+                          "content": "〒362-0035",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "kNs3m",
+                          "name": "address",
+                          "fill": "#1A1918",
+                          "content": "埼玉県上尾市仲町1-7-25",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "o8izq",
+                          "name": "tel",
+                          "fill": "#1A1918",
+                          "content": "TEL: 0120-433-233",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "aNzPT",
+                          "name": "hours",
+                          "fill": "#1A1918",
+                          "content": "受付時間: 10:00〜19:00（年中無休）",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "8J3tx",
+                      "name": "serviceMenu",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "ZtsRI",
+                          "name": "serviceTitle",
+                          "fill": "#1A1918",
+                          "content": "サービスメニュー",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "D4gYm",
+                          "name": "svc1",
+                          "fill": "#1A1918",
+                          "content": "遺品整理サービス",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "RZkMJ",
+                          "name": "svc2",
+                          "fill": "#1A1918",
+                          "content": "生前整理サービス",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "aK0Zv",
+                          "name": "svc3",
+                          "fill": "#1A1918",
+                          "content": "特殊清掃",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "1mwhn",
+                          "name": "svc4",
+                          "fill": "#1A1918",
+                          "content": "不用品回収",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "9iwjw",
+                      "name": "companyLinks",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "CaUB2",
+                          "name": "companyLinksTitle",
+                          "fill": "#1A1918",
+                          "content": "会社情報",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "q8ilt",
+                          "name": "link1",
+                          "fill": "#1A1918",
+                          "content": "会社概要",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "3OG4A",
+                          "name": "link2",
+                          "fill": "#1A1918",
+                          "content": "ブログ",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "7vh2e",
+                          "name": "link3",
+                          "fill": "#1A1918",
+                          "content": "よくある質問",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "hzf1t",
+                          "name": "link4",
+                          "fill": "#1A1918",
+                          "content": "プライバシーポリシー",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NgyvW",
+                  "name": "footerDivider",
+                  "width": "fill_container",
+                  "height": 1,
+                  "fill": "#E0E0E0"
+                },
+                {
+                  "type": "frame",
+                  "id": "rncOd",
+                  "name": "footerNav",
+                  "width": "fill_container",
+                  "gap": 32,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "feqyJ",
+                      "name": "nav1",
+                      "fill": "#1A1918",
+                      "content": "トップ",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "GrH1l",
+                      "name": "navServiceFooter",
+                      "fill": "#1A1918",
+                      "content": "サービス内容",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "JfEss",
+                      "name": "nav2",
+                      "fill": "#1A1918",
+                      "content": "料金について",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "omnYg",
+                      "name": "nav3",
+                      "fill": "#1A1918",
+                      "content": "会社概要",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "PdWaS",
+                      "name": "nav4",
+                      "fill": "#1A1918",
+                      "content": "ブログ",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "HIDB4",
+                      "name": "nav5",
+                      "fill": "#1A1918",
+                      "content": "よくある質問",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "SdvKg",
+                      "name": "nav6",
+                      "fill": "#1A1918",
+                      "content": "お問い合わせ",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "M83DQ",
+                      "name": "nav7",
+                      "fill": "#1A1918",
+                      "content": "プライバシーポリシー",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "sT9Yz",
+                  "name": "copyrightSection",
+                  "width": "fill_container",
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "JD24W",
+                      "name": "copyrightText",
+                      "fill": "#4A4A4A",
+                      "content": "© 2026 整理の味方 All Rights Reserved.",
+                      "fontFamily": "Outfit",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "frame",

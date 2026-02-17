@@ -98,14 +98,14 @@
   <section class="section contact-form-section">
     <div class="container">
       <h2 class="section-title">お問い合わせフォーム</h2>
-      <form id="contactForm" class="contact-form contact-form-styled">
+      <form id="mailformpro" class="contact-form contact-form-styled" action="https://seirino-mikata.com/mailformpro/mailformpro.cgi" method="POST">
         <div class="form-row">
           <div class="form-label-area">
             <label for="name">氏名</label>
             <span class="required-badge">※必須</span>
           </div>
           <div class="form-input-area">
-            <input type="text" id="name" name="name" required placeholder="整理 太郎">
+            <input type="text" id="name" name="氏名" required placeholder="整理 太郎" class="text">
           </div>
         </div>
 
@@ -115,7 +115,7 @@
             <span class="required-badge">※必須</span>
           </div>
           <div class="form-input-area">
-            <input type="text" id="furigana" name="furigana" required placeholder="せいり たろう">
+            <input type="text" id="furigana" name="ふりがな" required placeholder="せいり たろう" class="text">
           </div>
         </div>
 
@@ -125,7 +125,7 @@
             <span class="required-badge">※必須</span>
           </div>
           <div class="form-input-area form-input-with-link">
-            <input type="text" id="postalcode" name="postalcode" required placeholder="000-0000" class="input-short">
+            <input type="text" id="postalcode" name="郵便番号" required placeholder="000-0000" class="input-short">
             <a href="#" class="auto-fill-link" id="autoFillAddress">住所自動入力</a>
           </div>
         </div>
@@ -136,7 +136,7 @@
             <span class="required-badge">※必須</span>
           </div>
           <div class="form-input-area">
-            <input type="text" id="address" name="address" required placeholder="入力してください">
+            <input type="text" id="address" name="住所" required placeholder="入力してください" class="text">
           </div>
         </div>
 
@@ -146,7 +146,7 @@
             <span class="required-badge">※必須</span>
           </div>
           <div class="form-input-area">
-            <input type="tel" id="phone" name="phone" required placeholder="000-0000-0000">
+            <input type="tel" id="phone" name="電話番号" required placeholder="000-0000-0000" class="text">
           </div>
         </div>
 
@@ -155,7 +155,7 @@
             <label for="preferred_date">希望日時</label>
           </div>
           <div class="form-input-area form-input-with-note">
-            <select id="preferred_date" name="preferred_date" class="input-short">
+            <select id="preferred_date" name="希望日時" class="input-short">
               <option value="">日付を選択</option>
             </select>
             <span class="form-note">※入力日から１ヶ月先まで選択可能</span>
@@ -167,7 +167,7 @@
             <label for="message">ご相談内容</label>
           </div>
           <div class="form-input-area">
-            <textarea id="message" name="message" placeholder="遺品整理について"></textarea>
+            <textarea id="message" name="ご相談内容" placeholder="遺品整理について"></textarea>
           </div>
         </div>
 

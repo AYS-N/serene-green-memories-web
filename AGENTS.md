@@ -1,71 +1,114 @@
 # AGENTS.md
 
-## Project overview
-- Vite + React + TypeScript app with Tailwind and shadcn/ui components.
-- Source code lives in `src/`; static HTML files in repo root are legacy templates.
-- Blog data is intended to come from microCMS (see `src/lib/microcms.ts`).
-- Blog pages are currently implemented as static HTML + vanilla JS under `blog.html`, `blog-detail.html`, and `js/`.
+## プロジェクト概要
+- Vite + React + TypeScript アプリ。Tailwind と shadcn/ui コンポーネントを使用。
+- ソースコードは `src/` 配下。ルート直下の静的HTMLファイルはレガシーテンプレート。
+- ブログデータは microCMS から取得予定（`src/lib/microcms.ts` 参照）。
+- ブログページは現在、静的HTML + vanilla JS で実装（`blog.html`、`blog-detail.html`、`js/`）。
 
-## Key directories
-- `src/` application code
-- `src/components/` reusable UI components
-- `src/lib/` utilities (API clients, helpers)
-- `public/` static assets
-- `css/` stylesheets (main: `style.css`)
-- `images/` image assets and SVG icons
-- `js/` legacy JavaScript for static HTML pages
+## 主要ディレクトリ
+- `src/` - アプリケーションコード
+- `src/components/` - 再利用可能なUIコンポーネント
+- `src/lib/` - ユーティリティ（APIクライアント、ヘルパー）
+- `public/` - 静的アセット
+- `css/` - スタイルシート（メイン: `style.css`）
+- `images/` - 画像アセットとSVGアイコン
+- `js/` - 静的HTMLページ用のレガシーJavaScript
 
-## Common commands
-- Dev server: `npm run dev`
-- Build: `npm run build`
-- Preview build: `npm run preview`
-- Lint: `npm run lint`
+## よく使うコマンド
+- 開発サーバー: `npm run dev`
+- ビルド: `npm run build`
+- ビルドプレビュー: `npm run preview`
+- リント: `npm run lint`
 
-## Environment variables
-- Uses microCMS; set required keys in a local `.env` file (do not commit).
-- Runtime fallback: `public/microcms-config.js` can provide `window.__MICROCMS__` for static hosting.
+## 環境変数
+- microCMS を使用。必要なキーはローカルの `.env` ファイルに設定（コミット禁止）。
+- ランタイムフォールバック: `public/microcms-config.js` で `window.__MICROCMS__` を提供可能（静的ホスティング用）。
 
-## Key pages
-- `index.html` - Top page with main visual, services, testimonials
-- `services.html` - Service details
-- `about.html` - Company info
-- `contact.html` - Contact page with phone, form, and LINE options
-- `blog.html` / `blog-detail.html` - Blog list and detail pages
-- `faq.html` - FAQ page
+## ページ構成
+- `index.html` - トップページ（メインビジュアル、サービス紹介、お客様の声）
+- `services.html` - サービス内容
+- `price.html` - 料金について
+- `about.html` - 会社概要
+- `contact.html` - お問い合わせ（電話・フォーム・LINE）
+- `thanks.html` - フォーム送信完了（サンクスページ）
+- `blog.html` / `blog-detail.html` - ブログ一覧・詳細
+- `faq.html` - よくある質問
 
-## Styling conventions
+## デザインファイル
+- `pencil-new.pen` - Pencilデザインファイル（全ページのデザイン）
 
-### CSS Variables (defined in `:root`)
-- `--color-primary`: #3f7d39 (green)
-- `--color-primary-dark`: #336330
-- `--color-primary-light`: #569e4b
-- `--color-primary-bg`: #f2f8f0
+## メールフォーム（Mailform Pro 4.2.3）
+
+### 概要
+お問い合わせフォーム（contact.html）は、お名前ドットコムサーバー上で稼働中の Mailform Pro CGI にPOSTする構成。
+
+### 設定情報
+- **CGI URL**: `https://seirino-mikata.com/mailformpro/mailformpro.cgi`
+- **設定ファイル**: サーバー上の `mailformpro/config.cgi`
+- **メール送信先**: `info@seirino-mikata.com`
+- **差出人名**: 整理のミカタ
+- **サンクスページ**: `../thanks.html?no=%s`（相対パス、受付番号付き）
+
+### フォームのname属性（Mailform Pro準拠）
+
+| フィールド | name属性 |
+|-----------|---------|
+| 氏名 | `氏名` |
+| ふりがな | `ふりがな` |
+| 郵便番号 | `郵便番号` |
+| 住所 | `住所` |
+| 電話番号 | `電話番号` |
+| 希望日時 | `希望日時` |
+| ご相談内容 | `ご相談内容` |
+
+### 注意事項
+- フォームの `id` は `mailformpro` にすること（CGI側で参照）
+- name属性は日本語（旧サイトと同一のフィールド名を維持）
+- config.cgiを変更すると旧サイト・新サイト両方に影響する（共有CGI）
+
+## 公式LINE
+- **URL**: `https://lin.ee/zR7fCKt`
+- サイト内の複数箇所で使用（ヘッダー、CTAセクション、お問い合わせページ、サンクスページ）
+
+## 連絡先情報
+- **フリーダイヤル**: 0120-433-233
+- **受付時間**: 10:00〜19:00（年中無休）
+- **メール**: info@seirino-mikata.com
+- **住所**: 〒362-0035 埼玉県上尾市仲町1-7-25
+
+## スタイル規約
+
+### CSS変数（`:root` で定義）
+- `--color-primary`: #5a9d64（グリーン）
+- `--color-primary-dark`: #3d7a4a
+- `--color-primary-light`: #7fb889
+- `--color-primary-bg`: #F5FBF6
 - `--font-sans`: 'Noto Sans JP'
-- `--font-serif`: 'Noto Serif JP'
+- `--font-serif`: 'Noto Sans JP'
 
-### Main visual section
-- Desktop: Side-by-side layout with person image on right
-- Mobile (<=840px): Person image is hidden, text centered
-- Title uses `.main-visual-title` with 3-line layout:
-  - Line 1: おかたずけの
-  - Line 2: プロフェッショナル
-  - Line 3: 整理のミカタ (styled with `.brand-name` - green, larger, bold)
+### メインビジュアルセクション
+- デスクトップ: 左右並びレイアウト（右側に人物画像）
+- モバイル（840px以下）: 人物画像は非表示、テキスト中央揃え
+- タイトルは `.main-visual-title` で3行構成:
+  - 1行目: おかたずけの
+  - 2行目: プロフェッショナル
+  - 3行目: 整理のミカタ（`.brand-name` でスタイル - グリーン、大きめ、太字）
 
-### Responsive breakpoints
-- 840px: Main visual layout changes (column, person hidden)
-- 768px: Navigation switches to mobile menu, footer layout changes
-- 640px: Blog grid becomes single column
+### レスポンシブブレークポイント
+- 840px: メインビジュアルのレイアウト変更（縦並び、人物非表示）
+- 768px: ナビゲーションがモバイルメニューに切替、フッターレイアウト変更
+- 640px: ブロググリッドが1カラムに
 
-## Icon files (`images/`)
-- `icon-tel.svg` - Phone icon
-- `icon-mail.svg` - Mail/envelope icon
-- `icon-line.svg` - LINE messenger icon
-- `icon-heart.svg`, `icon-pro.svg`, `icon-price.svg`, `icon-support.svg` - Feature icons
+## アイコンファイル（`images/`）
+- `icon-tel.svg` - 電話アイコン
+- `icon-mail.svg` - メール/封筒アイコン
+- `icon-line.svg` - LINEメッセンジャーアイコン
+- `icon-heart.svg`、`icon-pro.svg`、`icon-price.svg`、`icon-support.svg` - 特徴アイコン
 
-## Conventions
-- Prefer editing React pages/components under `src/` rather than root HTML files.
-- Keep changes minimal and consistent with existing component patterns.
-- Avoid non-ASCII characters unless the file already contains them.
-- Blog list/detail styling lives in `css/style.css` and uses classes like `.blog-grid`, `.blog-card`, `.pagination`, `.blog-detail-*`.
-- Use CSS variables for colors and fonts to maintain consistency.
-- Mobile-first considerations: test layouts at 375px width for smartphone view.
+## 開発規約
+- Reactページ/コンポーネントは `src/` 配下を優先して編集すること。
+- 変更は最小限に、既存のコンポーネントパターンとの一貫性を保つこと。
+- ブログ一覧/詳細のスタイルは `css/style.css` にあり、`.blog-grid`、`.blog-card`、`.pagination`、`.blog-detail-*` などのクラスを使用。
+- 色やフォントにはCSS変数を使用して統一感を維持すること。
+- モバイルファースト: スマートフォン表示（375px幅）でのレイアウトを確認すること。
