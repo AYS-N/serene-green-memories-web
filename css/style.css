@@ -242,6 +242,10 @@ li {
 ==========================================================================
 */
 
+.page-title + .main {
+  margin-top: 60px;
+}
+
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
