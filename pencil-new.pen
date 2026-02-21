@@ -722,6 +722,2760 @@
               ]
             }
           ]
+        },
+        {
+          "type": "frame",
+          "id": "DyFUy",
+          "x": 18907,
+          "y": 534,
+          "name": "サービスページ（新提案）",
+          "width": 1440,
+          "fill": "#FAFAF8",
+          "layout": "vertical",
+          "children": [
+            {
+              "type": "frame",
+              "id": "Xr78J",
+              "name": "Header",
+              "width": "fill_container",
+              "height": 72,
+              "fill": "#FFFFFF",
+              "padding": [
+                0,
+                120
+              ],
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "rectangle",
+                  "id": "y2sGs",
+                  "name": "Logo",
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "images/seirino-mikata-logo.png",
+                    "mode": "fit"
+                  },
+                  "width": 180,
+                  "height": 60
+                },
+                {
+                  "type": "frame",
+                  "id": "lLWIC",
+                  "name": "Navigation",
+                  "gap": 32,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "jy18D",
+                      "name": "navTop",
+                      "fill": "#1A1918",
+                      "content": "トップ",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "a7a5d",
+                      "name": "navServiceActive",
+                      "fill": "#E8F5E9",
+                      "cornerRadius": 4,
+                      "padding": [
+                        6,
+                        12
+                      ],
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Lktn2",
+                          "name": "navServiceContent",
+                          "fill": "#2E7D4A",
+                          "content": "サービス内容",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "LKF0b",
+                      "name": "navService",
+                      "fill": "#4A4A4A",
+                      "content": "料金について",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "nUWOh",
+                      "name": "navAbout",
+                      "fill": "transparent",
+                      "cornerRadius": 4,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "4mXGW",
+                          "name": "navAboutText",
+                          "fill": "#4A4A4A",
+                          "content": "会社概要",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "1DnLf",
+                      "name": "navBlog",
+                      "fill": "#4A4A4A",
+                      "content": "ブログ",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "cJBW4",
+                      "name": "navFaq",
+                      "fill": "#4A4A4A",
+                      "content": "よくある質問",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    },
+                    {
+                      "type": "text",
+                      "id": "n3C26",
+                      "name": "navContact",
+                      "fill": "#4A4A4A",
+                      "content": "お問い合わせ",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "prEy1",
+              "name": "Hero Section",
+              "metadata": {
+                "type": "unsplash",
+                "username": "tannguyen200196",
+                "link": "https://unsplash.com/@tannguyen200196",
+                "author": "Tan Tony"
+              },
+              "width": "fill_container",
+              "height": 540,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1759244328661-9f8b9d0e7737?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0NjM1Njl8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "layout": "vertical",
+              "gap": 24,
+              "padding": [
+                80,
+                120
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "MjS03",
+                  "name": "HeroOverlay",
+                  "width": "fill_container",
+                  "height": "fill_container",
+                  "fill": {
+                    "type": "gradient",
+                    "gradientType": "linear",
+                    "enabled": true,
+                    "rotation": 180,
+                    "size": {
+                      "height": 1
+                    },
+                    "colors": [
+                      {
+                        "color": "#1B5E35DD",
+                        "position": 0
+                      },
+                      {
+                        "color": "#2E7D4ABB",
+                        "position": 1
+                      }
+                    ]
+                  },
+                  "layout": "vertical",
+                  "gap": 24,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "nwb1W",
+                      "name": "HeroLabel",
+                      "fill": "#FFFFFF22",
+                      "cornerRadius": 20,
+                      "gap": 8,
+                      "padding": [
+                        6,
+                        16
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "r9Ox6",
+                          "name": "heroLabelIcon",
+                          "width": 14,
+                          "height": 14,
+                          "iconFontName": "heart",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        },
+                        {
+                          "type": "text",
+                          "id": "wDZY6",
+                          "name": "heroLabelText",
+                          "fill": "#FFFFFF",
+                          "content": "埼玉県全域対応・遺品整理専門",
+                          "fontFamily": "Outfit",
+                          "fontSize": 13,
+                          "fontWeight": "500"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "C3pOX",
+                      "name": "HeroTitle",
+                      "fill": "#FFFFFF",
+                      "textGrowth": "fixed-width",
+                      "width": 800,
+                      "content": "大切な方の想い出を、\n心を込めてお手伝いします",
+                      "lineHeight": 1.4,
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 44,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "zRQKX",
+                      "name": "HeroSub",
+                      "fill": "#FFFFFFCC",
+                      "textGrowth": "fixed-width",
+                      "width": 680,
+                      "content": "はじめての遺品整理、不安なお気持ちに寄り添います。\nお見積りは完全無料。強引な営業は一切いたしません。",
+                      "lineHeight": 1.7,
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "EI5Dx",
+                      "name": "HeroCTARow",
+                      "gap": 16,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ajh3m",
+                          "name": "HeroCTABtn",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": 8,
+                          "gap": 10,
+                          "padding": [
+                            16,
+                            36
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "Jt5tF",
+                              "name": "heroBtn1Icon",
+                              "width": 20,
+                              "height": 20,
+                              "iconFontName": "calculator",
+                              "iconFontFamily": "lucide",
+                              "fill": "#2E7D4A"
+                            },
+                            {
+                              "type": "text",
+                              "id": "lAKSq",
+                              "name": "heroBtn1Text",
+                              "fill": "#2E7D4A",
+                              "content": "無料お見積り・ご相談",
+                              "fontFamily": "Outfit",
+                              "fontSize": 17,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "w5hEg",
+                          "name": "HeroPhoneBtn",
+                          "fill": "#FFFFFF20",
+                          "cornerRadius": 8,
+                          "stroke": {
+                            "thickness": 2,
+                            "fill": "#FFFFFF80"
+                          },
+                          "gap": 10,
+                          "padding": [
+                            16,
+                            36
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "DXaEf",
+                              "name": "heroBtn2Icon",
+                              "width": 20,
+                              "height": 20,
+                              "iconFontName": "phone",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FFFFFF"
+                            },
+                            {
+                              "type": "text",
+                              "id": "HfHHF",
+                              "name": "heroBtn2Text",
+                              "fill": "#FFFFFF",
+                              "content": "0120-XXX-XXX",
+                              "fontFamily": "Outfit",
+                              "fontSize": 17,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "44dw7",
+              "name": "Service Overview",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "layout": "vertical",
+              "gap": 48,
+              "padding": [
+                80,
+                120
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "tMwag",
+                  "name": "SvcHeader",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "XfXAn",
+                      "name": "svcLabel",
+                      "fill": "#2E7D4A",
+                      "content": "SERVICE",
+                      "fontFamily": "Outfit",
+                      "fontSize": 13,
+                      "fontWeight": "600",
+                      "letterSpacing": 3
+                    },
+                    {
+                      "type": "text",
+                      "id": "IScJq",
+                      "name": "svcTitle",
+                      "fill": "#1A1A1A",
+                      "content": "遺品整理のすべてをお任せください",
+                      "fontFamily": "Outfit",
+                      "fontSize": 36,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "ufQGw",
+                      "name": "svcDesc",
+                      "fill": "#7A7A7A",
+                      "content": "ご遺族のお気持ちに寄り添いながら、丁寧にサポートいたします",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "VNRg0",
+                  "name": "ServiceCards",
+                  "width": "fill_container",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "fXgmA",
+                      "name": "Card1",
+                      "width": "fill_container",
+                      "fill": "#FAFAF8",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E0E8E4"
+                      },
+                      "layout": "vertical",
+                      "gap": 20,
+                      "padding": [
+                        32,
+                        28
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "tFBJh",
+                          "name": "Card1Img",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "andrewpetrischev",
+                            "link": "https://unsplash.com/@andrewpetrischev",
+                            "author": "Andrew"
+                          },
+                          "width": "fill_container",
+                          "height": 180,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1578509725209-08fa73a38fa8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0NjM2NTl8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 8
+                        },
+                        {
+                          "type": "text",
+                          "id": "GCHAr",
+                          "name": "card1Title",
+                          "fill": "#1A1A1A",
+                          "content": "遺品の仕分け・整理",
+                          "fontFamily": "Outfit",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "fLPo6",
+                          "name": "card1Desc",
+                          "fill": "#4A4A4A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "ご遺族のご意向を確認しながら、一つひとつ丁寧に仕分けいたします。大切な思い出の品は慎重にお取り扱いします。",
+                          "lineHeight": 1.7,
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "uRHOg",
+                      "name": "Card2",
+                      "width": "fill_container",
+                      "fill": "#FAFAF8",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E0E8E4"
+                      },
+                      "layout": "vertical",
+                      "gap": 20,
+                      "padding": [
+                        32,
+                        28
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "UZIJe",
+                          "name": "Card2Img",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "jackplantt",
+                            "link": "https://unsplash.com/@jackplantt",
+                            "author": "Jack Plant"
+                          },
+                          "width": "fill_container",
+                          "height": 180,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1640828333856-66076f44a611?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0NjM2NjB8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 8
+                        },
+                        {
+                          "type": "text",
+                          "id": "HfHCJ",
+                          "name": "card2Title",
+                          "fill": "#1A1A1A",
+                          "content": "買取・査定サービス",
+                          "fontFamily": "Outfit",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "oxM00",
+                          "name": "card2Desc",
+                          "fill": "#4A4A4A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "買取専門店運営の経験を活かし、適正価格で査定。遺品整理の費用を実質的に削減できます。",
+                          "lineHeight": 1.7,
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Y94DM",
+                      "name": "Card3",
+                      "width": "fill_container",
+                      "fill": "#FAFAF8",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 1,
+                        "fill": "#E0E8E4"
+                      },
+                      "layout": "vertical",
+                      "gap": 20,
+                      "padding": [
+                        32,
+                        28
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "MkDyW",
+                          "name": "Card3Img",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "wellgraf",
+                            "link": "https://unsplash.com/@wellgraf",
+                            "author": "Pontus Wellgraf"
+                          },
+                          "width": "fill_container",
+                          "height": 180,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1564636444771-0530507ecd3e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0NjM2NjB8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          },
+                          "cornerRadius": 8
+                        },
+                        {
+                          "type": "text",
+                          "id": "53jjg",
+                          "name": "card3Title",
+                          "fill": "#1A1A1A",
+                          "content": "リユース・リサイクル",
+                          "fontFamily": "Outfit",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "j5Dx1",
+                          "name": "card3Desc",
+                          "fill": "#4A4A4A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "3Rディレクターが国内外でのリユース・リサイクルを推進。捨てるのではなく、次の方へつなぎます。",
+                          "lineHeight": 1.7,
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Y6sqj",
+              "name": "No Waste Section",
+              "width": "fill_container",
+              "fill": "#F0F7F4",
+              "layout": "vertical",
+              "gap": 56,
+              "padding": [
+                80,
+                120
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ZGsLZ",
+                  "name": "NWHeader",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "kyFv9",
+                      "name": "nwLabel",
+                      "fill": "#2E7D4A",
+                      "content": "SUSTAINABLE",
+                      "fontFamily": "Outfit",
+                      "fontSize": 13,
+                      "fontWeight": "600",
+                      "letterSpacing": 3
+                    },
+                    {
+                      "type": "text",
+                      "id": "HZRHH",
+                      "name": "nwCatch",
+                      "fill": "#1B5E35",
+                      "content": "捨てるのではなく、つなぐ。",
+                      "fontFamily": "Outfit",
+                      "fontSize": 40,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "lfw12",
+                      "name": "nwSubtitle",
+                      "fill": "#4A4A4A",
+                      "content": "大切なお品物を、次の方へつなぎます",
+                      "fontFamily": "Outfit",
+                      "fontSize": 18,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "bwU04",
+                  "name": "Zigzag1",
+                  "width": "fill_container",
+                  "gap": 48,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Cb7sD",
+                      "name": "ZZ1Text",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "fFKKk",
+                          "name": "zz1Title",
+                          "fill": "#1A1A1A",
+                          "content": "3Rディレクター資格の意義",
+                          "fontFamily": "Outfit",
+                          "fontSize": 24,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "NfyJW",
+                          "name": "zz1Desc",
+                          "fill": "#4A4A4A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "JRRC（遺品3Rディレクター協会）公式認定の専門資格です。消費者トラブルの増加を背景に創設され、法令遵守・高い倫理性を証明します。私たちは資格保有者が責任を持って対応いたします。",
+                          "lineHeight": 1.8,
+                          "fontFamily": "Outfit",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "9p1V5",
+                      "name": "ZZ1Img",
+                      "width": 480,
+                      "height": 320,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1771463714518.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 12
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "91TWV",
+                  "name": "Zigzag2",
+                  "width": "fill_container",
+                  "gap": 48,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "U76q9",
+                      "name": "ZZ2Img",
+                      "width": 480,
+                      "height": 320,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1771463723421.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ifmYO",
+                      "name": "ZZ2Text",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "Lk70V",
+                          "name": "zz2Title",
+                          "fill": "#1A1A1A",
+                          "content": "海外リユースで、世界へつなぐ",
+                          "fontFamily": "Outfit",
+                          "fontSize": 24,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "JJ53r",
+                          "name": "zz2Desc",
+                          "fill": "#4A4A4A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "フィリピン、カンボジアなどへの海外輸出を含むリユースネットワークを構築。特に和服・着物は海外での需要が高く、大切にされてきたお品物が新しい持ち主のもとで再び活躍します。",
+                          "lineHeight": 1.8,
+                          "fontFamily": "Outfit",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "rnpgK",
+              "name": "Service Flow",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "layout": "vertical",
+              "gap": 48,
+              "padding": 80,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "0QYnm",
+                  "name": "FlowTitleRow",
+                  "width": "fill_container",
+                  "gap": 20,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "317vS",
+                      "name": "titleLineL",
+                      "width": 80,
+                      "height": 2,
+                      "fill": "#2E7D4A"
+                    },
+                    {
+                      "type": "text",
+                      "id": "6RDq0",
+                      "name": "titleText",
+                      "fill": "#1A1A1A",
+                      "content": "お問い合わせから完了までの流れ",
+                      "fontFamily": "Outfit",
+                      "fontSize": 32,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "frame",
+                      "id": "GW9qk",
+                      "name": "titleLineR",
+                      "width": 80,
+                      "height": 2,
+                      "fill": "#2E7D4A"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "13dse",
+                  "name": "StepsRow",
+                  "width": "fill_container",
+                  "gap": 24,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "u5GsD",
+                      "name": "Step1Card",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 2,
+                        "fill": "#8CB46D"
+                      },
+                      "layout": "vertical",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "e8M3M",
+                          "name": "s1label",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": [
+                            12,
+                            12,
+                            0,
+                            0
+                          ],
+                          "padding": [
+                            8,
+                            0
+                          ],
+                          "justifyContent": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "H7TLK",
+                              "name": "s1labelText",
+                              "fill": "#5A9D64",
+                              "content": "STEP1. お問い合わせ",
+                              "fontFamily": "Outfit",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "5IWr4",
+                          "name": "S1Img",
+                          "width": "fill_container",
+                          "height": 160,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/generated-1771465145470.png",
+                            "mode": "fill"
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Haj8T",
+                          "name": "s1desc",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            14,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "LQhbo",
+                              "name": "s1descText",
+                              "fill": "#4A4A4A",
+                              "content": "最短当日に訪問見積もり対応",
+                              "textAlign": "center",
+                              "fontFamily": "Outfit",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jrK1x",
+                      "name": "Step2Card",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 2,
+                        "fill": "#8CB46D"
+                      },
+                      "layout": "vertical",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "jONaf",
+                          "name": "s2label",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": [
+                            12,
+                            12,
+                            0,
+                            0
+                          ],
+                          "padding": [
+                            8,
+                            0
+                          ],
+                          "justifyContent": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "NCZUe",
+                              "name": "s2labelText",
+                              "fill": "#5A9D64",
+                              "content": "STEP2. 見積もり・契約",
+                              "fontFamily": "Outfit",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Bjckn",
+                          "name": "S2Img",
+                          "width": "fill_container",
+                          "height": 160,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/generated-1771465153251.png",
+                            "mode": "fill"
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "kNivd",
+                          "name": "s2desc",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            14,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "kOgnh",
+                              "name": "s2descText",
+                              "fill": "#4A4A4A",
+                              "content": "追加料金無し！明朗会計です",
+                              "textAlign": "center",
+                              "fontFamily": "Outfit",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "hig9w",
+                      "name": "Step3Card",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 2,
+                        "fill": "#8CB46D"
+                      },
+                      "layout": "vertical",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "fmds1",
+                          "name": "s3label",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": [
+                            12,
+                            12,
+                            0,
+                            0
+                          ],
+                          "padding": [
+                            8,
+                            0
+                          ],
+                          "justifyContent": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "EythY",
+                              "name": "s3labelText",
+                              "fill": "#5A9D64",
+                              "content": "STEP3. 作業・清掃",
+                              "fontFamily": "Outfit",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "p4rqf",
+                          "name": "S3Img",
+                          "width": "fill_container",
+                          "height": 160,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/generated-1771465169545.png",
+                            "mode": "fill"
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "4KaLb",
+                          "name": "s3desc",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            14,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "50okI",
+                              "name": "s3descText",
+                              "fill": "#4A4A4A",
+                              "content": "スピード重視の迅速対応！",
+                              "textAlign": "center",
+                              "fontFamily": "Outfit",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "WJ8M2",
+                      "name": "Step4Card",
+                      "width": "fill_container",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 12,
+                      "stroke": {
+                        "thickness": 2,
+                        "fill": "#8CB46D"
+                      },
+                      "layout": "vertical",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "9fNMe",
+                          "name": "s4label",
+                          "width": "fill_container",
+                          "fill": "#FFFFFF",
+                          "cornerRadius": [
+                            12,
+                            12,
+                            0,
+                            0
+                          ],
+                          "padding": [
+                            8,
+                            0
+                          ],
+                          "justifyContent": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "ANb1v",
+                              "name": "s4labelText",
+                              "fill": "#5A9D64",
+                              "content": "STEP4. 確認・ご精算",
+                              "fontFamily": "Outfit",
+                              "fontSize": 14,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "xe67U",
+                          "name": "S4Img",
+                          "width": "fill_container",
+                          "height": 160,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "./images/generated-1771465176633.png",
+                            "mode": "fill"
+                          }
+                        },
+                        {
+                          "type": "frame",
+                          "id": "4B1u1",
+                          "name": "s4desc",
+                          "width": "fill_container",
+                          "layout": "vertical",
+                          "padding": [
+                            14,
+                            12
+                          ],
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "jlT3y",
+                              "name": "s4descText",
+                              "fill": "#4A4A4A",
+                              "content": "現金・カードどちらもOK",
+                              "textAlign": "center",
+                              "fontFamily": "Outfit",
+                              "fontSize": 13,
+                              "fontWeight": "500"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "qROuM",
+              "name": "Other Services",
+              "width": "fill_container",
+              "fill": "#F0F4EC",
+              "layout": "vertical",
+              "gap": 40,
+              "padding": [
+                80,
+                120
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "EcB2r",
+                  "name": "title",
+                  "fill": "#1A1A1A",
+                  "content": "遺品回収の他にもお客様をサポートいたします。",
+                  "textAlign": "center",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 28,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "rectangle",
+                  "cornerRadius": 3,
+                  "id": "3JtWt",
+                  "name": "underline",
+                  "fill": "#4CAF50",
+                  "width": 280,
+                  "height": 5
+                },
+                {
+                  "type": "text",
+                  "id": "MjsG9",
+                  "name": "subtitle",
+                  "fill": "#444444",
+                  "content": "「私たちは遺品を整理して終わり」という訳ではありません。\n遺品整理時に関わることは、まずは「整理のミカタ」にご相談ください。",
+                  "lineHeight": 1.8,
+                  "textAlign": "center",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 16,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "rectangle",
+                  "id": "MgexA",
+                  "name": "divider",
+                  "fill": "#CCCCCC",
+                  "width": 600,
+                  "height": 1
+                },
+                {
+                  "type": "text",
+                  "id": "pZkAY",
+                  "name": "subheading",
+                  "fill": "#1A1A1A",
+                  "content": "このようなケースも整理のミカタにご相談ください",
+                  "textAlign": "center",
+                  "fontFamily": "Noto Sans JP",
+                  "fontSize": 22,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "frame",
+                  "id": "QUHwI",
+                  "name": "row1",
+                  "width": "fill_container",
+                  "gap": 32,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "N442x",
+                      "name": "card1",
+                      "width": 370,
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "rFbhL",
+                          "name": "label1",
+                          "width": "fill_container",
+                          "fill": "#4CAF50",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "4X3dJ",
+                              "name": "labelText1",
+                              "fill": "#FFFFFF",
+                              "content": "遺品供養",
+                              "textAlign": "center",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "nbf5L",
+                          "name": "img1",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "pafuxu",
+                            "link": "https://unsplash.com/@pafuxu",
+                            "author": "Kouji Tsuru"
+                          },
+                          "width": "fill_container",
+                          "height": 220,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1656488497986-4c98f1b69279?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0NjU4MzZ8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "6DIhg",
+                      "name": "card2",
+                      "width": 370,
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "h70wg",
+                          "name": "label2",
+                          "width": "fill_container",
+                          "fill": "#4CAF50",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "pS6dw",
+                              "name": "labelText2",
+                              "fill": "#FFFFFF",
+                              "content": "特殊清掃や消臭作業",
+                              "textAlign": "center",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "20V2W",
+                          "name": "img2",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "koneca",
+                            "link": "https://unsplash.com/@koneca",
+                            "author": "Yk K"
+                          },
+                          "width": "fill_container",
+                          "height": 220,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1636791013127-37effd526316?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0NjU4Mzd8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "CSJZV",
+                      "name": "card3",
+                      "width": 370,
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "yaWr3",
+                          "name": "label3",
+                          "width": "fill_container",
+                          "fill": "#4CAF50",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "Kxugk",
+                              "name": "labelText3",
+                              "fill": "#FFFFFF",
+                              "content": "ゴミ屋敷・汚部屋の清掃",
+                              "textAlign": "center",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "EztvC",
+                          "name": "img3",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "by_danny_g",
+                            "link": "https://unsplash.com/@by_danny_g",
+                            "author": "Danny Greenberg"
+                          },
+                          "width": "fill_container",
+                          "height": 220,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1752892918934-557f437f8b41?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0NjU4Mzh8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "6lHVy",
+                  "name": "row2",
+                  "width": "fill_container",
+                  "gap": 32,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "peS89",
+                      "name": "card4",
+                      "width": 370,
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "ER8gR",
+                          "name": "label4",
+                          "width": "fill_container",
+                          "fill": "#4CAF50",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "VprDk",
+                              "name": "labelText4",
+                              "fill": "#FFFFFF",
+                              "content": "不動産整理",
+                              "textAlign": "center",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "ZJ9W9",
+                          "name": "img4",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "isoten",
+                            "link": "https://unsplash.com/@isoten",
+                            "author": "5010"
+                          },
+                          "width": "fill_container",
+                          "height": 220,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1762956227561-7b2cb2d7454f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0NjU4Mzh8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "9lbWY",
+                      "name": "card5",
+                      "width": 370,
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "tElNc",
+                          "name": "label5",
+                          "width": "fill_container",
+                          "fill": "#4CAF50",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "8jROe",
+                              "name": "labelText5",
+                              "fill": "#FFFFFF",
+                              "content": "解体業者・リフォーム業者のご紹介",
+                              "textAlign": "center",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "9hJ39",
+                          "name": "img5",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "nuvolephotos",
+                            "link": "https://unsplash.com/@nuvolephotos",
+                            "author": "Abhishek Kirloskar"
+                          },
+                          "width": "fill_container",
+                          "height": 220,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1631171992385-784ae02b1acb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0NjU4Mzl8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "gSUA6",
+                      "name": "card6",
+                      "width": 370,
+                      "cornerRadius": 8,
+                      "layout": "vertical",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "KgBh2",
+                          "name": "label6",
+                          "width": "fill_container",
+                          "fill": "#4CAF50",
+                          "padding": [
+                            10,
+                            24
+                          ],
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "text",
+                              "id": "QtmC2",
+                              "name": "labelText6",
+                              "fill": "#FFFFFF",
+                              "content": "各種手続き代行",
+                              "textAlign": "center",
+                              "fontFamily": "Noto Sans JP",
+                              "fontSize": 16,
+                              "fontWeight": "700"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "PM1dQ",
+                          "name": "img6",
+                          "metadata": {
+                            "type": "unsplash",
+                            "username": "brett_jordan",
+                            "link": "https://unsplash.com/@brett_jordan",
+                            "author": "Brett Jordan"
+                          },
+                          "width": "fill_container",
+                          "height": 220,
+                          "fill": {
+                            "type": "image",
+                            "enabled": true,
+                            "url": "https://images.unsplash.com/photo-1655967022662-3d63d0923508?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NzE0NjU4NDB8&ixlib=rb-4.1.0&q=80&w=1080",
+                            "mode": "fill"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "lMlin",
+              "name": "Service Area",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "layout": "vertical",
+              "gap": 48,
+              "padding": [
+                80,
+                120
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ubHeb",
+                  "name": "areaHeader",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "es9BJ",
+                      "name": "areaLabel",
+                      "fill": "#2E7D4A",
+                      "content": "AREA",
+                      "fontFamily": "Outfit",
+                      "fontSize": 13,
+                      "fontWeight": "600",
+                      "letterSpacing": 3
+                    },
+                    {
+                      "type": "text",
+                      "id": "fibN9",
+                      "name": "areaTitle",
+                      "fill": "#1A1A1A",
+                      "content": "対応エリア",
+                      "fontFamily": "Outfit",
+                      "fontSize": 36,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "JFVfu",
+                  "name": "areaContent",
+                  "width": "fill_container",
+                  "gap": 48,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "D9CPe",
+                      "name": "AreaMap",
+                      "width": "fill_container",
+                      "height": 360,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "./images/generated-1771463953663.png",
+                        "mode": "fill"
+                      },
+                      "cornerRadius": 12
+                    },
+                    {
+                      "type": "frame",
+                      "id": "wsIxL",
+                      "name": "areaList",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 16,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "TSzmS",
+                          "name": "areaListTitle",
+                          "fill": "#1A1A1A",
+                          "content": "埼玉県全域に対応しています",
+                          "fontFamily": "Outfit",
+                          "fontSize": 22,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "jMEte",
+                          "name": "areaListDesc",
+                          "fill": "#4A4A4A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "さいたま市・川口市・川越市・所沢市・越谷市・草加市・春日部市・上尾市・熊谷市・新座市・久喜市・狭山市・入間市・深谷市・三郷市・朝霞市・戸田市・鴻巣市・加須市・富士見市 など埼玉県内全域",
+                          "lineHeight": 1.8,
+                          "fontFamily": "Outfit",
+                          "fontSize": 15,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "GH0Q5",
+                          "name": "areaNote",
+                          "fill": "#7A7A7A",
+                          "content": "※一部エリアは出張費が発生する場合がございます",
+                          "fontFamily": "Outfit",
+                          "fontSize": 13,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "NpXhl",
+              "name": "Trust Section",
+              "width": "fill_container",
+              "fill": "#FFFFFF",
+              "layout": "vertical",
+              "gap": 48,
+              "padding": [
+                80,
+                120
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "qKaqV",
+                  "name": "TrustHeader",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "yJqez",
+                      "name": "trustLabel",
+                      "fill": "#2E7D4A",
+                      "content": "TRUST & SAFETY",
+                      "fontFamily": "Outfit",
+                      "fontSize": 13,
+                      "fontWeight": "600",
+                      "letterSpacing": 3
+                    },
+                    {
+                      "type": "text",
+                      "id": "Lupni",
+                      "name": "trustTitle",
+                      "fill": "#1A1A1A",
+                      "content": "安心の保障・資格",
+                      "fontFamily": "Outfit",
+                      "fontSize": 36,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "BWpIP",
+                  "name": "TrustCards",
+                  "width": "fill_container",
+                  "gap": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "5jT9d",
+                      "name": "TC1",
+                      "width": "fill_container",
+                      "fill": "#F0F7F4",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": [
+                        32,
+                        28
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "LtXzk",
+                          "name": "TC1Icon",
+                          "width": 64,
+                          "height": 64,
+                          "fill": "#2E7D4A",
+                          "cornerRadius": 32,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "6OgXW",
+                              "name": "tc1IconImg",
+                              "width": 32,
+                              "height": 32,
+                              "iconFontName": "badge-check",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FFFFFF"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "AX4Kv",
+                          "name": "tc1Title",
+                          "fill": "#1A1A1A",
+                          "content": "3Rディレクター",
+                          "textAlign": "center",
+                          "fontFamily": "Outfit",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "LD3gq",
+                          "name": "tc1Desc",
+                          "fill": "#4A4A4A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "JRRC認定「遺品3Rディレクター」が対応。消費者トラブル増加を背景に創設された専門資格で、法令遵守の研修・試験を通過した専門家です。",
+                          "lineHeight": 1.7,
+                          "textAlign": "center",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "L17y7",
+                      "name": "TC2",
+                      "width": "fill_container",
+                      "fill": "#F0F7F4",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": [
+                        32,
+                        28
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "qNMu6",
+                          "name": "TC2Icon",
+                          "width": 64,
+                          "height": 64,
+                          "fill": "#2E7D4A",
+                          "cornerRadius": 32,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "btMvH",
+                              "name": "tc2IconImg",
+                              "width": 32,
+                              "height": 32,
+                              "iconFontName": "shield-check",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FFFFFF"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "OD9bm",
+                          "name": "tc2Title",
+                          "fill": "#1A1A1A",
+                          "content": "JRRC保険1億円",
+                          "textAlign": "center",
+                          "fontFamily": "Outfit",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "JDS8e",
+                          "name": "tc2BigNum",
+                          "fill": "#1B5E35",
+                          "content": "1億円",
+                          "textAlign": "center",
+                          "fontFamily": "Outfit",
+                          "fontSize": 40,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "k05p1",
+                          "name": "tc2Desc",
+                          "fill": "#4A4A4A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "作業中の建物・壁の破損、お客様の大切な品物の損傷、搬出時の事故まで幅広く保障いたします。",
+                          "lineHeight": 1.7,
+                          "textAlign": "center",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "mJ1kj",
+                      "name": "TC3",
+                      "width": "fill_container",
+                      "fill": "#F0F7F4",
+                      "cornerRadius": 12,
+                      "layout": "vertical",
+                      "gap": 16,
+                      "padding": [
+                        32,
+                        28
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "yXHp8",
+                          "name": "TC3Icon",
+                          "width": 64,
+                          "height": 64,
+                          "fill": "#2E7D4A",
+                          "cornerRadius": 32,
+                          "justifyContent": "center",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "type": "icon_font",
+                              "id": "EWT0l",
+                              "name": "tc3IconImg",
+                              "width": 32,
+                              "height": 32,
+                              "iconFontName": "lock",
+                              "iconFontFamily": "lucide",
+                              "fill": "#FFFFFF"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "text",
+                          "id": "uHZdX",
+                          "name": "tc3Title",
+                          "fill": "#1A1A1A",
+                          "content": "プライバシー保護",
+                          "textAlign": "center",
+                          "fontFamily": "Outfit",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "NBWoO",
+                          "name": "tc3Desc",
+                          "fill": "#4A4A4A",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "content": "個人情報・機密書類の適切な処理を徹底。機密文書のシュレッダー処理にも対応。故人の手紙・写真などデリケートな品物は最大限の配慮をいたします。",
+                          "lineHeight": 1.7,
+                          "textAlign": "center",
+                          "fontFamily": "Outfit",
+                          "fontSize": 14,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "hBAis",
+              "name": "Trust Badge Bar",
+              "width": "fill_container",
+              "fill": "#1B5E3B",
+              "padding": [
+                28,
+                80
+              ],
+              "justifyContent": "space_around",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "jrENS",
+                  "name": "Badge1",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "txdSH",
+                      "name": "iconBg1",
+                      "width": 52,
+                      "height": 52,
+                      "fill": "rgba(255,255,255,0.15)",
+                      "cornerRadius": 26,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "7s6NC",
+                          "name": "badge1Icon",
+                          "width": 30,
+                          "height": 30,
+                          "iconFontName": "award",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "C84ju",
+                      "name": "badge1Text",
+                      "fill": "#FFFFFF",
+                      "content": "遺品整理士在籍",
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "QE12b",
+                  "name": "Badge2",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "rFfOl",
+                      "name": "iconBg2",
+                      "width": 52,
+                      "height": 52,
+                      "fill": "rgba(255,255,255,0.15)",
+                      "cornerRadius": 26,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "aLmeh",
+                          "name": "badge2Icon",
+                          "width": 30,
+                          "height": 30,
+                          "iconFontName": "badge-check",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "YGPZ1",
+                      "name": "badge2Text",
+                      "fill": "#FFFFFF",
+                      "content": "3Rディレクター",
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "7g8sr",
+                  "name": "Badge3",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "aEvjP",
+                      "name": "iconBg3",
+                      "width": 52,
+                      "height": 52,
+                      "fill": "rgba(255,255,255,0.15)",
+                      "cornerRadius": 26,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "Rj6QK",
+                          "name": "badge3Icon",
+                          "width": 30,
+                          "height": 30,
+                          "iconFontName": "shield-check",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "u7TVN",
+                      "name": "badge3Text",
+                      "fill": "#FFFFFF",
+                      "content": "JRRC保険1億円",
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "4CUiX",
+                  "name": "Badge4",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "UXT1w",
+                      "name": "iconBg4",
+                      "width": 52,
+                      "height": 52,
+                      "fill": "rgba(255,255,255,0.15)",
+                      "cornerRadius": 26,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "T0Gd4",
+                          "name": "badge4Icon",
+                          "width": 30,
+                          "height": 30,
+                          "iconFontName": "trophy",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "CUnC4",
+                      "name": "badge4Text",
+                      "fill": "#FFFFFF",
+                      "content": "年間実績300件",
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "pXIWR",
+                  "name": "Badge5",
+                  "layout": "vertical",
+                  "gap": 12,
+                  "padding": [
+                    12,
+                    16
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "rdgNI",
+                      "name": "iconBg5",
+                      "width": 52,
+                      "height": 52,
+                      "fill": "rgba(255,255,255,0.15)",
+                      "cornerRadius": 26,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "lzPcO",
+                          "name": "badge5Icon",
+                          "width": 30,
+                          "height": 30,
+                          "iconFontName": "map-pin",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "nhIpA",
+                      "name": "badge5Text",
+                      "fill": "#FFFFFF",
+                      "content": "埼玉県全域対応",
+                      "textAlign": "center",
+                      "fontFamily": "Outfit",
+                      "fontSize": 15,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "AMqHT",
+              "name": "Final CTA",
+              "width": "fill_container",
+              "fill": {
+                "type": "gradient",
+                "gradientType": "linear",
+                "enabled": true,
+                "rotation": 135,
+                "size": {
+                  "height": 1
+                },
+                "colors": [
+                  {
+                    "color": "#1B5E35",
+                    "position": 0
+                  },
+                  {
+                    "color": "#2E7D4A",
+                    "position": 0.5
+                  },
+                  {
+                    "color": "#4CAF50",
+                    "position": 1
+                  }
+                ]
+              },
+              "layout": "vertical",
+              "gap": 32,
+              "padding": [
+                80,
+                120
+              ],
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "UElmN",
+                  "name": "fcTitle",
+                  "fill": "#FFFFFF",
+                  "content": "お見積り・ご相談は完全無料です",
+                  "textAlign": "center",
+                  "fontFamily": "Outfit",
+                  "fontSize": 36,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "YHGQe",
+                  "name": "fcSub",
+                  "fill": "#FFFFFFCC",
+                  "content": "強引な営業は一切いたしません。まずはお気軽にお問い合わせください。",
+                  "textAlign": "center",
+                  "fontFamily": "Outfit",
+                  "fontSize": 18,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "5gtlH",
+                  "name": "fcPhone",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "icon_font",
+                      "id": "l2dad",
+                      "name": "fcPhoneIcon",
+                      "width": 28,
+                      "height": 28,
+                      "iconFontName": "phone",
+                      "iconFontFamily": "lucide",
+                      "fill": "#FFFFFF"
+                    },
+                    {
+                      "type": "text",
+                      "id": "pgQiW",
+                      "name": "fcPhoneNum",
+                      "fill": "#FFFFFF",
+                      "content": "0120-XXX-XXX",
+                      "fontFamily": "Outfit",
+                      "fontSize": 36,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "BJhVN",
+                  "name": "fcPhoneNote",
+                  "fill": "#FFFFFF99",
+                  "content": "受付時間 9:00～18:00（年中無休）",
+                  "fontFamily": "Outfit",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "dXXNW",
+                  "name": "fcBtns",
+                  "gap": 16,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "xfyQ1",
+                      "name": "fcBtn1",
+                      "fill": "#FFFFFF",
+                      "cornerRadius": 8,
+                      "gap": 10,
+                      "padding": [
+                        16,
+                        36
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "3UF5w",
+                          "name": "fcBtn1Icon",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "calculator",
+                          "iconFontFamily": "lucide",
+                          "fill": "#1B5E35"
+                        },
+                        {
+                          "type": "text",
+                          "id": "hRKRL",
+                          "name": "fcBtn1Text",
+                          "fill": "#1B5E35",
+                          "content": "無料見積りを依頼する",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "700"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "RyCbS",
+                      "name": "fcBtn2",
+                      "fill": "#06C755",
+                      "cornerRadius": 8,
+                      "gap": 10,
+                      "padding": [
+                        16,
+                        36
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "EdDe8",
+                          "name": "fcBtn2Icon",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "message-circle",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        },
+                        {
+                          "type": "text",
+                          "id": "6PpjY",
+                          "name": "fcBtn2Text",
+                          "fill": "#FFFFFF",
+                          "content": "LINEで簡単お見積り",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "k72tW",
+                      "name": "fcBtn3",
+                      "fill": "#FFFFFF20",
+                      "cornerRadius": 8,
+                      "stroke": {
+                        "thickness": 2,
+                        "fill": "#FFFFFF80"
+                      },
+                      "gap": 10,
+                      "padding": [
+                        16,
+                        36
+                      ],
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "VhxrT",
+                          "name": "fcBtn3Icon",
+                          "width": 20,
+                          "height": 20,
+                          "iconFontName": "mail",
+                          "iconFontFamily": "lucide",
+                          "fill": "#FFFFFF"
+                        },
+                        {
+                          "type": "text",
+                          "id": "aAYcZ",
+                          "name": "fcBtn3Text",
+                          "fill": "#FFFFFF",
+                          "content": "メールで問い合わせ",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "f4cGh",
+              "name": "Footer",
+              "width": "fill_container",
+              "fill": "#F5F5F5",
+              "layout": "vertical",
+              "gap": 40,
+              "padding": [
+                60,
+                120
+              ],
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Dtdly",
+                  "name": "footerTop",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "KwbOf",
+                      "name": "companyInfo",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "TYO4z",
+                          "name": "companyTitle",
+                          "fill": "#2E7D4A",
+                          "content": "整理のミカタ",
+                          "fontFamily": "Outfit",
+                          "fontSize": 20,
+                          "fontWeight": "700"
+                        },
+                        {
+                          "type": "text",
+                          "id": "AqrwL",
+                          "name": "postal",
+                          "fill": "#1A1918",
+                          "content": "〒362-0035",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "zPZja",
+                          "name": "address",
+                          "fill": "#1A1918",
+                          "content": "埼玉県上尾市仲町1-7-25",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "s7uxL",
+                          "name": "tel",
+                          "fill": "#1A1918",
+                          "content": "TEL: 0120-433-233",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "973GX",
+                          "name": "hours",
+                          "fill": "#1A1918",
+                          "content": "受付時間: 10:00〜19:00（年中無休）",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ogqOX",
+                      "name": "serviceMenu",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "JbxrP",
+                          "name": "serviceTitle",
+                          "fill": "#1A1918",
+                          "content": "サービスメニュー",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "slMOh",
+                          "name": "svc1",
+                          "fill": "#1A1918",
+                          "content": "遺品整理サービス",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "kDurZ",
+                          "name": "svc2",
+                          "fill": "#1A1918",
+                          "content": "生前整理サービス",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "3e1PE",
+                          "name": "svc3",
+                          "fill": "#1A1918",
+                          "content": "特殊清掃",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "usIyV",
+                          "name": "svc4",
+                          "fill": "#1A1918",
+                          "content": "不用品回収",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Qf6Oy",
+                      "name": "companyLinks",
+                      "layout": "vertical",
+                      "gap": 12,
+                      "children": [
+                        {
+                          "type": "text",
+                          "id": "z7Mwe",
+                          "name": "companyLinksTitle",
+                          "fill": "#1A1918",
+                          "content": "会社情報",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "600"
+                        },
+                        {
+                          "type": "text",
+                          "id": "LN0zI",
+                          "name": "link1",
+                          "fill": "#1A1918",
+                          "content": "会社概要",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "aOEue",
+                          "name": "link2",
+                          "fill": "#1A1918",
+                          "content": "ブログ",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "1L2ar",
+                          "name": "link3",
+                          "fill": "#1A1918",
+                          "content": "よくある質問",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        },
+                        {
+                          "type": "text",
+                          "id": "PQ7fN",
+                          "name": "link4",
+                          "fill": "#1A1918",
+                          "content": "プライバシーポリシー",
+                          "fontFamily": "Outfit",
+                          "fontSize": 16,
+                          "fontWeight": "normal"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HWjGj",
+                  "name": "footerDivider",
+                  "width": "fill_container",
+                  "height": 1,
+                  "fill": "#E0E0E0"
+                },
+                {
+                  "type": "frame",
+                  "id": "KYGLI",
+                  "name": "footerNav",
+                  "width": "fill_container",
+                  "gap": 32,
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Bam0g",
+                      "name": "nav1",
+                      "fill": "#1A1918",
+                      "content": "トップ",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "r6y0V",
+                      "name": "navServiceFooter",
+                      "fill": "#1A1918",
+                      "content": "サービス内容",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "3erMz",
+                      "name": "nav2",
+                      "fill": "#1A1918",
+                      "content": "料金について",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "MkSYY",
+                      "name": "nav3",
+                      "fill": "#1A1918",
+                      "content": "会社概要",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "AwB4h",
+                      "name": "nav4",
+                      "fill": "#1A1918",
+                      "content": "ブログ",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "SrrrP",
+                      "name": "nav5",
+                      "fill": "#1A1918",
+                      "content": "よくある質問",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "u9DMk",
+                      "name": "nav6",
+                      "fill": "#1A1918",
+                      "content": "お問い合わせ",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "oK73N",
+                      "name": "nav7",
+                      "fill": "#1A1918",
+                      "content": "プライバシーポリシー",
+                      "fontFamily": "Outfit",
+                      "fontSize": 16,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "l7JKq",
+                  "name": "copyrightSection",
+                  "width": "fill_container",
+                  "justifyContent": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "nxPXy",
+                      "name": "copyrightText",
+                      "fill": "#4A4A4A",
+                      "content": "© 2026 整理の味方 All Rights Reserved.",
+                      "fontFamily": "Outfit",
+                      "fontSize": 14,
+                      "fontWeight": "normal"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ]
     },

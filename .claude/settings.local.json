@@ -9,7 +9,19 @@
       "mcp__plugin_playwright_playwright__browser_wait_for",
       "mcp__plugin_playwright_playwright__browser_evaluate",
       "mcp__plugin_playwright_playwright__browser_take_screenshot",
-      "mcp__plugin_playwright_playwright__browser_click"
+      "mcp__plugin_playwright_playwright__browser_click",
+      "Bash(npx http-server:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(cmd /c \"dir C:\\\\Users\\\\AtsushiNoguchi\\\\.claude\\\\ /b\")",
+      "Bash(git -C /c/Users/AtsushiNoguchi/Desktop/serene-green-memories-web log --all --oneline)",
+      "Bash(git -C /c/Users/AtsushiNoguchi/Desktop/serene-green-memories-web remote -v)",
+      "WebSearch",
+      "Bash(git status:*)"
     ]
-  }
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "sentry"
+  ]
 }
