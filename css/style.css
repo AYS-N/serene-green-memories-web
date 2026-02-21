@@ -4494,3 +4494,818 @@ FAQ ページ
     font-size: 13px;
   }
 }
+
+/*
+==========================================================================
+サービスページ（新提案デザイン）
+==========================================================================
+*/
+
+/* ヒーローセクション */
+.svc-hero {
+  position: relative;
+  width: 100%;
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.svc-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(27, 94, 53, 0.87) 0%, rgba(46, 125, 74, 0.73) 100%);
+  z-index: 1;
+}
+
+.svc-hero-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  padding: 80px 20px;
+}
+
+.svc-hero-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.13);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.svc-hero-label svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.svc-hero h1 {
+  font-size: 2.75rem;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  text-shadow: none;
+  font-weight: 700;
+}
+
+.svc-hero-sub {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.svc-hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.svc-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.svc-hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.svc-hero-btn-primary {
+  background: #fff;
+  color: #2E7D4A;
+}
+
+.svc-hero-btn-primary:hover {
+  color: #2E7D4A;
+}
+
+.svc-hero-btn-outline {
+  background: rgba(255, 255, 255, 0.13);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.svc-hero-btn-outline:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* サービス概要 */
+.svc-overview {
+  background: #fff;
+  padding: 80px 0;
+}
+
+.svc-overview-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.svc-section-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2E7D4A;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.svc-overview-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 12px;
+}
+
+.svc-overview-header h2::after {
+  display: none;
+}
+
+.svc-overview-desc {
+  font-size: 16px;
+  color: #7A7A7A;
+}
+
+.svc-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.svc-card {
+  background: #FAFAF8;
+  border-radius: 12px;
+  border: 1px solid #E0E8E4;
+  overflow: hidden;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.svc-card-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.svc-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 0;
+}
+
+.svc-card p {
+  font-size: 14px;
+  color: #4A4A4A;
+  line-height: 1.7;
+}
+
+/* 捨てない片付けセクション */
+.svc-nowaste {
+  background: #F0F7F4;
+  padding: 80px 0;
+}
+
+.svc-nowaste-header {
+  margin-bottom: 56px;
+}
+
+.svc-nowaste-header .svc-section-label {
+  text-align: left;
+}
+
+.svc-nowaste-catch {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1B5E35;
+  margin-bottom: 12px;
+}
+
+.svc-nowaste-sub {
+  font-size: 18px;
+  color: #4A4A4A;
+}
+
+.svc-zigzag {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  margin-bottom: 56px;
+}
+
+.svc-zigzag:last-child {
+  margin-bottom: 0;
+}
+
+.svc-zigzag-text {
+  flex: 1;
+}
+
+.svc-zigzag-text h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 16px;
+}
+
+.svc-zigzag-text p {
+  font-size: 15px;
+  color: #4A4A4A;
+  line-height: 1.8;
+}
+
+.svc-zigzag-img {
+  width: 480px;
+  min-width: 480px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.svc-zigzag.reverse {
+  flex-direction: row-reverse;
+}
+
+/* サービスの流れ */
+.svc-flow {
+  background: #fff;
+  padding: 80px 0;
+}
+
+.svc-flow-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.svc-flow-title-line {
+  width: 80px;
+  height: 2px;
+  background: #2E7D4A;
+}
+
+.svc-flow-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+
+.svc-flow-title h2::after {
+  display: none;
+}
+
+.svc-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.svc-step-card {
+  border-radius: 12px;
+  border: 2px solid #8CB46D;
+  overflow: hidden;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.svc-step-label {
+  text-align: center;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #5A9D64;
+}
+
+.svc-step-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.svc-step-desc {
+  text-align: center;
+  padding: 14px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #4A4A4A;
+}
+
+/* その他サポート */
+.svc-other {
+  background: #F0F4EC;
+  padding: 80px 0;
+}
+
+.svc-other-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #1A1A1A;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.svc-other-title::after {
+  content: '';
+  display: block;
+  width: 280px;
+  height: 5px;
+  background: #4CAF50;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+.svc-other-sub {
+  font-size: 16px;
+  color: #444;
+  text-align: center;
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.svc-other-divider {
+  width: 600px;
+  max-width: 100%;
+  height: 1px;
+  background: #ccc;
+  margin: 0 auto 32px;
+}
+
+.svc-other-subheading {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1A1A1A;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.svc-other-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.svc-other-card {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.svc-other-card-label {
+  background: #4CAF50;
+  color: #fff;
+  text-align: center;
+  padding: 10px 24px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.svc-other-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* 対応エリア */
+.svc-area {
+  background: #fff;
+  padding: 80px 0;
+}
+
+.svc-area-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.svc-area-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 0;
+}
+
+.svc-area-header h2::after {
+  display: none;
+}
+
+.svc-area-content {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.svc-area-map {
+  flex: 1;
+  min-width: 0;
+}
+
+.svc-area-map img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.svc-area-list {
+  flex: 1;
+  min-width: 0;
+}
+
+.svc-area-list h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 16px;
+}
+
+.svc-area-list p {
+  font-size: 15px;
+  color: #4A4A4A;
+  line-height: 1.8;
+}
+
+.svc-area-note {
+  font-size: 13px;
+  color: #7A7A7A;
+  margin-top: 16px;
+}
+
+/* 安心の保障・資格 */
+.svc-trust {
+  background: #fff;
+  padding: 80px 0;
+}
+
+.svc-trust-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.svc-trust-header h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 0;
+}
+
+.svc-trust-header h2::after {
+  display: none;
+}
+
+.svc-trust-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.svc-trust-card {
+  background: #F0F7F4;
+  border-radius: 12px;
+  padding: 32px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.svc-trust-icon {
+  width: 64px;
+  height: 64px;
+  background: #2E7D4A;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svc-trust-icon svg {
+  width: 32px;
+  height: 32px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.svc-trust-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 0;
+}
+
+.svc-trust-bignum {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1B5E35;
+}
+
+.svc-trust-card p {
+  font-size: 14px;
+  color: #4A4A4A;
+  line-height: 1.7;
+}
+
+/* 信頼バッジバー */
+.svc-badge-bar {
+  background: #1B5E3B;
+  padding: 28px 20px;
+}
+
+.svc-badge-bar .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.svc-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+}
+
+.svc-badge-icon {
+  width: 52px;
+  height: 52px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svc-badge-icon svg {
+  width: 30px;
+  height: 30px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.svc-badge-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+/* 最終CTA */
+.svc-final-cta {
+  background: linear-gradient(135deg, #1B5E35 0%, #2E7D4A 50%, #4CAF50 100%);
+  padding: 80px 0;
+  text-align: center;
+}
+
+.svc-final-cta h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.svc-final-cta h2::after {
+  display: none;
+}
+
+.svc-final-cta-sub {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 32px;
+}
+
+.svc-final-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.svc-final-phone svg {
+  width: 28px;
+  height: 28px;
+  stroke: #fff;
+  fill: none;
+  stroke-width: 2;
+}
+
+.svc-final-phone a {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.svc-final-phone a:hover {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.svc-final-phone-note {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 32px;
+}
+
+.svc-final-btns {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.svc-final-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.svc-final-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.svc-final-btn-white {
+  background: #fff;
+  color: #1B5E35;
+}
+
+.svc-final-btn-white:hover {
+  color: #1B5E35;
+}
+
+.svc-final-btn-line {
+  background: #06C755;
+  color: #fff;
+}
+
+.svc-final-btn-line:hover {
+  color: #fff;
+}
+
+.svc-final-btn-outline {
+  background: rgba(255, 255, 255, 0.13);
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+.svc-final-btn-outline:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.svc-final-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* サービスページ レスポンシブ */
+@media (max-width: 768px) {
+  .svc-hero {
+    min-height: 420px;
+  }
+
+  .svc-hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .svc-hero-sub {
+    font-size: 15px;
+  }
+
+  .svc-hero-cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .svc-hero-btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .svc-overview-header h2,
+  .svc-area-header h2,
+  .svc-trust-header h2,
+  .svc-final-cta h2 {
+    font-size: 28px;
+  }
+
+  .svc-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-zigzag,
+  .svc-zigzag.reverse {
+    flex-direction: column;
+  }
+
+  .svc-zigzag-img {
+    width: 100%;
+    min-width: unset;
+    height: 220px;
+  }
+
+  .svc-nowaste-catch {
+    font-size: 28px;
+  }
+
+  .svc-flow-title h2 {
+    font-size: 24px;
+  }
+
+  .svc-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .svc-other-title {
+    font-size: 22px;
+  }
+
+  .svc-other-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-other-card-img {
+    height: 180px;
+  }
+
+  .svc-area-content {
+    flex-direction: column;
+  }
+
+  .svc-area-map img {
+    height: 240px;
+  }
+
+  .svc-trust-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .svc-badge-bar .container {
+    justify-content: center;
+  }
+
+  .svc-badge {
+    flex: 0 0 calc(50% - 16px);
+  }
+
+  .svc-final-phone a {
+    font-size: 28px;
+  }
+
+  .svc-final-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .svc-final-btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+}
