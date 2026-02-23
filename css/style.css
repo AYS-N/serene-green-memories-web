@@ -4745,7 +4745,7 @@ FAQ ページ
   width: 480px;
   min-width: 480px;
   height: 320px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 12px;
 }
 
