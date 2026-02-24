@@ -19,7 +19,13 @@
       "WebSearch",
       "Bash(git status:*)",
       "Bash(npm run build:*)",
-      "Bash(npm install:*)"
+      "Bash(npm install:*)",
+      "Bash(git -C /c/Users/NoguchiAtsushi/Downloads/serene-green-memories-web config user.email)",
+      "Bash(git -C /c/Users/NoguchiAtsushi/Downloads/serene-green-memories-web config user.name \"AYS-N\")",
+      "Bash(git -C /c/Users/NoguchiAtsushi/Downloads/serene-green-memories-web config user.email \"nacnacnacstore@gmail.com\")",
+      "Bash(claude mcp list:*)",
+      "Bash(claude plugins list:*)",
+      "Bash(echo:*)"
     ]
   },
   "enableAllProjectMcpServers": true,
