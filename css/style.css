@@ -1522,7 +1522,7 @@ li {
 }
 
 .page-title {
-  background: url('../images/price-background.png') center / cover no-repeat;
+  background: url('../images/price-background.webp') center / cover no-repeat;
   padding: 60px 0;
   text-align: center;
   position: relative;
