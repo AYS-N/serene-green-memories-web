@@ -5269,6 +5269,62 @@ FAQ ページ
   color: #666;
 }
 
+/* 回収品の行き先 */
+.svc-yukue {
+  margin-top: 60px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px 24px 32px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.svc-yukue-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-top: 3px solid #6B8E23;
+  border-bottom: 3px solid #6B8E23;
+  display: inline-block;
+  width: 100%;
+  padding-top: 12px;
+}
+.svc-yukue-img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.svc-yukue-sp {
+  display: none;
+}
+.svc-yukue-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+.svc-yukue-desc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #333;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .svc-yukue {
+    padding: 24px 16px 20px;
+  }
+  .svc-yukue-title {
+    font-size: 20px;
+  }
+  .svc-yukue-pc {
+    display: none;
+  }
+  .svc-yukue-sp {
+    display: block;
+  }
+}
+
 /* その他サポート */
 .svc-other {
   background: #F0F4EC;
