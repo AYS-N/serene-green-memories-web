@@ -232,6 +232,7 @@ function ensureMobileMenuInit() {
       e.stopPropagation();
       this.classList.toggle('active');
       navSp.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
     });
 
     // メニュー内のリンクをクリックした時にメニューを閉じる
@@ -239,6 +240,7 @@ function ensureMobileMenuInit() {
       link.addEventListener('click', function() {
         navToggle.classList.remove('active');
         navSp.classList.remove('active');
+        document.body.classList.remove('menu-open');
       });
     });
 

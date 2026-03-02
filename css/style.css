@@ -3862,6 +3862,13 @@ FAQ ページ
     transform: translateY(0);
   }
 
+  /* ハンバーガーメニュー展開時はCTAバーを非表示 */
+  body.menu-open .floating-buttons {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transform: translateY(100%) !important;
+  }
+
   .floating-btn-contact {
     flex: 1;
     padding: 16px 12px;
@@ -5731,6 +5738,13 @@ FAQ ページ
 
   .svc-area-map img {
     height: auto;
+  }
+
+  .svc-area-list p {
+    word-break: normal;
+    overflow-wrap: break-word;
+    font-size: 13px;
+    line-height: 2;
   }
 
   .svc-trust-cards {
