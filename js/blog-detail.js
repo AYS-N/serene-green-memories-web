@@ -130,6 +130,78 @@ async function displayBlogDetail() {
   document.title = `${blog.title} | 整理のミカタ - 遺品整理のプロフェッショナル`;
   blogTitle.textContent = blog.title;
   blogDetailTitle.textContent = blog.title;
+
+  // SEOメタタグを動的に更新
+  const plainText = blog.content.replace(/<[^>]*>/g, '').substring(0, 120);
+  const metaDescription = plainText + '...';
+  const articleUrl = `https://seirino-mikata.com/blog-detail.html?id=${blogId}`;
+  const ogImage = blog.eyecatch ? blog.eyecatch.url : 'https://seirino-mikata.com/images/seirino-mikata-logo.png';
+
+  // meta description
+  const descTag = document.querySelector('meta[name="description"]');
+  if (descTag) descTag.setAttribute('content', metaDescription);
+
+  // canonical
+  const canonicalTag = document.querySelector('link[rel="canonical"]');
+  if (canonicalTag) canonicalTag.setAttribute('href', articleUrl);
+
+  // OGP
+  const ogTags = {
+    'og:title': `${blog.title} | 整理のミカタ`,
+    'og:description': metaDescription,
+    'og:url': articleUrl,
+    'og:image': ogImage
+  };
+  Object.entries(ogTags).forEach(([prop, content]) => {
+    const tag = document.querySelector(`meta[property="${prop}"]`);
+    if (tag) tag.setAttribute('content', content);
+  });
+
+  // Twitter Card
+  const twitterTags = {
+    'twitter:title': `${blog.title} | 整理のミカタ`,
+    'twitter:description': metaDescription,
+    'twitter:image': ogImage
+  };
+  Object.entries(twitterTags).forEach(([name, content]) => {
+    const tag = document.querySelector(`meta[name="${name}"]`);
+    if (tag) tag.setAttribute('content', content);
+  });
+
+  // 構造化データ: Article
+  const articleSchema = document.getElementById('article-structured-data');
+  if (articleSchema) {
+    articleSchema.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      'headline': blog.title,
+      'description': metaDescription,
+      'image': ogImage,
+      'datePublished': blog.publishedAt,
+      'dateModified': blog.updatedAt || blog.publishedAt,
+      'url': articleUrl,
+      'publisher': {
+        '@type': 'Organization',
+        'name': '整理のミカタ',
+        'url': 'https://seirino-mikata.com/'
+      }
+    });
+  }
+
+  // 構造化データ: BreadcrumbList のタイトル更新
+  const breadcrumbScript = document.querySelector('script[type="application/ld+json"]:not(#article-structured-data)');
+  if (breadcrumbScript) {
+    try {
+      const breadcrumbData = JSON.parse(breadcrumbScript.textContent);
+      breadcrumbData.itemListElement[2] = {
+        '@type': 'ListItem',
+        'position': 3,
+        'name': blog.title,
+        'item': articleUrl
+      };
+      breadcrumbScript.textContent = JSON.stringify(breadcrumbData);
+    } catch (e) { /* ignore */ }
+  }
   
   // 日付設定
   const formattedDate = formatDate(blog.publishedAt);
