@@ -5326,6 +5326,50 @@ FAQ ページ
   }
 }
 
+/* 循環社会への貢献メッセージ */
+.svc-recycle-message {
+  margin-top: 48px;
+  padding: 56px 40px;
+  text-align: center;
+  background:
+    linear-gradient(rgba(255,255,255,0.55), rgba(255,255,255,0.55)),
+    linear-gradient(135deg, #d4e8b8 0%, #a8d48a 25%, #c8dea8 50%, #b8d898 75%, #d0e4b0 100%);
+  border-radius: 12px;
+}
+.svc-recycle-message-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #4a2c0a;
+  margin-bottom: 32px;
+}
+.svc-recycle-message-text {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 2;
+  color: #333;
+  margin: 0 0 24px;
+}
+.svc-recycle-message-text:last-child {
+  margin-bottom: 0;
+}
+.svc-recycle-message-text strong {
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .svc-recycle-message {
+    padding: 36px 20px;
+  }
+  .svc-recycle-message-title {
+    font-size: 20px;
+  }
+  .svc-recycle-message-text {
+    font-size: 14px;
+  }
+  .svc-recycle-message-text br {
+    display: none;
+  }
+}
+
 /* その他サポート */
 .svc-other {
   background: #F0F4EC;
@@ -5333,7 +5377,7 @@ FAQ ページ
 }
 
 .svc-other-title {
-  font-size: 28px;
+  font-size: 34px;
   font-weight: 800;
   color: #1A1A1A;
   text-align: center;
