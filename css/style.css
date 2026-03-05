@@ -1700,6 +1700,15 @@ li {
   margin: 0 auto;
 }
 
+.message-content p {
+  margin-bottom: 1.2em;
+  line-height: 2;
+}
+
+.message-content p:last-of-type {
+  margin-bottom: 0;
+}
+
 .message-image img {
   border-radius: var(--radius-md);
   width: 100%;
@@ -5493,14 +5502,14 @@ FAQ ページ
 }
 
 .svc-area-list h3 {
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
   color: #1A1A1A;
   margin-bottom: 16px;
 }
 
 .svc-area-list p {
-  font-size: 15px;
+  font-size: 18px;
   color: #4A4A4A;
   line-height: 1.8;
   word-break: keep-all;
@@ -5843,10 +5852,14 @@ FAQ ページ
     height: auto;
   }
 
+  .svc-area-list h3 {
+    font-size: 22px;
+  }
+
   .svc-area-list p {
     word-break: normal;
     overflow-wrap: break-word;
-    font-size: 13px;
+    font-size: 15px;
     line-height: 2;
   }
 
