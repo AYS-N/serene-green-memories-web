@@ -187,7 +187,7 @@ function scrollToHashElement() {
 
 // フローティングボタンのスクロール表示制御
 function initFloatingButtons() {
-  const floatingButtons = document.querySelector('.floating-buttons');
+  const floatingButtons = document.querySelector('.cta-bottom-bar');
   if (!floatingButtons) return;
 
   const footer = document.querySelector('.footer');

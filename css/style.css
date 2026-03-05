@@ -3745,177 +3745,136 @@ FAQ ページ
 /* ========================================
    固定フローティングボタン（右下固定）
    ======================================== */
-.floating-buttons {
+/* 固定CTAバー（ページ下部） */
+.cta-bottom-bar {
   position: fixed;
-  bottom: 24px;
-  right: 24px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
-  transform: translateY(20px);
+  transform: translateY(100%);
   transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.15);
 }
 
-.floating-buttons.visible {
+.cta-bottom-bar.visible {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
 }
 
-/* 温かみのあるお見積りボタン */
-.floating-btn-contact {
+body.menu-open .cta-bottom-bar {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(100%) !important;
+}
+
+.cta-bottom-bar a {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 24px;
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-warm) 100%);
-  border: none;
-  border-radius: var(--radius-xl);
-  color: white;
+  gap: 8px;
+  padding: 14px 12px;
   text-decoration: none;
+  color: #fff;
   font-weight: 700;
   font-size: 15px;
-  transition: var(--transition-bounce);
-  box-shadow: var(--shadow-warm);
-  position: relative;
-  overflow: hidden;
+  transition: filter 0.2s;
 }
 
-.floating-btn-contact::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
-  transform: scale(0);
-  transition: transform 0.6s ease;
+.cta-bottom-bar a:hover {
+  filter: brightness(1.1);
+  color: #fff;
 }
 
-.floating-btn-contact:hover::before {
-  transform: scale(1);
+.cta-bar-tel {
+  background: #2E7D4A;
+  flex: 1.2 !important;
 }
 
-.floating-btn-contact:hover {
-  color: white;
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 8px 32px rgba(139, 200, 150, 0.4);
-}
-
-.floating-btn-contact-text {
-  white-space: nowrap;
-}
-
-/* 白背景の電話ボタン */
-.floating-btn-tel {
+.cta-bar-tel .cta-bar-icon {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 16px;
-  background: rgba(250, 254, 251, 0.98);
-  border: 2px solid var(--color-primary);
-  border-radius: var(--radius-xl);
-  text-decoration: none;
-  transition: var(--transition-bounce);
-  box-shadow: var(--shadow-md);
-  backdrop-filter: blur(8px);
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  font-size: 16px;
+  flex-shrink: 0;
 }
 
-.floating-btn-tel:hover {
-  background: white;
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: var(--shadow-warm);
-  border-color: var(--color-accent-warm);
-}
-
-.floating-btn-tel-icon {
-  font-size: 1.1rem;
-  color: var(--color-primary);
-  animation: float 2s ease-in-out infinite;
-}
-
-.floating-btn-tel-content {
+.cta-bar-tel .cta-bar-tel-info {
   display: flex;
   flex-direction: column;
+  line-height: 1.3;
 }
 
-.floating-btn-tel-label {
-  font-size: 11px;
-  color: var(--color-text-light);
-  font-weight: 600;
-}
-
-.floating-btn-tel-number {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--color-primary-dark);
+.cta-bar-tel .cta-bar-tel-number {
+  font-size: 20px;
+  font-weight: 900;
   letter-spacing: 0.5px;
 }
 
+.cta-bar-tel .cta-bar-tel-hours {
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.cta-bar-mail {
+  background: #C8A83E;
+}
+
+.cta-bar-mail .cta-bar-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cta-bar-mail .cta-bar-arrow {
+  font-size: 18px;
+  margin-left: 4px;
+}
+
+.cta-bar-line {
+  background: #2E7D4A;
+}
+
+.cta-bar-line .cta-bar-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cta-bar-line .cta-bar-arrow {
+  font-size: 18px;
+  margin-left: 4px;
+}
+
 @media (max-width: 768px) {
-  .floating-buttons {
-    bottom: 0;
-    right: 0;
-    left: 0;
-    flex-direction: row;
-    gap: 0;
-    transform: translateY(100%);
-    border-radius: 16px 16px 0 0;
-    overflow: hidden;
-    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  .cta-bottom-bar a {
+    padding: 10px 6px;
+    font-size: 11px;
+    gap: 4px;
   }
 
-  .floating-buttons.visible {
-    transform: translateY(0);
-  }
-
-  /* ハンバーガーメニュー展開時はCTAバーを非表示 */
-  body.menu-open .floating-buttons {
-    opacity: 0 !important;
-    visibility: hidden !important;
-    transform: translateY(100%) !important;
-  }
-
-  .floating-btn-contact {
-    flex: 1;
-    padding: 16px 12px;
+  .cta-bar-tel .cta-bar-tel-number {
     font-size: 14px;
-    border-radius: 0;
-    text-align: center;
   }
 
-  .floating-btn-contact:hover {
-    transform: none;
+  .cta-bar-tel .cta-bar-tel-hours {
+    font-size: 8px;
   }
 
-  .floating-btn-contact::before {
-    display: none;
-  }
-
-  .floating-btn-tel {
-    flex: 1;
-    padding: 12px;
-    border: none;
-    border-radius: 0;
-    background: #fff;
-    justify-content: center;
-    backdrop-filter: none;
-  }
-
-  .floating-btn-tel:hover {
-    transform: none;
-  }
-
-  .floating-btn-tel-icon {
-    font-size: 0.95rem;
-  }
-
-  .floating-btn-tel-number {
-    font-size: 1rem;
+  .cta-bar-tel .cta-bar-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 12px;
   }
 }
 
