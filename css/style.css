@@ -2766,7 +2766,7 @@ FAQ ページ
 }
 
 .cta-card-label {
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   color: #333;
   margin-bottom: 16px;
@@ -2776,12 +2776,13 @@ FAQ ページ
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  font-size: 28px;
-  font-weight: 700;
+  gap: 10px;
+  font-size: 36px;
+  font-weight: 900;
   color: #2E7D4A;
   text-decoration: none;
   margin-bottom: 8px;
+  letter-spacing: 1px;
 }
 
 .cta-card-phone:hover {
@@ -2789,7 +2790,7 @@ FAQ ページ
 }
 
 .cta-card-note {
-  font-size: 14px;
+  font-size: 16px;
   color: #666;
 }
 
@@ -2800,10 +2801,10 @@ FAQ ページ
   gap: 12px;
   background: linear-gradient(135deg, #f5a623, #e8912a);
   color: #fff;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   text-decoration: none;
-  padding: 16px 40px;
+  padding: 20px 48px;
   border-radius: 40px;
   margin-top: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -2823,10 +2824,10 @@ FAQ ページ
   gap: 12px;
   background: #06C755;
   color: #fff;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 700;
   text-decoration: none;
-  padding: 16px 40px;
+  padding: 20px 48px;
   border-radius: 40px;
   margin-top: 8px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -3772,18 +3773,23 @@ body.menu-open .cta-bottom-bar {
   transform: translateY(100%) !important;
 }
 
+/* 共通ボタンスタイル */
 .cta-bottom-bar a {
-  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 14px 12px;
+  gap: 12px;
+  padding: 16px 20px;
   text-decoration: none;
   color: #fff;
   font-weight: 700;
-  font-size: 15px;
+  font-size: 16px;
   transition: filter 0.2s;
+  border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.cta-bottom-bar a:last-child {
+  border-right: none;
 }
 
 .cta-bottom-bar a:hover {
@@ -3791,21 +3797,22 @@ body.menu-open .cta-bottom-bar {
   color: #fff;
 }
 
+/* 電話ボタン */
 .cta-bar-tel {
   background: #2E7D4A;
-  flex: 1.2 !important;
+  flex: 1.3;
 }
 
 .cta-bar-tel .cta-bar-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  font-size: 16px;
   flex-shrink: 0;
+}
+
+.cta-bar-tel .cta-bar-icon img {
+  height: 40px;
+  width: auto;
 }
 
 .cta-bar-tel .cta-bar-tel-info {
@@ -3815,66 +3822,142 @@ body.menu-open .cta-bottom-bar {
 }
 
 .cta-bar-tel .cta-bar-tel-number {
-  font-size: 20px;
+  font-size: 36px;
   font-weight: 900;
-  letter-spacing: 0.5px;
+  letter-spacing: 2px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .cta-bar-tel .cta-bar-tel-hours {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 400;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
+/* メールボタン */
 .cta-bar-mail {
   background: #C8A83E;
+  flex: 1;
 }
 
 .cta-bar-mail .cta-bar-label {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+}
+
+.cta-bar-mail .cta-bar-icon-mail {
+  font-size: 32px;
+}
+
+.cta-bar-mail .cta-bar-text {
+  font-size: 16px;
 }
 
 .cta-bar-mail .cta-bar-arrow {
-  font-size: 18px;
-  margin-left: 4px;
+  font-size: 16px;
+  opacity: 0.9;
 }
 
+/* LINEボタン */
 .cta-bar-line {
-  background: #2E7D4A;
+  background: #4CAF50;
+  flex: 1;
 }
 
 .cta-bar-line .cta-bar-label {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+}
+
+.cta-bar-line .cta-bar-icon-line {
+  display: flex;
+  align-items: center;
+}
+
+.cta-bar-line .cta-bar-text {
+  font-size: 16px;
 }
 
 .cta-bar-line .cta-bar-arrow {
-  font-size: 18px;
-  margin-left: 4px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+.cta-bar-line .cta-bar-line-sp {
+  display: none;
 }
 
 @media (max-width: 768px) {
   .cta-bottom-bar a {
-    padding: 10px 6px;
-    font-size: 11px;
-    gap: 4px;
+    padding: 8px 6px;
+    font-size: 12px;
+    gap: 6px;
+  }
+
+  /* 電話ボタン：横幅多め */
+  .cta-bar-tel {
+    flex: 2;
+    gap: 6px;
+  }
+
+  .cta-bar-tel .cta-bar-icon img {
+    height: 28px;
   }
 
   .cta-bar-tel .cta-bar-tel-number {
-    font-size: 14px;
+    font-size: 22px;
+    letter-spacing: 0;
+    white-space: nowrap;
   }
 
   .cta-bar-tel .cta-bar-tel-hours {
     font-size: 8px;
+    white-space: nowrap;
   }
 
-  .cta-bar-tel .cta-bar-icon {
-    width: 24px;
-    height: 24px;
-    font-size: 12px;
+  /* メール・LINEボタン：縦積みレイアウト */
+  .cta-bar-mail,
+  .cta-bar-line {
+    flex: 0.8;
+  }
+
+  .cta-bar-mail .cta-bar-label,
+  .cta-bar-line .cta-bar-label {
+    flex-direction: column;
+    gap: 2px;
+    text-align: center;
+  }
+
+  .cta-bar-mail .cta-bar-icon-mail {
+    display: none;
+  }
+
+  .cta-bar-mail .cta-bar-text,
+  .cta-bar-line .cta-bar-text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+
+  .cta-bar-mail .cta-bar-arrow,
+  .cta-bar-line .cta-bar-arrow {
+    display: none;
+  }
+
+  .cta-bar-line .cta-bar-icon-line {
+    display: none;
+  }
+
+  .cta-bar-line .cta-bar-line-pc {
+    display: none;
+  }
+
+  .cta-bar-line .cta-bar-line-sp {
+    display: block;
+    font-size: 14px;
+    font-weight: 900;
   }
 }
 
