@@ -606,9 +606,9 @@ Home guide page
 .home-photo-hero-content {
   position: relative;
   z-index: 1;
-  width: min(420px, calc(100% - 120px));
-  max-width: 420px;
-  margin-left: clamp(58px, 6vw, 88px);
+  width: min(540px, calc(100% - 120px));
+  max-width: 540px;
+  margin-left: clamp(54px, 6vw, 86px);
   margin-right: auto;
   padding-top: 78px;
   padding-right: 0;
@@ -621,32 +621,32 @@ Home guide page
   display: inline-flex;
   align-items: center;
   width: fit-content;
-  min-height: 40px;
-  padding: 0 26px;
+  min-height: 48px;
+  padding: 0 30px;
   border: 0;
   border-radius: 999px;
   background: linear-gradient(135deg, #2f8a47, #236f39);
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
   box-shadow: 0 10px 24px rgba(30, 105, 53, 0.22);
 }
 
 .home-photo-hero h1 {
-  max-width: 400px;
-  margin: 32px 0 26px;
+  max-width: 540px;
+  margin: 34px 0 28px;
   color: #19512d;
   font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
-  font-size: clamp(40px, 3.6vw, 48px);
+  font-size: clamp(46px, 4vw, 58px);
   font-weight: 700;
-  line-height: 1.36;
+  line-height: 1.28;
   letter-spacing: 0;
 }
 
 .home-photo-hero p:not(.home-photo-label) {
-  max-width: 400px;
+  max-width: 520px;
   color: #1f2d25;
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 700;
   line-height: 2;
 }
@@ -656,16 +656,16 @@ Home guide page
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 16px;
-  margin-top: 32px;
+  gap: 18px;
+  margin-top: 36px;
 }
 
 .home-photo-actions .btn {
-  min-width: 300px;
-  min-height: 76px;
+  min-width: 340px;
+  min-height: 84px;
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(22, 94, 45, 0.26);
-  font-size: 19px;
+  font-size: 21px;
 }
 
 .home-photo-phone {
@@ -673,11 +673,11 @@ Home guide page
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 76px;
-  padding: 8px 0 8px 44px;
+  min-height: 82px;
+  padding: 8px 0 8px 50px;
   border-radius: 10px;
   color: #236f39;
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 800;
   line-height: 1.15;
 }
@@ -686,16 +686,16 @@ Home guide page
   content: "TEL";
   position: absolute;
   left: 0;
-  top: 17px;
+  top: 18px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   background: #236f39;
   color: #fff;
-  font-size: 10px;
+  font-size: 11px;
   letter-spacing: 0;
 }
 
