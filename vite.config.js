@@ -23,7 +23,9 @@ export default defineConfig(({ mode }) => ({
         faq: 'faq.html',
         blog: 'blog.html',
         blogDetail: 'blog-detail.html',
-        price: 'price.html'
+        price: 'price.html',
+        privacy: 'privacy.html',
+        thanks: 'thanks.html'
       }
     }
   },

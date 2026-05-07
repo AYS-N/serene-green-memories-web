@@ -902,7 +902,7 @@ li {
 
 .main-visual {
   background-color: var(--color-primary-bg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/遺品整理作業シーン.png');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../images/heroimgkai.webp');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -2455,7 +2455,7 @@ FAQ ページ
 
 /* サービスヒーロー */
 .service-hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/遺品整理作業シーン.png');
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/heroimgkai.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
