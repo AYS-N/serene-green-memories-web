@@ -504,6 +504,37 @@ Home guide page
   gap: 22px;
 }
 
+.home-info-image-board {
+  position: relative;
+}
+
+.home-info-image-board img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.home-info-image-board a {
+  position: absolute;
+  top: 21.5%;
+  bottom: 11.8%;
+  width: 30%;
+  border-radius: 8px;
+}
+
+.home-info-image-board a:nth-of-type(1) {
+  left: 0;
+}
+
+.home-info-image-board a:nth-of-type(2) {
+  left: 35%;
+}
+
+.home-info-image-board a:nth-of-type(3) {
+  left: 70%;
+}
+
 .home-info-panel {
   min-height: 220px;
 }
@@ -906,7 +937,14 @@ Home guide page
 }
 
 .home-trust-visual {
-  background: #eef7f0;
+  background: #fff;
+}
+
+.home-trust-image-board img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .home-trust-visual-grid {
@@ -949,6 +987,13 @@ Home guide page
 
 .home-flow-visual {
   background: #fff;
+}
+
+.home-flow-image-board img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .home-flow-strip {
@@ -1151,6 +1196,86 @@ Home guide page
     width: 840px;
   }
 
+  .home-trust-image-board {
+    overflow-x: auto;
+    margin: 0 -14px;
+    padding: 0 14px 8px;
+  }
+
+  .home-trust-image-board img {
+    width: 860px;
+    max-width: none;
+  }
+
+  .home-flow-image-board {
+    overflow-x: auto;
+    margin: 0 -14px;
+    padding: 0 14px 8px;
+  }
+
+  .home-flow-image-board img {
+    width: 860px;
+    max-width: none;
+  }
+
+  .home-info-image-board {
+    overflow-x: auto;
+    margin: 0 -14px;
+    padding: 0 14px 8px;
+  }
+
+  .home-info-image-board img {
+    width: 860px;
+    max-width: none;
+  }
+
+  .home-info-image-board a {
+    top: 21.5%;
+    bottom: 11.8%;
+    width: 258px;
+  }
+
+  .home-info-image-board a:nth-of-type(1) {
+    left: 14px;
+  }
+
+  .home-info-image-board a:nth-of-type(2) {
+    left: 315px;
+  }
+
+  .home-info-image-board a:nth-of-type(3) {
+    left: 616px;
+  }
+
+  .cta-image-board {
+    overflow-x: auto;
+    margin: 0 -14px;
+    padding: 0 14px 8px;
+  }
+
+  .cta-image-board img {
+    width: 860px;
+    max-width: none;
+  }
+
+  .cta-image-board a {
+    top: 40%;
+    bottom: 22.5%;
+    width: 232px;
+  }
+
+  .cta-image-board a:nth-of-type(1) {
+    left: 18px;
+  }
+
+  .cta-image-board a:nth-of-type(2) {
+    left: 328px;
+  }
+
+  .cta-image-board a:nth-of-type(3) {
+    left: 638px;
+  }
+
   .home-image-tile--large {
     grid-column: span 1;
     grid-row: span 1;
@@ -1166,6 +1291,55 @@ Home guide page
 
   .home-story-photos {
     grid-template-columns: 1fr;
+  }
+
+  .home-service-head {
+    margin-bottom: 30px;
+  }
+
+  .home-service-head h2 {
+    font-size: 32px;
+  }
+
+  .home-service-head p {
+    font-size: 16px;
+  }
+
+  .home-service-tags {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 26px;
+  }
+
+  .home-service-tags span {
+    min-height: 46px;
+    padding: 0 12px;
+    font-size: 15px;
+  }
+
+  .home-service-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .home-service-cards img {
+    height: 220px;
+  }
+
+  .home-service-cards h3 {
+    margin: 22px 20px 10px;
+    font-size: 24px;
+  }
+
+  .home-service-cards p {
+    margin: 0 20px 24px;
+  }
+
+  .home-service-more {
+    width: 100%;
+    min-width: 0;
+    min-height: 62px;
+    padding: 0 52px;
   }
 
   .home-flow-strip li {
@@ -3666,9 +3840,39 @@ FAQ ページ
 
 /* CTA セクション */
 .cta-section {
-  background-color: #2E7D4A;
-  padding: 80px 0;
+  background: #fffdf8;
+  padding: 0;
   text-align: center;
+}
+
+.cta-image-board {
+  position: relative;
+}
+
+.cta-image-board img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cta-image-board a {
+  position: absolute;
+  top: 40%;
+  bottom: 22.5%;
+  width: 27%;
+  border-radius: 8px;
+}
+
+.cta-image-board a:nth-of-type(1) {
+  left: 0.5%;
+}
+
+.cta-image-board a:nth-of-type(2) {
+  left: 36.5%;
+}
+
+.cta-image-board a:nth-of-type(3) {
+  left: 72.5%;
 }
 
 .cta-title {
@@ -4287,7 +4491,36 @@ FAQ ページ
   }
 
   .cta-section {
-    padding: 60px 0;
+    padding: 0;
+  }
+
+  .cta-image-board {
+    overflow-x: auto;
+    margin: 0 -14px;
+    padding: 0 14px 8px;
+  }
+
+  .cta-image-board img {
+    width: 860px;
+    max-width: none;
+  }
+
+  .cta-image-board a {
+    top: 40%;
+    bottom: 22.5%;
+    width: 232px;
+  }
+
+  .cta-image-board a:nth-of-type(1) {
+    left: 18px;
+  }
+
+  .cta-image-board a:nth-of-type(2) {
+    left: 328px;
+  }
+
+  .cta-image-board a:nth-of-type(3) {
+    left: 638px;
   }
 
   .cta-title {
