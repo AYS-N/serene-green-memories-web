@@ -606,8 +606,14 @@ Home guide page
 .home-photo-hero-content {
   position: relative;
   z-index: 1;
+  width: min(420px, calc(100% - 120px));
+  max-width: 420px;
+  margin-left: clamp(58px, 6vw, 88px);
+  margin-right: auto;
   padding-top: 78px;
+  padding-right: 0;
   padding-bottom: 78px;
+  padding-left: 0;
   color: #17261d;
 }
 
@@ -627,18 +633,18 @@ Home guide page
 }
 
 .home-photo-hero h1 {
-  max-width: 600px;
+  max-width: 400px;
   margin: 32px 0 26px;
   color: #19512d;
   font-family: "Yu Mincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
-  font-size: clamp(44px, 4.6vw, 68px);
+  font-size: clamp(40px, 3.6vw, 48px);
   font-weight: 700;
   line-height: 1.36;
   letter-spacing: 0;
 }
 
 .home-photo-hero p:not(.home-photo-label) {
-  max-width: 600px;
+  max-width: 400px;
   color: #1f2d25;
   font-size: 19px;
   font-weight: 700;
@@ -647,10 +653,11 @@ Home guide page
 
 .home-photo-actions {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  gap: 28px;
-  margin-top: 38px;
+  align-items: flex-start;
+  gap: 16px;
+  margin-top: 32px;
 }
 
 .home-photo-actions .btn {
@@ -703,9 +710,14 @@ Home guide page
   background: #f7fbf8;
 }
 
+.home-image-nav .container,
+.home-info .container {
+  max-width: 1480px;
+}
+
 .home-image-board {
   position: relative;
-  max-width: 1320px;
+  max-width: none;
   margin: 0 auto;
 }
 
