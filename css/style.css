@@ -1901,17 +1901,24 @@ Home guide page
   -moz-osx-font-smoothing: grayscale;
 }
 
+.header .container {
+  max-width: none;
+  padding: 0 32px;
+}
+
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 120px;
   padding: 10px 0;
+  gap: 18px;
 }
 
 .logo {
   font-size: 24px;
   font-weight: 600;
+  flex: 0 0 auto;
 }
 
 .logo a {
@@ -1925,10 +1932,16 @@ Home guide page
   text-rendering: optimizeLegibility;
 }
 
+.logo picture {
+  display: flex;
+  flex: 0 0 auto;
+}
+
 .logo-img {
   height: 140px;
   width: auto;
-  margin-left: 50px;
+  max-width: none;
+  margin-left: 0;
 }
 
 @media (max-width: 768px) {
@@ -1941,14 +1954,20 @@ Home guide page
 .nav-list {
   display: flex;
   list-style: none;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.nav-pc {
+  flex: 1 1 auto;
 }
 
 .nav-pc .nav-list li {
-  margin-left: 30px;
+  margin-left: 14px;
 }
 
 .nav-pc .nav-list a {
-  padding: 10px 16px;
+  padding: 9px 9px;
   color: #1a2a1d;
   border-radius: var(--radius-lg);
   font-weight: 700;
@@ -1960,6 +1979,7 @@ Home guide page
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .nav-pc .nav-list a::before {
@@ -1983,6 +2003,165 @@ Home guide page
 .nav-pc .nav-list a:hover::before,
 .nav-pc .nav-list a.active::before {
   transform: scaleX(1);
+}
+
+.nav-contact-panel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+  padding-left: 4px;
+}
+
+.nav-contact-phone {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #111;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.nav-contact-phone:hover {
+  color: var(--color-primary-dark);
+}
+
+.nav-contact-phone-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 42px;
+  color: #07101a;
+}
+
+.nav-contact-phone-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: rotate(-10deg);
+}
+
+.nav-contact-phone-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-contact-phone-number {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #111;
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+.nav-contact-phone-hours {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #172316;
+}
+
+.nav-contact-actions {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-contact-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 2px solid #07101a;
+  border-radius: 8px;
+  color: #07101a;
+  background: rgba(245, 251, 246, 0.8);
+}
+
+.nav-contact-icon:hover {
+  color: #07101a;
+  background: #eaf7ec;
+  transform: translateY(-1px);
+}
+
+.nav-contact-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.nav-contact-icon-line span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1.8px solid currentColor;
+  border-radius: 50%;
+  font-size: 7px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.nav-contact-menu {
+  flex-direction: column;
+  gap: 3px;
+  padding: 4px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.nav-contact-menu span {
+  display: block;
+  width: 19px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.nav-contact-menu em {
+  font-style: normal;
+  font-size: 6px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+@media (max-width: 1180px) {
+  .nav-pc .nav-list li {
+    margin-left: 12px;
+  }
+
+  .nav-pc .nav-list a {
+    padding: 9px 8px;
+    font-size: 14px;
+  }
+
+  .nav-contact-phone-number {
+    font-size: 24px;
+  }
+
+  .nav-contact-icon {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .nav-contact-panel {
+    display: none;
+  }
 }
 
 .nav-toggle {
@@ -2045,6 +2224,14 @@ Home guide page
 
 /* メディアクエリ: モバイル */
 @media (max-width: 768px) {
+  .header-inner {
+    gap: 12px;
+  }
+
+  .nav-contact-panel {
+    display: none;
+  }
+
   .nav-pc {
     display: none;
   }

@@ -223,6 +223,7 @@ function initFloatingButtons() {
 function ensureMobileMenuInit() {
   const navToggle = document.getElementById('nav-toggle');
   const navSp = document.getElementById('nav-sp');
+  const menuProxyButtons = document.querySelectorAll('[data-menu-proxy]');
 
   if (navToggle && navSp && !navToggle.hasAttribute('data-initialized')) {
     navToggle.setAttribute('data-initialized', 'true');
@@ -245,6 +246,20 @@ function ensureMobileMenuInit() {
     });
 
     console.log('ハンバーガーメニューを初期化しました');
+  }
+
+  if (navToggle && navSp) {
+    menuProxyButtons.forEach(function(button) {
+      if (!button.hasAttribute('data-initialized')) {
+        button.setAttribute('data-initialized', 'true');
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          navToggle.classList.toggle('active');
+          navSp.classList.toggle('active');
+          document.body.classList.toggle('menu-open');
+        });
+      }
+    });
   }
 }
 
