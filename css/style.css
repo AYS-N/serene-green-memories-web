@@ -2008,15 +2008,15 @@ Home guide page
 .nav-contact-panel {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   flex: 0 0 auto;
-  padding-left: 4px;
+  padding-left: 8px;
 }
 
 .nav-contact-phone {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   color: #111;
   line-height: 1;
   white-space: nowrap;
@@ -2030,8 +2030,8 @@ Home guide page
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 42px;
+  width: 40px;
+  height: 48px;
   color: #07101a;
 }
 
@@ -2053,7 +2053,7 @@ Home guide page
 }
 
 .nav-contact-phone-number {
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 800;
   letter-spacing: 0.08em;
   color: #111;
@@ -2061,7 +2061,7 @@ Home guide page
 }
 
 .nav-contact-phone-hours {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
   color: #172316;
@@ -2070,15 +2070,15 @@ Home guide page
 .nav-contact-actions {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 8px;
 }
 
 .nav-contact-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
+  width: 42px;
+  height: 42px;
   border: 2px solid #07101a;
   border-radius: 8px;
   color: #07101a;
@@ -2105,36 +2105,12 @@ Home guide page
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border: 1.8px solid currentColor;
   border-radius: 50%;
-  font-size: 7px;
+  font-size: 8px;
   font-weight: 900;
-  letter-spacing: 0;
-}
-
-.nav-contact-menu {
-  flex-direction: column;
-  gap: 3px;
-  padding: 4px;
-  cursor: pointer;
-  font: inherit;
-}
-
-.nav-contact-menu span {
-  display: block;
-  width: 19px;
-  height: 2px;
-  border-radius: 999px;
-  background: currentColor;
-}
-
-.nav-contact-menu em {
-  font-style: normal;
-  font-size: 6px;
-  font-weight: 900;
-  line-height: 1;
   letter-spacing: 0;
 }
 
@@ -2149,12 +2125,12 @@ Home guide page
   }
 
   .nav-contact-phone-number {
-    font-size: 24px;
+    font-size: 28px;
   }
 
   .nav-contact-icon {
-    width: 34px;
-    height: 34px;
+    width: 40px;
+    height: 40px;
   }
 }
 
