@@ -7159,55 +7159,6 @@ body.menu-open .cta-bottom-bar {
   line-height: 1.8;
 }
 
-/* 信頼バッジバー */
-.svc-badge-bar {
-  background: #1B5E3B;
-  padding: 28px 20px;
-}
-
-.svc-badge-bar .container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.svc-badge {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
-}
-
-.svc-badge-icon {
-  width: 52px;
-  height: 52px;
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.svc-badge-icon svg {
-  width: 30px;
-  height: 30px;
-  stroke: #fff;
-  fill: none;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.svc-badge-text {
-  font-size: 15px;
-  font-weight: 700;
-  color: #fff;
-  text-align: center;
-}
-
 /* 最終CTA */
 .svc-final-cta {
   background: linear-gradient(135deg, #1B5E35 0%, #2E7D4A 50%, #4CAF50 100%);
@@ -7425,14 +7376,6 @@ body.menu-open .cta-bottom-bar {
 
   .svc-trust-cards {
     grid-template-columns: 1fr;
-  }
-
-  .svc-badge-bar .container {
-    justify-content: center;
-  }
-
-  .svc-badge {
-    flex: 0 0 calc(50% - 16px);
   }
 
   .svc-final-phone a {
