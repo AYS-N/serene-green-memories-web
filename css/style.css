@@ -2008,18 +2008,24 @@ Home guide page
 .nav-contact-panel {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   flex: 0 0 auto;
-  padding-left: 8px;
+  padding: 9px 10px 9px 12px;
+  border: 1px solid rgba(47, 134, 75, 0.2);
+  border-radius: 999px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 251, 246, 0.94));
+  box-shadow: 0 10px 24px rgba(27, 94, 53, 0.08);
 }
 
 .nav-contact-phone {
   display: flex;
   align-items: center;
-  gap: 10px;
-  color: #111;
+  gap: 9px;
+  color: var(--color-primary-dark);
   line-height: 1;
   white-space: nowrap;
+  padding-right: 2px;
 }
 
 .nav-contact-phone:hover {
@@ -2030,107 +2036,171 @@ Home guide page
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 48px;
-  color: #07101a;
+  width: 38px;
+  height: 38px;
+  color: #fff;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2f864b 0%, #1b5e35 100%);
+  box-shadow: 0 8px 16px rgba(27, 94, 53, 0.18);
 }
 
 .nav-contact-phone-icon svg {
-  width: 100%;
-  height: 100%;
+  width: 22px;
+  height: 22px;
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.9;
+  stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transform: rotate(-10deg);
+  transform: rotate(-8deg);
 }
 
 .nav-contact-phone-text {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 }
 
 .nav-contact-phone-number {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 800;
-  letter-spacing: 0.08em;
-  color: #111;
+  letter-spacing: 0.06em;
+  color: #1b5e35;
   font-family: 'Noto Sans JP', sans-serif;
 }
 
 .nav-contact-phone-hours {
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  color: #172316;
+  letter-spacing: 0.04em;
+  color: #52604f;
 }
 
 .nav-contact-actions {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  padding-left: 8px;
+  border-left: 1px solid rgba(47, 134, 75, 0.18);
 }
 
 .nav-contact-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  border: 2px solid #07101a;
-  border-radius: 8px;
-  color: #07101a;
-  background: rgba(245, 251, 246, 0.8);
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(27, 94, 53, 0.22);
+  border-radius: 50%;
+  color: #1b5e35;
+  background: #fff;
+  box-shadow: 0 6px 14px rgba(27, 94, 53, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
 .nav-contact-icon:hover {
-  color: #07101a;
-  background: #eaf7ec;
+  color: var(--color-primary-dark);
+  background: #eef8f0;
   transform: translateY(-1px);
+  box-shadow: 0 9px 18px rgba(27, 94, 53, 0.14);
 }
 
 .nav-contact-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 21px;
+  height: 21px;
   fill: none;
   stroke: currentColor;
-  stroke-width: 1.8;
+  stroke-width: 1.9;
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+.nav-contact-icon-line {
+  color: #fff;
+  border-color: transparent;
+  background: linear-gradient(135deg, #20c75a 0%, #0faa45 100%);
+}
+
+.nav-contact-icon-line:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #28d465 0%, #109d42 100%);
 }
 
 .nav-contact-icon-line span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 28px;
-  height: 28px;
-  border: 1.8px solid currentColor;
+  width: 26px;
+  height: 26px;
+  border: 1.6px solid currentColor;
   border-radius: 50%;
-  font-size: 8px;
+  font-size: 7px;
   font-weight: 900;
   letter-spacing: 0;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1320px) {
+  .header .container {
+    padding: 0 22px;
+  }
+
   .nav-pc .nav-list li {
-    margin-left: 12px;
+    margin-left: 8px;
   }
 
   .nav-pc .nav-list a {
-    padding: 9px 8px;
+    padding: 8px 7px;
     font-size: 14px;
   }
 
+  .nav-contact-panel {
+    gap: 8px;
+    padding: 8px 9px 8px 10px;
+  }
+
+  .nav-contact-phone {
+    gap: 7px;
+  }
+
+  .nav-contact-phone-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .nav-contact-phone-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
   .nav-contact-phone-number {
-    font-size: 28px;
+    font-size: 24px;
+    letter-spacing: 0.05em;
+  }
+
+  .nav-contact-phone-hours {
+    font-size: 9px;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-contact-actions {
+    gap: 5px;
+    padding-left: 6px;
   }
 
   .nav-contact-icon {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-contact-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .nav-contact-icon-line span {
+    width: 24px;
+    height: 24px;
+    font-size: 6px;
   }
 }
 
