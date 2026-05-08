@@ -111,27 +111,33 @@ function initContactForm() {
 
 // 希望日時のドロップダウンを初期化（今日から1ヶ月先まで）
 function initPreferredDateSelect() {
-  const preferredDateSelect = document.getElementById('preferred_date');
-  if (!preferredDateSelect) return;
+  const preferredDateSelects = document.querySelectorAll('.js-date-select');
+  if (!preferredDateSelects.length) return;
   
   const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
   const today = new Date();
-  
-  // 1ヶ月分の日付を追加
-  for (let i = 0; i < 31; i++) {
-    const date = new Date(today);
-    date.setDate(today.getDate() + i);
-    
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
-    const weekday = weekdays[date.getDay()];
-    
-    const option = document.createElement('option');
-    option.value = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-    option.textContent = `${year}/${month}/${day}(${weekday})`;
-    preferredDateSelect.appendChild(option);
-  }
+
+  preferredDateSelects.forEach((select) => {
+    if (select.dataset.initialized === 'true') return;
+
+    // 1ヶ月分の日付を追加
+    for (let i = 0; i < 31; i++) {
+      const date = new Date(today);
+      date.setDate(today.getDate() + i);
+      
+      const year = date.getFullYear();
+      const month = date.getMonth() + 1;
+      const day = date.getDate();
+      const weekday = weekdays[date.getDay()];
+      
+      const option = document.createElement('option');
+      option.value = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+      option.textContent = `${year}/${month}/${day}(${weekday})`;
+      select.appendChild(option);
+    }
+
+    select.dataset.initialized = 'true';
+  });
 }
 
 // 郵便番号から住所を自動入力する機能

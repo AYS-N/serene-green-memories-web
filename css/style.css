@@ -3592,8 +3592,8 @@ FAQ ページ
 .form-label-area {
   display: flex;
   align-items: center;
-  width: 180px;
-  min-width: 180px;
+  width: 220px;
+  min-width: 220px;
   gap: 15px;
 }
 
@@ -3602,8 +3602,13 @@ FAQ ページ
   font-size: 15px;
   color: #333;
   margin-bottom: 0;
-  width: 80px;
-  min-width: 80px;
+  width: 120px;
+  min-width: 120px;
+}
+
+.form-label-area .form-label-wide {
+  width: 160px;
+  min-width: 160px;
 }
 
 .required-badge {
@@ -3676,6 +3681,15 @@ FAQ ページ
   gap: 20px;
 }
 
+.form-date-time-group {
+  flex-wrap: wrap;
+  gap: 12px 16px;
+}
+
+.form-date-time-group .form-note {
+  flex-basis: 100%;
+}
+
 .form-note {
   color: #e53935;
   font-size: 14px;
@@ -3704,6 +3718,11 @@ FAQ ページ
   }
 
   .form-label-area label {
+    width: auto;
+    min-width: auto;
+  }
+
+  .form-label-area .form-label-wide {
     width: auto;
     min-width: auto;
   }

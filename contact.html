@@ -182,7 +182,51 @@
             <label for="preferred_date">希望日時</label>
           </div>
           <div class="form-input-area form-input-with-note">
-            <select id="preferred_date" name="希望日時" class="input-short">
+            <select id="preferred_date" name="希望日時" class="input-short js-date-select">
+              <option value="">日付を選択</option>
+            </select>
+            <span class="form-note">※入力日から１ヶ月先まで選択可能</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-label-area">
+            <label for="work_preferred_date">作業希望日</label>
+          </div>
+          <div class="form-input-area form-input-with-note">
+            <select id="work_preferred_date" name="作業希望日" class="input-short js-date-select">
+              <option value="">日付を選択</option>
+            </select>
+            <span class="form-note">※入力日から１ヶ月先まで選択可能</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-label-area">
+            <label for="contact_preferred_date" class="form-label-wide">ご連絡希望日・時間帯</label>
+          </div>
+          <div class="form-input-area form-input-with-note form-date-time-group">
+            <select id="contact_preferred_date" name="ご連絡希望日" class="input-short js-date-select">
+              <option value="">日付を選択</option>
+            </select>
+            <select id="contact_preferred_time" name="ご連絡希望時間帯" class="input-short">
+              <option value="">時間帯を選択</option>
+              <option value="10:00〜12:00">10:00〜12:00</option>
+              <option value="12:00〜15:00">12:00〜15:00</option>
+              <option value="15:00〜17:00">15:00〜17:00</option>
+              <option value="17:00〜19:00">17:00〜19:00</option>
+              <option value="いつでも可">いつでも可</option>
+            </select>
+            <span class="form-note">※入力日から１ヶ月先まで選択可能</span>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-label-area">
+            <label for="estimate_preferred_date">お見積り希望日</label>
+          </div>
+          <div class="form-input-area form-input-with-note">
+            <select id="estimate_preferred_date" name="お見積り希望日" class="input-short js-date-select">
               <option value="">日付を選択</option>
             </select>
             <span class="form-note">※入力日から１ヶ月先まで選択可能</span>
