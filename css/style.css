@@ -6953,6 +6953,11 @@ body.menu-open .cta-bottom-bar {
   max-width: 100%;
   margin: 0 auto;
 }
+.svc-yukue-image-only {
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+}
 .svc-yukue-sp {
   display: none;
 }
