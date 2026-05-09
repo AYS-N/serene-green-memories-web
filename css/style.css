@@ -542,7 +542,7 @@ Home guide page
 .back-to-top {
   position: fixed;
   right: 24px;
-  bottom: 24px;
+  bottom: 200px;
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
@@ -565,6 +565,13 @@ Home guide page
 
 .back-to-top:hover {
   transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    right: 12px;
+    bottom: 80px;
+  }
 }
 
 .home-photo-hero {
