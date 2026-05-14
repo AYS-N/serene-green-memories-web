@@ -7161,7 +7161,7 @@ body.menu-open .cta-bottom-bar {
 /* 対応エリア */
 .svc-area {
   background: linear-gradient(180deg, #FFFFFF 0%, #FAFCF8 100%);
-  padding: 80px 0;
+  padding: 64px 0;
 }
 
 .svc-area > .container > .svc-area-header,
@@ -7170,7 +7170,8 @@ body.menu-open .cta-bottom-bar {
 }
 
 .svc-area > .container {
-  max-width: 1520px;
+  max-width: none;
+  padding: 0 12px;
 }
 
 .svc-area-image-block {
