@@ -7170,8 +7170,8 @@ body.menu-open .cta-bottom-bar {
 }
 
 .svc-area > .container {
-  max-width: none;
-  padding: 0 12px;
+  max-width: 1280px;
+  padding: 0 20px;
 }
 
 .svc-area-image-block {
