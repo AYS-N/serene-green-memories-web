@@ -6210,6 +6210,9 @@ body.menu-open .cta-bottom-bar {
 }
 
 .model-case-image {
+  width: min(1320px, calc(100vw - 40px));
+  margin-left: 50%;
+  transform: translateX(-50%);
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
