@@ -6188,6 +6188,20 @@ body.menu-open .cta-bottom-bar {
   display: block;
 }
 
+.settlement-legal-note {
+  width: min(1320px, calc(100vw - 40px));
+  margin: 22px auto 0;
+  padding: 18px 22px;
+  border-left: 6px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+  background: #F5FBF6;
+  color: var(--color-primary-dark);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.8;
+  box-shadow: var(--shadow-sm);
+}
+
 /* モデルケースセクション */
 .model-case-section {
   background-color: #F0F7F4;
