@@ -1272,32 +1272,32 @@ Home guide page
   }
 
   .cta-image-board {
-    overflow-x: auto;
-    margin: 0 -14px;
-    padding: 0 14px 8px;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
   }
 
   .cta-image-board img {
-    width: 960px;
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
   }
 
   .cta-image-board a {
     top: 41%;
     bottom: 18.5%;
-    width: 269px;
+    width: 28%;
   }
 
   .cta-image-board a:nth-of-type(1) {
-    left: 86px;
+    left: 7.5%;
   }
 
   .cta-image-board a:nth-of-type(2) {
-    left: 392px;
+    left: 39.4%;
   }
 
   .cta-image-board a:nth-of-type(3) {
-    left: 692px;
+    left: 70.6%;
   }
 
   .home-image-tile--large {
@@ -4121,6 +4121,11 @@ FAQ ページ
   text-align: center;
 }
 
+.cta-section > .container {
+  max-width: none;
+  padding: 0;
+}
+
 .cta-image-board {
   position: relative;
 }
@@ -4785,32 +4790,32 @@ FAQ ページ
   }
 
   .cta-image-board {
-    overflow-x: auto;
-    margin: 0 -14px;
-    padding: 0 14px 8px;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
   }
 
   .cta-image-board img {
-    width: 960px;
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
   }
 
   .cta-image-board a {
     top: 41%;
     bottom: 18.5%;
-    width: 269px;
+    width: 28%;
   }
 
   .cta-image-board a:nth-of-type(1) {
-    left: 86px;
+    left: 7.5%;
   }
 
   .cta-image-board a:nth-of-type(2) {
-    left: 392px;
+    left: 39.4%;
   }
 
   .cta-image-board a:nth-of-type(3) {
-    left: 692px;
+    left: 70.6%;
   }
 
   .cta-title {
