@@ -7169,6 +7169,20 @@ body.menu-open .cta-bottom-bar {
   display: none;
 }
 
+.svc-area > .container {
+  max-width: 1520px;
+}
+
+.svc-area-image-block {
+  width: 100%;
+}
+
+.svc-area-image-block img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .svc-area-redesign-header {
   text-align: center;
   margin-bottom: 48px;
