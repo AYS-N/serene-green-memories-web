@@ -7209,6 +7209,25 @@ body.menu-open .cta-bottom-bar {
   padding: 80px 0;
 }
 
+.svc-trust-image {
+  width: min(1320px, calc(100vw - 40px));
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.svc-trust-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.svc-trust .svc-trust-header,
+.svc-trust .svc-trust-cards {
+  display: none;
+}
+
 .svc-trust-header {
   text-align: center;
   margin-bottom: 48px;
