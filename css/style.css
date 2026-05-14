@@ -1284,20 +1284,20 @@ Home guide page
 
   .cta-image-board a {
     top: 41%;
-    bottom: 18.5%;
-    width: 28%;
+    bottom: 24%;
+    width: 25.8%;
   }
 
   .cta-image-board a:nth-of-type(1) {
-    left: 7.5%;
+    left: 6.8%;
   }
 
   .cta-image-board a:nth-of-type(2) {
-    left: 39.4%;
+    left: 37.5%;
   }
 
   .cta-image-board a:nth-of-type(3) {
-    left: 70.6%;
+    left: 67%;
   }
 
   .home-image-tile--large {
@@ -4139,30 +4139,30 @@ FAQ ページ
 .cta-image-board a {
   position: absolute;
   top: 41%;
-  bottom: 18.5%;
-  width: 28%;
+  bottom: 24%;
+  width: 25.8%;
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease;
 }
 
 .cta-image-board a:nth-of-type(1) {
-  left: 7.5%;
+  left: 6.8%;
 }
 
 .cta-image-board a:nth-of-type(2) {
-  left: 39.4%;
+  left: 37.5%;
 }
 
 .cta-image-board a:nth-of-type(3) {
-  left: 70.6%;
+  left: 67%;
 }
 
 .cta-image-board a:hover,
 .cta-image-board a:focus-visible {
   background: rgba(90, 157, 100, 0.08);
-  box-shadow: 0 14px 28px rgba(61, 122, 74, 0.18), 0 0 0 3px rgba(90, 157, 100, 0.28);
-  transform: translateY(-6px);
+  box-shadow: 0 10px 22px rgba(61, 122, 74, 0.14), 0 0 0 2px rgba(90, 157, 100, 0.22);
+  transform: translateY(-3px);
 }
 
 .cta-image-board a:focus-visible {
@@ -4802,20 +4802,20 @@ FAQ ページ
 
   .cta-image-board a {
     top: 41%;
-    bottom: 18.5%;
-    width: 28%;
+    bottom: 24%;
+    width: 25.8%;
   }
 
   .cta-image-board a:nth-of-type(1) {
-    left: 7.5%;
+    left: 6.8%;
   }
 
   .cta-image-board a:nth-of-type(2) {
-    left: 39.4%;
+    left: 37.5%;
   }
 
   .cta-image-board a:nth-of-type(3) {
-    left: 70.6%;
+    left: 67%;
   }
 
   .cta-title {
