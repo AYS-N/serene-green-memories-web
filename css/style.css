@@ -6190,7 +6190,8 @@ body.menu-open .cta-bottom-bar {
 
 .settlement-legal-note {
   width: min(1320px, calc(100vw - 40px));
-  margin: 22px auto 0;
+  margin: 22px 0 0 50%;
+  transform: translateX(-50%);
   padding: 18px 22px;
   border-left: 6px solid var(--color-primary);
   border-radius: var(--radius-sm);
