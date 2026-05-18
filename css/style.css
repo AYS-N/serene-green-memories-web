@@ -6770,8 +6770,10 @@ body.menu-open .cta-bottom-bar {
 }
 
 .svc-overview-image-board {
-  width: 98%;
+  width: min(1760px, calc(100vw - 64px));
   margin: 0 auto;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
 .svc-overview-image-board img {
@@ -7584,7 +7586,7 @@ body.menu-open .cta-bottom-bar {
   }
 
   .svc-overview-image-board {
-    width: 98%;
+    width: calc(100vw - 24px);
   }
 
   .svc-zigzag,
