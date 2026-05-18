@@ -1,7 +1,19 @@
 
 import { defineConfig } from 'vite'
 import path from 'path'
+import fs from 'fs'
 import { componentTagger } from "lovable-tagger"
+
+const generatedBlogInputs = fs.existsSync('generated/blog')
+  ? Object.fromEntries(
+      fs.readdirSync('generated/blog')
+        .filter((file) => file.endsWith('.html'))
+        .map((file) => [
+          `generatedBlog${path.parse(file).name.replace(/[^a-zA-Z0-9_]/g, '_')}`,
+          `generated/blog/${file}`,
+        ])
+    )
+  : {}
 
 export default defineConfig(({ mode }) => ({
   server: {
@@ -25,7 +37,8 @@ export default defineConfig(({ mode }) => ({
         blogDetail: 'blog-detail.html',
         price: 'price.html',
         privacy: 'privacy.html',
-        thanks: 'thanks.html'
+        thanks: 'thanks.html',
+        ...generatedBlogInputs
       }
     }
   },

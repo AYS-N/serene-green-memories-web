@@ -18,6 +18,10 @@ const blogRecent = document.getElementById('blog-recent');
 const urlParams = new URLSearchParams(window.location.search);
 const blogId = urlParams.get('id');
 
+function getBlogUrl(blog) {
+  return `/generated/blog/${encodeURIComponent(blog.id)}.html`;
+}
+
 // 日付をフォーマットする関数
 function formatDate(dateString) {
   const date = new Date(dateString);
@@ -135,7 +139,7 @@ async function displayBlogDetail() {
   const plainText = blog.content.replace(/<[^>]*>/g, '').substring(0, 120);
   const metaDescription = plainText + '...';
   const articleUrl = `https://seirino-mikata.com/blog-detail.html?id=${blogId}`;
-  const ogImage = blog.eyecatch ? blog.eyecatch.url : 'https://seirino-mikata.com/images/seirino-mikata-logo.png';
+  const ogImage = blog.eyecatch ? blog.eyecatch.url : 'https://seirino-mikata.com/images/seirino-mikata-logo.webp';
 
   // meta description
   const descTag = document.querySelector('meta[name="description"]');
@@ -254,7 +258,7 @@ async function displayRecentBlogs() {
   blogs.forEach(blog => {
     if (blog.id !== blogId) {
       html += `<li>
-        <a href="blog-detail.html?id=${blog.id}">
+        <a href="${getBlogUrl(blog)}">
           <div class="blog-recent-title">${blog.title}</div>
           <div class="blog-recent-date">${formatDate(blog.publishedAt)}</div>
         </a>

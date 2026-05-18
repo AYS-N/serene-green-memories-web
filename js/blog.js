@@ -14,6 +14,10 @@ const limit = 6;
 const urlParams = new URLSearchParams(window.location.search);
 const categoryId = urlParams.get('category');
 
+function getBlogUrl(blog) {
+  return `/generated/blog/${encodeURIComponent(blog.id)}.html`;
+}
+
 // 日付をフォーマットする関数
 function formatDate(dateString) {
   const date = new Date(dateString);
@@ -87,7 +91,7 @@ function createBlogCard(blog) {
   const content = blog.content.replace(/<[^>]*>/g, '').substring(0, 100) + '...';
   
   card.innerHTML = `
-    <a href="blog-detail.html?id=${blog.id}" class="blog-card-link">
+    <a href="${getBlogUrl(blog)}" class="blog-card-link">
       <div class="blog-card-image-container">
         ${imageHtml}
       </div>

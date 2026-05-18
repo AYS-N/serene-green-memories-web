@@ -3,6 +3,10 @@ import { getMicrocmsConfig } from './microcms-config.js';
 const { serviceDomain: SERVICE_DOMAIN, apiKey: API_KEY } = getMicrocmsConfig();
 const blogPreview = document.getElementById('blog-preview');
 
+function getBlogUrl(blog) {
+  return `/generated/blog/${encodeURIComponent(blog.id)}.html`;
+}
+
 function formatDate(dateString) {
   const date = new Date(dateString);
   const year = date.getFullYear();
@@ -57,7 +61,7 @@ function createBlogCard(blog) {
   const excerpt = rawContent ? `${rawContent.substring(0, 100)}...` : '';
 
   card.innerHTML = `
-    <a href="blog-detail.html?id=${blog.id}" class="blog-card-link">
+    <a href="${getBlogUrl(blog)}" class="blog-card-link">
       <div class="blog-card-image-container">
         ${imageHtml}
       </div>
