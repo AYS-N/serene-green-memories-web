@@ -976,7 +976,7 @@ Home guide page
 }
 
 .home-trust-image-board {
-  width: min(1760px, calc(100vw - 64px));
+  width: min(1560px, calc(100vw - 160px));
   margin-left: 50%;
   transform: translateX(-50%);
 }
