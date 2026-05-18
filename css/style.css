@@ -6770,7 +6770,7 @@ body.menu-open .cta-bottom-bar {
 }
 
 .svc-overview-image-board {
-  width: min(1080px, 92%);
+  width: 98%;
   margin: 0 auto;
 }
 
@@ -7584,7 +7584,7 @@ body.menu-open .cta-bottom-bar {
   }
 
   .svc-overview-image-board {
-    width: 94%;
+    width: 98%;
   }
 
   .svc-zigzag,
