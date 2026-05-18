@@ -541,21 +541,30 @@ Home guide page
 
 .back-to-top {
   position: fixed;
-  right: 24px;
+  right: 28px;
   bottom: 200px;
-  z-index: 1000;
+  z-index: 1100;
   opacity: 0;
   visibility: hidden;
-  padding: 10px 14px;
+  padding: 12px 16px;
   border: 0;
   border-radius: 8px;
   background: var(--color-primary-dark);
   color: #fff;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 600;
   cursor: pointer;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
   transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  line-height: 1.3;
+}
+
+.back-to-top .btt-label {
+  font-size: 12px;
 }
 
 .back-to-top.visible {
@@ -571,6 +580,13 @@ Home guide page
   .back-to-top {
     right: 12px;
     bottom: 80px;
+    padding: 8px 10px;
+    font-size: 11px;
+    border-radius: 6px;
+  }
+
+  .back-to-top .btt-label {
+    font-size: 10px;
   }
 }
 
@@ -4986,34 +5002,34 @@ FAQ ページ
 }
 
 .hero-image-cta-btn--tel {
-  padding: 14px 28px;
+  padding: 14px 36px;
   background: rgba(255, 255, 255, 0.95);
   color: var(--color-primary-dark);
-  font-size: 1.2rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-  flex-direction: column;
   line-height: 1;
+  flex-direction: column;
+  text-align: center;
 }
 
-.hero-image-cta-tel-row {
+.hero-cta-tel-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+  margin-bottom: 4px;
+}
+
+.hero-cta-tel-number {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
 .hero-image-cta-btn--tel:hover {
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.18);
   color: var(--color-primary-dark);
-}
-
-.hero-image-cta-hours {
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: var(--color-text-light);
-  margin-top: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* スライド2: 信頼性アピール */
@@ -5327,29 +5343,26 @@ FAQ ページ
   }
 
   .hero-image-cta-btn--primary {
-    padding: 14px 32px;
-    font-size: 1rem;
+    padding: 16px 32px;
+    font-size: 1.15rem;
     width: 100%;
     max-width: 300px;
     justify-content: center;
   }
 
   .hero-image-cta-btn--tel {
-    padding: 12px 24px;
-    font-size: 1.1rem;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    padding: 16px 32px;
+    font-size: 1.15rem;
+    background: #fff;
+    border: 2px solid var(--color-primary-dark);
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.12);
     width: 100%;
     max-width: 300px;
     justify-content: center;
   }
 
   .hero-image-cta-btn--tel:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
-  }
-
-  .hero-image-cta-hours {
-    font-size: 0.65rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
   }
 
   .hero-slider-arrow {
@@ -5475,19 +5488,20 @@ body.menu-open .cta-bottom-bar {
 .cta-bar-mail .cta-bar-label {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .cta-bar-mail .cta-bar-icon-mail {
-  font-size: 32px;
+  font-size: 38px;
+  line-height: 1;
 }
 
 .cta-bar-mail .cta-bar-text {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .cta-bar-mail .cta-bar-arrow {
-  font-size: 16px;
+  font-size: 18px;
   opacity: 0.9;
 }
 
@@ -5500,7 +5514,7 @@ body.menu-open .cta-bottom-bar {
 .cta-bar-line .cta-bar-label {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .cta-bar-line .cta-bar-icon-line {
@@ -5508,12 +5522,17 @@ body.menu-open .cta-bottom-bar {
   align-items: center;
 }
 
+.cta-bar-line .cta-bar-icon-line svg {
+  width: 36px;
+  height: 36px;
+}
+
 .cta-bar-line .cta-bar-text {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .cta-bar-line .cta-bar-arrow {
-  font-size: 16px;
+  font-size: 18px;
   opacity: 0.9;
 }
 
