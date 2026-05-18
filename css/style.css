@@ -7347,7 +7347,7 @@ body.menu-open .cta-bottom-bar {
 }
 
 .svc-trust-image {
-  width: min(1320px, calc(100vw - 40px));
+  width: min(1760px, calc(100vw - 64px));
   margin-left: 50%;
   transform: translateX(-50%);
   border-radius: var(--radius-lg);
