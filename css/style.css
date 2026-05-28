@@ -4181,6 +4181,10 @@ FAQ ページ
   position: relative;
 }
 
+.cta-image-board picture {
+  display: block;
+}
+
 .cta-image-board img {
   display: block;
   width: 100%;
@@ -4851,21 +4855,27 @@ FAQ ページ
   }
 
   .cta-image-board a {
-    top: 41%;
-    bottom: 24%;
-    width: 25.8%;
+    left: 6%;
+    width: 88%;
+    bottom: auto;
   }
 
   .cta-image-board a:nth-of-type(1) {
-    left: 6.8%;
+    left: 6%;
+    top: 21.4%;
+    height: 27.4%;
   }
 
   .cta-image-board a:nth-of-type(2) {
-    left: 37.5%;
+    left: 6%;
+    top: 51.2%;
+    height: 21.3%;
   }
 
   .cta-image-board a:nth-of-type(3) {
-    left: 67%;
+    left: 6%;
+    top: 75.1%;
+    height: 21.4%;
   }
 
   .cta-title {
