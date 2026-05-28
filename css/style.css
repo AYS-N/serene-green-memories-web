@@ -998,6 +998,10 @@ Home guide page
   transform: translateX(-50%);
 }
 
+.home-trust-image-board picture {
+  display: block;
+}
+
 .home-trust-image-board img {
   display: block;
   width: 100%;
@@ -1261,16 +1265,16 @@ Home guide page
   }
 
   .home-trust-image-board {
-    width: auto;
-    overflow-x: auto;
-    margin: 0 -14px;
+    width: min(100%, 420px);
+    overflow-x: visible;
+    margin: 0 auto;
     transform: none;
-    padding: 0 14px 8px;
+    padding: 0;
   }
 
   .home-trust-image-board img {
-    width: 860px;
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
   }
 
   .home-flow-image-board {
