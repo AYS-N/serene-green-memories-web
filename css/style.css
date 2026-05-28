@@ -6264,6 +6264,10 @@ body.menu-open .cta-bottom-bar {
   overflow: hidden;
 }
 
+.settlement-image picture {
+  display: block;
+}
+
 .settlement-image img {
   width: 100%;
   height: auto;
@@ -6297,10 +6301,6 @@ body.menu-open .cta-bottom-bar {
   transform: translateX(-50%);
   border-radius: var(--radius-lg);
   overflow: hidden;
-}
-
-.model-case-image picture {
-  display: block;
 }
 
 .model-case-image img {
