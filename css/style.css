@@ -781,6 +781,23 @@ Home guide page
   width: 14.2%;
 }
 
+.home-image-mobile-list {
+  display: none;
+}
+
+.home-image-mobile-list a {
+  display: block;
+  border-radius: 8px;
+  outline-offset: 4px;
+}
+
+.home-image-mobile-list img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
 .home-image-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -1108,14 +1125,15 @@ Home guide page
   }
 
   .home-image-board {
-    overflow-x: auto;
-    margin: 0 -18px;
-    padding: 0 18px 8px;
+    display: none;
   }
 
-  .home-image-board img {
-    width: 920px;
-    max-width: none;
+  .home-image-mobile-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 18px;
+    max-width: 440px;
+    margin: 0 auto;
   }
 
   .home-story-grid,
@@ -1234,12 +1252,12 @@ Home guide page
   }
 
   .home-image-board {
-    margin: 0 -14px;
-    padding: 0 14px 8px;
+    display: none;
   }
 
-  .home-image-board img {
-    width: 840px;
+  .home-image-mobile-list {
+    gap: 16px;
+    max-width: 360px;
   }
 
   .home-trust-image-board {
