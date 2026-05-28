@@ -1051,6 +1051,10 @@ Home guide page
   background: #fff;
 }
 
+.home-flow-image-board picture {
+  display: block;
+}
+
 .home-flow-image-board img {
   display: block;
   width: 100%;
@@ -1278,14 +1282,15 @@ Home guide page
   }
 
   .home-flow-image-board {
-    overflow-x: auto;
-    margin: 0 -14px;
-    padding: 0 14px 8px;
+    width: min(100%, 420px);
+    overflow-x: visible;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .home-flow-image-board img {
-    width: 860px;
-    max-width: none;
+    width: 100%;
+    max-width: 100%;
   }
 
   .home-info-image-board {
