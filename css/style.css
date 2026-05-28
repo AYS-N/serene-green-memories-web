@@ -6811,6 +6811,10 @@ body.menu-open .cta-bottom-bar {
   transform: translateX(-50%);
 }
 
+.svc-overview-image-board picture {
+  display: block;
+}
+
 .svc-overview-image-board img {
   display: block;
   width: 100%;
@@ -7621,7 +7625,9 @@ body.menu-open .cta-bottom-bar {
   }
 
   .svc-overview-image-board {
-    width: calc(100vw - 24px);
+    width: min(100%, 420px);
+    margin-left: auto;
+    transform: none;
   }
 
   .svc-zigzag,
