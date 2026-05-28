@@ -7215,6 +7215,10 @@ body.menu-open .cta-bottom-bar {
   width: 100%;
 }
 
+.svc-area-image-block picture {
+  display: block;
+}
+
 .svc-area-image-block img {
   display: block;
   width: 100%;
