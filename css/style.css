@@ -7032,6 +7032,9 @@ body.menu-open .cta-bottom-bar {
   max-width: 100%;
   margin: 0 auto;
 }
+.svc-yukue picture {
+  display: block;
+}
 .svc-yukue-image-only {
   background: transparent;
   padding: 0;
@@ -7056,6 +7059,9 @@ body.menu-open .cta-bottom-bar {
 @media (max-width: 768px) {
   .svc-yukue {
     padding: 24px 16px 20px;
+  }
+  .svc-yukue-image-only {
+    padding: 0;
   }
   .svc-yukue-title {
     font-size: 20px;
@@ -7399,6 +7405,10 @@ body.menu-open .cta-bottom-bar {
   display: block;
 }
 
+.svc-trust-image picture {
+  display: block;
+}
+
 .svc-trust .svc-trust-header,
 .svc-trust .svc-trust-cards {
   display: none;
@@ -7622,6 +7632,17 @@ body.menu-open .cta-bottom-bar {
   .svc-trust-header h2,
   .svc-final-cta h2 {
     font-size: 28px;
+  }
+
+  .svc-trust {
+    padding: 48px 0;
+  }
+
+  .svc-trust-image {
+    width: min(calc(100vw - 24px), 430px);
+    margin: 0 auto;
+    transform: none;
+    border-radius: 10px;
   }
 
   .svc-overview-image-board {
