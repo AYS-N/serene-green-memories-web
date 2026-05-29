@@ -57,6 +57,23 @@ html {
   overflow-x: hidden;
 }
 
+/* サービスページのアンカー着地位置（固定ヘッダーに隠れないよう余白を確保） */
+#estate,
+#lifetime,
+#cleanup,
+#special,
+#waste,
+#buyback {
+  scroll-margin-top: 100px;
+}
+
+.svc-anchor {
+  display: block;
+  height: 0;
+  margin: 0;
+  visibility: hidden;
+}
+
 body {
   overflow-x: hidden;
   font-family: var(--font-sans);
