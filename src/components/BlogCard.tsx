@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Blog } from '@/lib/microcms';
+import type { Blog } from '@/lib/microcms';
 import { format } from 'date-fns';
 import { ja } from 'date-fns/locale';
 

@@ -74,24 +74,16 @@ Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-trick
 
 ## microCMS setup (blog)
 
-Set credentials in one of the following ways:
+The public blog uses PHP (`blog.php` and `blog-detail.php`) so the microCMS API key is read on the server and is not exposed in browser JavaScript.
 
-1) Vite env file (recommended)
+For production, copy `microcms-config.sample.php` to `microcms-config.php` on the server and fill in the real values:
 
-Create `.env` in the project root:
-
+```php
+<?php
+return [
+    'service_domain' => 'your-service-domain',
+    'api_key' => 'your-read-only-api-key',
+];
 ```
-VITE_MICROCMS_SERVICE_DOMAIN=your-service-domain
-VITE_MICROCMS_API_KEY=your-api-key
-```
 
-2) Runtime config (static hosting)
-
-Copy `public/microcms-config.example.js` to `public/microcms-config.js` and fill values:
-
-```
-window.__MICROCMS__ = {
-  serviceDomain: 'your-service-domain',
-  apiKey: 'your-api-key',
-};
-```
+`microcms-config.php` is ignored by Git. Blog authors only need to add or edit articles in microCMS; no local build is required after publishing a new article.

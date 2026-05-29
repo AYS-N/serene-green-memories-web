@@ -72,7 +72,7 @@
               <li><a href="services.html">サービス内容</a></li>
               <li><a href="price.html">料金について</a></li>
               <li><a href="about.html">会社概要</a></li>
-              <li><a href="blog.html">ブログ</a></li>
+              <li><a href="blog.php">ブログ</a></li>
               <li><a href="faq.html">よくある質問</a></li>
               <li><a href="contact.html">お問い合わせ</a></li>
             </ul>
@@ -115,7 +115,7 @@
           <li><a href="services.html">サービス内容</a></li>
           <li><a href="price.html">料金について</a></li>
           <li><a href="about.html">会社概要</a></li>
-          <li><a href="blog.html">ブログ</a></li>
+          <li><a href="blog.php">ブログ</a></li>
           <li><a href="faq.html">よくある質問</a></li>
           <li><a href="contact.html">お問い合わせ</a></li>
         </ul>
@@ -238,14 +238,14 @@
           <div class="home-info-image-board">
             <img src="images/info_link.webp" alt="詳しい情報はこちらから。会社情報、ブログ、よくある質問への案内" loading="lazy" width="2172" height="724" decoding="async">
             <a href="about.html" aria-label="会社情報を見る"></a>
-            <a href="blog.html" aria-label="ブログを見る"></a>
+            <a href="blog.php" aria-label="ブログを見る"></a>
             <a href="faq.html" aria-label="よくある質問を見る"></a>
           </div>
           <div class="home-info-mobile-list" aria-label="詳しい情報を見る">
             <a href="about.html" aria-label="会社情報を見る">
               <img src="images/home-info-mobile-about.webp" alt="会社情報" loading="lazy" width="941" height="1672" decoding="async">
             </a>
-            <a href="blog.html" aria-label="ブログを見る">
+            <a href="blog.php" aria-label="ブログを見る">
               <img src="images/home-info-mobile-blog.webp" alt="ブログ" loading="lazy" width="941" height="1672" decoding="async">
             </a>
             <a href="faq.html" aria-label="よくある質問を見る">
@@ -262,10 +262,10 @@
             <h2>新着ブログ</h2>
           </div>
           <div class="blog-preview" id="blog-preview">
-            <div class="loading">Loading...</div>
+<p class="info-message">ブログ記事は準備中です。</p>
           </div>
           <div class="section-more">
-            <a href="blog.html" class="btn btn-primary">ブログ一覧を見る</a>
+            <a href="blog.php" class="btn btn-primary">ブログ一覧を見る</a>
           </div>
         </div>
       </section>
@@ -328,7 +328,7 @@
               <h3 class="footer-menu-title">会社情報</h3>
               <ul class="footer-menu-list">
                 <li><a href="about.html">会社概要</a></li>
-                <li><a href="blog.html">ブログ</a></li>
+                <li><a href="blog.php">ブログ</a></li>
                 <li><a href="faq.html">よくある質問</a></li>
                 <li><a href="privacy.html">プライバシーポリシー</a></li>
               </ul>
@@ -342,7 +342,7 @@
               <li><a href="services.html">サービス内容</a></li>
               <li><a href="price.html">料金について</a></li>
               <li><a href="about.html">会社概要</a></li>
-              <li><a href="blog.html">ブログ</a></li>
+              <li><a href="blog.php">ブログ</a></li>
               <li><a href="faq.html">よくある質問</a></li>
               <li><a href="contact.html">お問い合わせ</a></li>
               <li><a href="privacy.html">プライバシーポリシー</a></li>
@@ -354,9 +354,22 @@
     </footer>
 
     <button class="back-to-top" id="backToTop" aria-label="トップに戻る">&#9650;<span class="btt-label">トップへ</span></button>
-    <script type="module" src="./js/microcms-config.js"></script>
-    <script type="module" src="./js/index.js"></script>
     <script type="module" src="./js/main.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', async function () {
+        var target = document.getElementById('blog-preview');
+        if (!target) return;
+
+        try {
+          var response = await fetch('api/blog-preview.php', { credentials: 'same-origin' });
+          if (response.ok) {
+            target.innerHTML = await response.text();
+          }
+        } catch (error) {
+          // The static placeholder remains visible if PHP is not available locally.
+        }
+      });
+    </script>
     <script>
       document.addEventListener('DOMContentLoaded', function () {
         var button = document.getElementById('backToTop');

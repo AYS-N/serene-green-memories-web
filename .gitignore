@@ -27,3 +27,10 @@ dist-ssr
 .env
 .env.*.local
 public/microcms-config.js
+microcms-config.php
+output/
+.codex/
+.claude/worktrees/
+.aidesigner/*
+!.aidesigner/.gitkeep
+.vercel
