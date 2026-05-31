@@ -7807,3 +7807,21 @@ body.menu-open .cta-bottom-bar {
     justify-content: center;
   }
 }
+
+/* お問い合わせフォーム: Mailform Pro の入力欄自動サイズ調整を打ち消す */
+.form-input-area input,
+.form-input-area textarea {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.form-input-area textarea {
+  min-height: 120px !important;
+  height: auto !important;
+  resize: vertical;
+}
+
+.form-input-area .input-short {
+  width: 100% !important;
+  max-width: 180px !important;
+}
