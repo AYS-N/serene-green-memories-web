@@ -1,0 +1,31 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # www あり → https の www なしに統一
+  RewriteCond %{HTTP_HOST} ^www\.seirino-mikata\.com [NC]
+  RewriteRule ^(.*)$ https://seirino-mikata.com/$1 [R=301,L]
+
+  # http → https に統一（暗号化を強制）
+  # ※ SSLの構成によってループする場合は、次の1行を
+  #   RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  #   に差し替えてください。
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://seirino-mikata.com/$1 [R=301,L]
+
+  # index.html → / に統一
+  RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+  RewriteRule ^(.*)index\.html$ https://seirino-mikata.com/$1 [R=301,L]
+
+  # --- ブログを .php なしのURLで提供する場合は以下を有効化 ---
+  # （あわせて各ページのリンクを /blog ・ /blog-detail?id=... に変更すること）
+  # RewriteRule ^blog/?$ blog.php [L,QSA]
+  # RewriteRule ^blog-detail/?$ blog-detail.php [L,QSA]
+</IfModule>
+
+# 設定ファイル（APIキーを含む）への直接アクセスを禁止
+<Files "microcms-config.php">
+  Require all denied
+</Files>
+<Files "microcms-config.sample.php">
+  Require all denied
+</Files>

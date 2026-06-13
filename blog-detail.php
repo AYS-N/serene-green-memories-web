@@ -2,6 +2,11 @@
 declare(strict_types=1);
 require __DIR__ . '/includes/microcms.php';
 
+// このページは「ダウンロードするファイル」ではなく「表示するウェブページ」であることを明示する。
+// 一部のセキュリティソフト（McAfee等）や社内プロキシが .php をダウンロード扱いするのを防ぐ。
+header('Content-Type: text/html; charset=UTF-8');
+header('Content-Disposition: inline');
+
 $id = isset($_GET['id']) ? preg_replace('/[^a-zA-Z0-9_-]/', '', (string) $_GET['id']) : '';
 $blog = $id !== '' ? microcms_get_blog($id) : null;
 

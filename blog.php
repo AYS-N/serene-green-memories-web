@@ -2,6 +2,11 @@
 declare(strict_types=1);
 require __DIR__ . '/includes/microcms.php';
 
+// このページは「ダウンロードするファイル」ではなく「表示するウェブページ」であることを明示する。
+// 一部のセキュリティソフト（McAfee等）や社内プロキシが .php をダウンロード扱いするのを防ぐ。
+header('Content-Type: text/html; charset=UTF-8');
+header('Content-Disposition: inline');
+
 $page = max(1, (int) ($_GET['page'] ?? 1));
 $limit = 6;
 $offset = ($page - 1) * $limit;
