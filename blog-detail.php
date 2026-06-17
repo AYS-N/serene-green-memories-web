@@ -82,6 +82,15 @@ $pageTitle = $title . ' | ' . SITE_NAME;
     ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
     </script>
   <?php endif; ?>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7RNPK5XXBZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7RNPK5XXBZ');
+  </script>
 </head>
 <body>
   <header class="header">
