@@ -532,8 +532,21 @@ Home guide page
   border-radius: 8px;
 }
 
+.home-info-image-board .home-info-company-photo {
+  position: absolute;
+  z-index: 1;
+  top: 20.5%;
+  left: 4.9%;
+  width: 28.35%;
+  height: 36.9%;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+  object-position: center;
+}
+
 .home-info-image-board a {
   position: absolute;
+  z-index: 2;
   top: 21.5%;
   bottom: 11.8%;
   width: 30%;
@@ -558,6 +571,7 @@ Home guide page
 
 .home-info-mobile-list a {
   display: block;
+  position: relative;
   border-radius: 8px;
   outline-offset: 4px;
 }
@@ -567,6 +581,17 @@ Home guide page
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+.home-info-mobile-list .home-info-company-photo {
+  position: absolute;
+  top: 3.6%;
+  left: 5.6%;
+  width: 88.8%;
+  height: 43.9%;
+  border-radius: 8px 8px 0 0;
+  object-fit: cover;
+  object-position: center;
 }
 
 .home-info-panel {
