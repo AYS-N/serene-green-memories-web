@@ -2038,7 +2038,7 @@ Home guide page
 }
 
 .logo-img {
-  height: 140px;
+  height: 80px;
   width: auto;
   max-width: none;
   margin-left: 0;
@@ -2046,7 +2046,7 @@ Home guide page
 
 @media (max-width: 768px) {
   .logo-img {
-    height: 120px;
+    height: 64px;
     margin-left: 10px;
   }
 }

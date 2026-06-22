@@ -98,7 +98,7 @@ $pageTitle = $title . ' | ' . SITE_NAME;
       <div class="header-inner">
         <div class="logo">
           <a href="index.html">
-            <picture><source srcset="images/seirino-mikata-logo.webp" type="image/webp"><img src="images/seirino-mikata-logo.webp" alt="整理のミカタ" class="logo-img" width="1024" height="1024" decoding="async"></picture>
+            <picture><source srcset="images/seirino-mikata-logo.webp" type="image/webp"><img src="images/seirino-mikata-logo.webp" alt="整理のミカタ" class="logo-img" width="1084" height="374" decoding="async"></picture>
           </a>
         </div>
         <nav class="nav-pc">
