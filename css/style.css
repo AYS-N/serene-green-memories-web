@@ -3968,11 +3968,41 @@ FAQ ページ
   opacity: 1;
   transform: translateY(0);
 }
-/* Breadcrumb list markers */
+/* パンくずリスト */
+.breadcrumb {
+  padding: 10px 0;
+  background: var(--color-primary-bg);
+  border-bottom: 1px solid rgba(90, 157, 100, 0.16);
+  font-size: 14px;
+}
+
 .breadcrumb ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
   list-style: none;
   padding-left: 0;
   margin: 0;
+}
+
+.breadcrumb li {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-text-light);
+}
+
+.breadcrumb li + li::before {
+  content: '＞';
+  margin: 0 0.65em;
+  color: var(--color-primary-light);
+}
+
+.breadcrumb a {
+  color: var(--color-primary-dark);
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
 }
 
 /* 

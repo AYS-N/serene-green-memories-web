@@ -162,7 +162,6 @@ $pageTitle = $title . ' | ' . SITE_NAME;
       <ul>
         <li><a href="index.html">トップ</a></li>
         <li><a href="blog.php">ブログ</a></li>
-        <li><?= h($title) ?></li>
       </ul>
     </div>
   </div>
