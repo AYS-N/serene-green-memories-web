@@ -15,6 +15,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // お問い合わせフォームの送信処理
   initContactForm();
+  window.addEventListener('load', initPreferredDateSelect);
+  setTimeout(initPreferredDateSelect, 500);
+  setTimeout(initPreferredDateSelect, 1500);
   
   // URLハッシュに該当するFAQカテゴリまでスクロール
   scrollToHashElement();
@@ -124,7 +127,7 @@ function initPreferredDateSelect() {
   }
 
   function parseDateValue(value) {
-    const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+    const match = /^(\d{4})[-\/](\d{1,2})[-\/](\d{1,2})/.exec(value);
     if (!match) return null;
     return new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
   }
@@ -177,6 +180,7 @@ function initPreferredDateSelect() {
       };
 
       source.addEventListener('change', refreshFromSource);
+      source.addEventListener('input', refreshFromSource);
       select.addEventListener('pointerdown', refreshFromSource);
       select.addEventListener('mousedown', refreshFromSource);
       select.addEventListener('focus', refreshFromSource);
