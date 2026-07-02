@@ -111,7 +111,7 @@ function initContactForm() {
 
 // 希望日ドロップダウンを初期化（今日から1ヶ月先まで）
 function initPreferredDateSelect() {
-  const preferredDateSelects = document.querySelectorAll('.js-date-select');
+  const preferredDateSelects = document.querySelectorAll('.js-date-select, [data-date-select]');
   if (!preferredDateSelects.length) return;
   
   const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
@@ -172,9 +172,14 @@ function initPreferredDateSelect() {
     populateDateSelect(select, sourceDate || today);
 
     if (source && select.dataset.minSourceBound !== 'true') {
-      source.addEventListener('change', () => {
+      const refreshFromSource = () => {
         populateDateSelect(select, parseDateValue(source.value) || today);
-      });
+      };
+
+      source.addEventListener('change', refreshFromSource);
+      select.addEventListener('pointerdown', refreshFromSource);
+      select.addEventListener('mousedown', refreshFromSource);
+      select.addEventListener('focus', refreshFromSource);
       select.dataset.minSourceBound = 'true';
     }
   });
