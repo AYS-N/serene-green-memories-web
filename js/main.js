@@ -149,7 +149,10 @@ function initPreferredDateSelect() {
   function populateDateSelect(select, minDate = today) {
     const currentValue = select.value;
     const placeholder = select.options[0]?.cloneNode(true) || new Option('日付を選択', '');
-    const startDate = normalizeDate(minDate > today ? minDate : today);
+    const offsetDays = Number(select.dataset.minOffsetDays || 0);
+    const minDateWithOffset = normalizeDate(minDate);
+    minDateWithOffset.setDate(minDateWithOffset.getDate() + offsetDays);
+    const startDate = normalizeDate(minDateWithOffset > today ? minDateWithOffset : today);
 
     select.replaceChildren(placeholder);
 
