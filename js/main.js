@@ -81,7 +81,7 @@ function initContactForm() {
   const contactForm = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
   
-  // 希望日時のドロップダウンを初期化
+  // 希望日ドロップダウンを初期化
   initPreferredDateSelect();
   
   // 住所自動入力機能を初期化
@@ -109,34 +109,74 @@ function initContactForm() {
   }
 }
 
-// 希望日時のドロップダウンを初期化（今日から1ヶ月先まで）
+// 希望日ドロップダウンを初期化（今日から1ヶ月先まで）
 function initPreferredDateSelect() {
   const preferredDateSelects = document.querySelectorAll('.js-date-select');
   if (!preferredDateSelects.length) return;
   
   const weekdays = ['日', '月', '火', '水', '木', '金', '土'];
-  const today = new Date();
+  const today = normalizeDate(new Date());
+  const maxDate = new Date(today);
+  maxDate.setDate(today.getDate() + 30);
 
-  preferredDateSelects.forEach((select) => {
-    if (select.dataset.initialized === 'true') return;
+  function normalizeDate(date) {
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  }
 
-    // 1ヶ月分の日付を追加
-    for (let i = 0; i < 31; i++) {
-      const date = new Date(today);
-      date.setDate(today.getDate() + i);
-      
-      const year = date.getFullYear();
-      const month = date.getMonth() + 1;
-      const day = date.getDate();
-      const weekday = weekdays[date.getDay()];
-      
+  function parseDateValue(value) {
+    const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value);
+    if (!match) return null;
+    return new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+  }
+
+  function formatDateValue(date) {
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    return `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+  }
+
+  function formatDateLabel(date) {
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    return `${year}/${month}/${day}(${weekdays[date.getDay()]})`;
+  }
+
+  function populateDateSelect(select, minDate = today) {
+    const currentValue = select.value;
+    const placeholder = select.options[0]?.cloneNode(true) || new Option('日付を選択', '');
+    const startDate = normalizeDate(minDate > today ? minDate : today);
+
+    select.replaceChildren(placeholder);
+
+    for (let date = new Date(startDate); date <= maxDate; date.setDate(date.getDate() + 1)) {
+      const optionDate = new Date(date);
       const option = document.createElement('option');
-      option.value = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-      option.textContent = `${year}/${month}/${day}(${weekday})`;
+      option.value = formatDateValue(optionDate);
+      option.textContent = formatDateLabel(optionDate);
       select.appendChild(option);
     }
 
+    select.value = Array.from(select.options).some((option) => option.value === currentValue)
+      ? currentValue
+      : '';
     select.dataset.initialized = 'true';
+  }
+
+  preferredDateSelects.forEach((select) => {
+    const sourceId = select.dataset.minSource;
+    const source = sourceId ? document.getElementById(sourceId) : null;
+    const sourceDate = source ? parseDateValue(source.value) : null;
+
+    populateDateSelect(select, sourceDate || today);
+
+    if (source && select.dataset.minSourceBound !== 'true') {
+      source.addEventListener('change', () => {
+        populateDateSelect(select, parseDateValue(source.value) || today);
+      });
+      select.dataset.minSourceBound = 'true';
+    }
   });
 }
 
